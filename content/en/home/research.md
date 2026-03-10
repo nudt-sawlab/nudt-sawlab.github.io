@@ -46,19 +46,25 @@ research_step_papers:
       authors_text: "Rouwan Wu, jiacheng Deng, Mingyu Mou, Xingyi He, Maojun Zhang, Yu Liu, **Shen Yan**"
       media_icon:
         type: image
-        src: "img/research/teaser_RAL.png"
-      journal: "IEEE Robotics and Automation Letters"
+        src: "img/research/teaser_UAVGeoLoc.gif"
+      journal: "RA-L 2025"
       intro: "World-UAV -- a diverse and realistic dataset for UAV-to-satellite geo-localization, UAVPlace -- a transformation-invariant retrieval method that significantly improves performance under extreme viewpoint variations."
       cite_text: |
-        
+        @ARTICLE{11077664,
+          author={Wu, Rouwan and Deng, Jiacheng and Mou, Mingyu and He, Xingyi and Zhang, Maojun and Liu, Yu and Yan, Shen},
+          journal={IEEE Robotics and Automation Letters},
+          title={UAV-GeoLoc: A Large-vocabulary Dataset and Geometry-Transformed Method for UAV Geo-Localization},
+          year={2025},
+          volume={},
+          number={},
+          pages={1-8},
+          keywords={Autonomous aerial vehicles;Satellites;Urban areas;Satellite images;Training;Drones;Location awareness;Large language models;Engines;Data mining;Localization;recognition;vision-based navigation},
+          doi={10.1109/LRA.2025.3588061}}
 
       links:
           - name: Paper
             url: "https://ieeexplore.ieee.org/document/11077664"
-        
-          - name: Project Page
-            url: "https://ringowrw.github.io/GeoLoc-UAV/"
-        
+
           - name: Code
             url: "https://github.com/RingoWRW/GeoLoc-UAV"
 
@@ -66,64 +72,61 @@ research_step_papers:
       authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun  Zhang, **Shen  Yan**"
       media_icon:
         type: image
-        src: "img/research/teaser_ICCV.png"
+        src: "img/research/teaser_LoDLocv2.gif"
       journal: "ICCV 2025"
-      intro: "We propose a novel method for aerial visual localization over low Level-of-Detail (LoD) city models. Previous wireframe-alignment-based method LoD-Loc [97] has shown promising localization results leveraging LoD models. However, LoD-Loc mainly relies on high-LoD (LoD3 or LoD2) city models, but the majority of available models and those many countries plan to construct nationwide are low-LoD (LoD1). Consequently, enabling localization on low-LoD city models could unlock drones' potential for global urban localization. To address these issues, we introduce LoD-Loc v2, which employs a coarse-to-fine strategy using explicit silhouette alignment to achieve accurate localization over low-LoD city models in the air. Specifically, given a query image, LoD-Loc v2 first applies a building segmentation network to shape building silhouettes. Then, in the coarse pose selection stage, we construct a pose cost volume by uniformly sampling pose hypotheses around a prior pose to represent the pose probability distribution. Each cost of the volume measures the degree of alignment between the projected and predicted silhouettes. We select the pose with maximum value as the coarse pose. In the fine pose estimation stage, a particle filtering method incorporating a multi-beam tracking approach is used to efficiently explore the hypothesis space and obtain the final pose estimation. To further facilitate research in this field, we release two datasets with LoD1 city models covering 10.7 km, along with real RGB queries and ground-truth pose annotations. Experimental results show that LoD-Loc v2 improves estimation accuracy with high-LoD models and enables localization with low-LoD models for the first time. Moreover, it outperforms state-of-the-art baselines by large margins, even surpassing texture-model-based methods, and broadens the convergence basin to accommodate larger prior errors. The code and dataset will be made available upon publication."
+      intro: "A novel method for aerial visual localization over low Level-of-Detail (LoD) city models. "
       cite_text: |
-        @misc{zhu2025lodlocv2aerialvisual,
-              title={LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment}, 
-              author={Juelin Zhu and Shuaibang Peng and Long Wang and Hanlin Tan and Yu Liu and Maojun Zhang and Shen Yan},
-              year={2025},
-              eprint={2507.00659},
-              archivePrefix={arXiv},
-              primaryClass={cs.CV},
-              url={https://arxiv.org/abs/2507.00659}, 
+        @inproceedings{zhu2025lod,
+          title={LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment},
+          author={Zhu, Juelin and Yan, Shen and Wang, Long and Zhang, Shengyue and Liu, Yu and Zhang, Maojun},
+          booktitle={},
+          pages={},
+          year={2025}
         }
 
       links:
           - name: Paper
-            url: "https://arxiv.org/abs/2507.00659"
-        
+            url: "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_LoD-Loc_v2_Aerial_Visual_Localization_over_Low_Level-of-Detail_City_Models_ICCV_2025_paper.pdf"
+
           - name: Project Page
-            url: "https://github.com/VictorZoo/LoD-Loc-v2"
-        
+            url: "https://pppppsb.github.io/LoD-Locv2/"
+
           - name: Code
-            url: "https://github.com/VictorZoo/LoD-Loc-v2" 
-  
+            url: "https://github.com/VictorZoo/LoD-Loc-v2"
+
     - title: "LoD-Loc: Aerial Visual Localization using LoD 3D Map with Neural Wireframe Alignment"
-      authors_text: "Juelin Zhu, Shen Yan, Long Wang, Shengyue Zhang, Yu Liu, **Maojun Zhang**"
+      authors_text: "Juelin Zhu*, Shen Yan*, Long Wang, Shengyue Zhang, Yu Liu, **Maojun Zhang**"
       media_icon:
         type: image
-        src: "img/research/teaser_NuerIPS.png"
+        src: "img/research/teaser_LoDLoc.gif"
       journal: "NeurIPS 2024"
-      intro: "We propose a new method named LoD-Loc for visual localization in the air. Unlike existing localization algorithms, LoD-Loc does not rely on complex 3D representations and can estimate the pose of an Unmanned Aerial Vehicle (UAV) using a Level-of-Detail (LoD) 3D map. LoD-Loc mainly achieves this goal by aligning the wireframe derived from the LoD projected model with that predicted by the neural network. Specifically, given a coarse pose provided by the UAV sensor, LoD-Loc hierarchically builds a cost volume for uniformly sampled pose hypotheses to describe pose probability distribution and select a pose with maximum probability. Each cost within this volume measures the degree of line alignment between projected and predicted wireframes. LoD-Loc also devises a 6-DoF pose optimization algorithm to refine the previous result with a differentiable Gaussian-Newton method. As no public dataset exists for the studied problem, we collect two datasets with map levels of LoD3.0 and LoD2.0, along with real RGB queries and ground-truth pose annotations. We benchmark our method and demonstrate that LoD-Loc achieves excellent performance, even surpassing current state-of-the-art methods that use textured 3D models for localization."
+      intro: ""
       cite_text: |
-        @inproceedings{
-          zhu2024lodloc,
-          title={LoD-Loc: Aerial Visual Localization using LoD 3D Map with Neural Wireframe Alignment},
-          author={Juelin Zhu and Shen Yan and Long Wang and zhang shengYue and Yu Liu and Maojun Zhang},
-          booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-          year={2024},
-          url={https://openreview.net/forum?id=PqlKliEXyJ}
-          }
+        @inproceedings{zhu2024lod,
+          title={LoD-Loc: aerial visual localization using LoD 3D map with neural wireframe alignment},
+          author={Zhu, Juelin and Yan, Shen and Wang, Long and Zhang, Shengyue and Liu, Yu and Zhang, Maojun},
+          booktitle={Proceedings of the 38th International Conference on Neural Information Processing Systems},
+          pages={119063--119098},
+          year={2024}
+        }
 
       links:
           - name: Paper
             url: "https://arxiv.org/abs/2410.12269"
-        
+
           - name: Project Page
-            url: "https://github.com/VictorZoo/LoD-Loc"
-        
+            url: "https://victorzoo.github.io/LoD-Loc.github.io/"
+
           - name: Code
             url: "https://github.com/VictorZoo/LoD-Loc"
 
-    - title: "UAVD4L:A Large-Scale Dataset for UAV6-DoF Localization"
-      authors_text: "Rouwan Wu, Xiaoya Cheng, Juelin Zhu, Yuxiang Liu, **Maojun Zhang**, Shen Yan"
+    - title: "UAVD4L:A Large-Scale Dataset for UAV 6-DoF Localization"
+      authors_text: "Rouwan Wu*, Xiaoya Cheng*, Juelin Zhu, Yuxiang Liu, Maojun Zhang†, Shen Yan"
       media_icon:
         type: image
-        src: "img/research/teaser_3DV.png"
-      journal: "IEEE 3DV"
-      intro: "The first large-scale dataset designed specifically for 6-DoF localization of UAVs in GPS-denied environments."
+        src: "img/research/teaser_UAVD4L.gif"
+      journal: "3DV 2024"
+      intro: "The first large-scale dataset designed specifically for 6-DoF localization of UAVs in GPS-denied environments"
       cite_text: |
         @inproceedings{wu2024uavd4l,
           title={UAVD4L: A Large-Scale Dataset for UAV 6-DoF Localization},
@@ -133,27 +136,124 @@ research_step_papers:
           year={2024},
           organization={IEEE}
         }
-        
+
 
       links:
           - name: Paper
             url: "https://arxiv.org/pdf/2401.05971"
-        
-          - name: Project Page
-            url: "https://seekanywhere.github.io/"
-        
+
           - name: Code
             url: "https://github.com/RingoWRW/UAVD4L"
 
-    
-  step2:
-  
-    - title: "Spectral–spatial adversarial multidomain synthesis network for cross-scene hyperspectral image classification"
-      authors_text: "Xi Chen, Lin Gao, **Maojun Zhang**, Chen Chen, Shen Yan"
+    - title: "ATLoc: Aerial Thermal Images Localization via View Synthesis"
+      authors_text: "Yuxiang Liu*, Rouwan Wu*, Shen Yan, Xiaoya Cheng, Juelin Zhu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
-        src: "img/research/S2AMSnet.png"
-      journal: "IEEE Transactions on Geoscience and Remote Sensing"
+        src: "img/research/teaser_ATLoc.png"
+      journal: "TGRS 2024"
+      intro: " This paper addresses the challenging problem of cross-view 6-DoF localization for thermal images by proposing a \"Render-and-Compare\" framework."
+      cite_text: |
+        @ARTICLE{10387530,
+          author={Liu, Yuxiang and Wu, Rouwan and Yan, Shen and Cheng, Xiaoya and Zhu, Juelin and Liu, Yu and Zhang, Maojun},
+          journal={IEEE Transactions on Geoscience and Remote Sensing},
+          title={ATLoc: Aerial Thermal Images Localization via View Synthesis},
+          year={2024},
+          volume={62},
+          number={},
+          pages={1-13},
+          keywords={Location awareness;Cameras;Three-dimensional displays;Solid modeling;6-DOF;Atmospheric modeling;Visualization;Aerial localization;thermal image;view synthesis},
+          doi={10.1109/TGRS.2024.3352421}}
+
+      links:
+          - name: Paper
+            url: "https://ieeexplore.ieee.org/abstract/document/10387530"
+
+          - name: Code
+            url: "https://github.com/RingoWRW/ATLoc"
+
+    - title: "Deep Active Contours for Real-time 6-DoF Object Tracking"
+      authors_text: "Long Wang*, Shen Yan*, Jianan Zhen, Yu Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_DeepAC.gif"
+      journal: "ICCV 2023"
+      intro: "A real-time 6-DoF object tracking framework that integrates deep learning with active contour models to achieve robust pose estimation from monocular video."
+      cite_text: |
+        @inproceedings{wang2023deep,
+          title={Deep active contours for real-time 6-DoF object tracking},
+          author={Wang, Long and Yan, Shen and Zhen, Jianan and Liu, Yu and Zhang, Maojun and Zhang, Guofeng and Zhou, Xiaowei},
+          booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+          pages={14034--14044},
+          year={2023}
+        }
+
+      links:
+          - name: Paper
+            url: "https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Deep_Active_Contours_for_Real-time_6-DoF_Object_Tracking_ICCV_2023_paper.pdf"
+
+          - name: Project Page
+            url: "https://zju3dv.github.io/deep_ac/"
+
+          - name: Code
+            url: "https://github.com/WangLongZJU/DeepAC"
+
+    - title: "Render-and-compare: Cross-view 6-dof localization from noisy prior"
+      authors_text: "Shen Yan, Xiaoya Cheng, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_Render2Loc.png"
+      journal: "ICME 2023"
+      intro: "An iterative framework that refines a noisy initial pose by matching rendered synthetic views with actual query images to bridge the geometric gap between aerial and ground perspectives."
+      cite_text: |
+        @inproceedings{yan2023render,
+          title={Render-and-compare: Cross-view 6-dof localization from noisy prior},
+          author={Yan, Shen and Cheng, Xiaoya and Liu, Yuxiang and Zhu, Juelin and Wu, Rouwan and Liu, Yu and Zhang, Maojun},
+          booktitle={2023 IEEE International Conference on Multimedia and Expo (ICME)},
+          pages={2171--2176},
+          year={2023},
+          organization={IEEE}
+        }
+
+      links:
+          - name: Paper
+            url: "https://arxiv.org/pdf/2302.06287.pdf"
+
+          - name: Code
+            url: "https://github.com/Choyaa/Render2Loc"
+
+    - title: "Long-term Visual Localization with Mobile Sensors"
+      authors_text: "Shen Yan, Yu Liu, Long Wang, Zehong Shen, Zhen Peng, Haomin Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_SensLoc.png"
+      journal: "CVPR 2023"
+      intro: "Addresses extreme seasonal and structural appearance changes by tightly fusing visual information with standard mobile sensor data (GPS, compass, gravity)."
+      cite_text: |
+        @inproceedings{yan2023long,
+          title={Long-term Visual Localization with Mobile Sensors},
+          author={Yan, Shen and Liu, Yu and Wang, Long and Shen, Zehong and Peng, Zhen and Liu, Haomin and Zhang, Maojun and Zhang, Guofeng and Zhou, Xiaowei},
+          booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+          pages={17245--17255},
+          year={2023}
+        }
+
+      links:
+          - name: Paper
+            url: "https://openaccess.thecvf.com/content/CVPR2023/papers/Yan_Long-Term_Visual_Localization_With_Mobile_Sensors_CVPR_2023_paper.pdf"
+
+          - name: Project Page
+            url: "https://zju3dv.github.io/sensloc/"
+
+    
+  step2:
+
+    - title: "Spectral–spatial Adversarial Multidomain Synthesis Network for Cross-scene Hyperspectral Image Classification"
+      authors_text: "Xi Chen, Lin Gao, Maojun Zhang†, Chen Chen, Shen Yan"
+      media_icon:
+        type: image
+        src: "img/research/teaser_S2AMSnet.png"
+      journal: "TGRS 2024"
+      intro: "A Method for Robust Cross-Scene Hyperspectral Image Classification via Expansion of Source Domain Distribution Diversity."
       cite_text: |
         @article{chen2024spectral,
           title={Spectral--spatial adversarial multidomain synthesis network for cross-scene hyperspectral image classification},
@@ -163,25 +263,23 @@ research_step_papers:
           pages={1--16},
           year={2024},
           publisher={IEEE}
-          }
-      
+        }
+
       links:
           - name: Paper
             url: "https://ieeexplore.ieee.org/abstract/document/10531019"
-        
-          - name: Project Page
-            url: "https://github.com/daxichen/S2AMSnet"
-        
+
           - name: Code
             url: "https://github.com/daxichen/S2AMSnet"
-    
-  
+
+
     - title: "Target Detection With Spectral Graph Contrast Clustering Assignment and Spectral Graph Transformer in Hyperspectral Imagery"
-      authors_text: "Xi Chen, **Maojun Zhang**, Yu Liu"
+      authors_text: "Xi Chen, Maojun Zhang†, Yu Liu"
       media_icon:
         type: image
-        src: "img/research/Target Detection With Spectral Graph.png"
-      journal: "IEEE Transactions on Geoscience and Remote Sensing"
+        src: "img/research/teaser_TGRS_Target.png"
+      journal: "TGRS 2024"
+      intro: "A Method for Hyperspectral Image Target Detection."
       cite_text: |
         @article{chen2024target,
           title={Target detection with spectral graph contrast clustering assignment and spectral graph transformer in hyperspectral imagery},
@@ -191,25 +289,19 @@ research_step_papers:
           pages={1--16},
           year={2024},
           publisher={IEEE}
-          }
-          
+        }
+
       links:
           - name: Paper
             url: "https://ieeexplore.ieee.org/abstract/document/10509725"
-        
-          - name: Project Page
-            url: "https://github.com/daxichen"
-        
-          - name: Code
-            url: "https://github.com/daxichen"
     
   step3:
   
     - title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
-      authors_text: "Kun Yang, Yuxiang Liu, Zeyu Cui, Yu Liu, Maojun Zhang, Shen Yan, Qing Wang"
+      authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu, Maojun Zhang, Shen Yan, Qing Wang†"
       media_icon:
         type: image
-        src: "img/research/teaser_CVPR2025.png"
+        src: "img/research/teaser_NTRGaussian.png"
       journal: "CVPR 2025"
       cite_text: |
         @inproceedings{yang2025ntr,
@@ -222,16 +314,39 @@ research_step_papers:
       
       links:
           - name: Paper
-            url: "https://cvpr.thecvf.com/virtual/2025/poster/33236"
-        
-          - name: Project Page
-            url: "https://cvpr.thecvf.com/virtual/2025/poster/33236"
+            url: "https://openaccess.thecvf.com/content/CVPR2025/papers/Yang_NTR-Gaussian_Nighttime_Dynamic_Thermal_Reconstruction_with_4D_Gaussian_Splatting_Based_CVPR_2025_paper.pdf"
         
           - name: Code
-            url: "https://cvpr.thecvf.com/virtual/2025/poster/33236"
+            url: "https://github.com/NPU-CVPG/NTR-Gaussian"
     
+    - title: "ThermalGS: Dynamic 3D Thermal Reconstruction with Gaussian Splatting"
+      authors_text: "Yuxiang Liu, Xi Chen, Shen Yan, Zeyu Cui, Huaxin Xiao, Yu Liu, Maojun Zhang†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_ThermalGS.gif"
+      journal: "Remote Sensing 2025"
+      cite_text: |
+        @article{thermalgs2025,
+        AUTHOR = {Liu, Yuxiang and Chen, Xi and Yan, Shen and Cui, Zeyu and Xiao, Huaxin and Liu, Yu and Zhang, Maojun},
+        TITLE = {ThermalGS: Dynamic 3D Thermal Reconstruction with Gaussian Splatting},
+        JOURNAL = {Remote Sensing},
+        VOLUME = {17},
+        YEAR = {2025},
+        NUMBER = {2},
+        ARTICLE-NUMBER = {335},
+        URL = {https://www.mdpi.com/2072-4292/17/2/335},
+        ISSN = {2072-4292},
+        DOI = {10.3390/rs17020335}
+        }
+      
+      links:
+          - name: Paper
+            url: "https://www.mdpi.com/2072-4292/17/2/335"
+        
+          - name: Code
+            url: "https://github.com/porcofly/ThermalGS-and-TSDN-Dataset"
 
-  
+
 ---
 
 Our lab pioneers **3D geospatial intelligence** with a focus on:

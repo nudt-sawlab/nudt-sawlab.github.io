@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo --gc --minify)",
+      "Bash(go clean -modcache)",
+      "Bash(GODEBUG=http2client=0 hugo mod get -u)",
+      "Bash(curl -I https://seekanywhere.github.io/)",
+      "Bash(gh run list --limit 5)",
+      "Bash(curl -I https://sawlab-ai.github.io/)",
+      "Bash(git config --global http.version HTTP/1.1)",
+      "Bash(git config --global http.postBuffer 524288000)",
+      "Bash(git config --global --unset http.version)",
+      "Bash(export GIT_CURL_VERBOSE=1)",
+      "Bash(brew uninstall hugo)",
+      "Bash(brew install hugo@0.135.0)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -L https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_extended_0.135.0_darwin-universal.tar.gz -o hugo.tar.gz)",
+      "Bash(tar -xzf hugo.tar.gz)",
+      "Bash(sudo mv hugo /usr/local/bin/hugo-0.135)",
+      "Bash(chmod +x /usr/local/bin/hugo-0.135)",
+      "Bash(/usr/local/bin/hugo-0.135 version)",
+      "Bash(hugo --ignoreCache)",
+      "Read(//Users/shenyan/Desktop/sawlab-ai.github.io/**)",
+      "Bash(sort -k2)",
+      "Bash(du -sh /Users/shenyan/Desktop/sawlab-ai.github.io/content/en/publication/*/)",
+      "Bash(find /Users/shenyan/Desktop/sawlab-ai.github.io -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" -o -iname \"*.gif\" -o -iname \"*.webp\" -o -iname \"*.svg\" \\\\\\) -exec du -c {} +)",
+      "Bash(grep -E \"\\\\.\\(toml|yaml|yml\\)$\")",
+      "Bash(xargs du -sh)",
+      "Bash(ls -lh /Users/shenyan/Desktop/sawlab-ai.github.io/content/en/publication/*/)",
+      "Bash(grep -v \"/resources/\" -exec du -c {} +)",
+      "Bash(du -sh /Users/shenyan/Desktop/sawlab-ai.github.io/content/en/publication/*/*.gif)",
+      "Bash(ls -lh /Users/shenyan/Desktop/sawlab-ai.github.io/static/img/research/*.png)",
+      "Bash(ls -lh /Users/shenyan/Desktop/sawlab-ai.github.io/content/en/publication/*/teaser.png)",
+      "Bash(chmod +x /Users/shenyan/Desktop/sawlab-ai.github.io/scripts/*.sh)",
+      "WebFetch(domain:openreview.net)"
+    ],
+    "additionalDirectories": [
+      "/Users/shenyan/Library/Caches/hugo_cache/modules"
+    ]
+  }
+}

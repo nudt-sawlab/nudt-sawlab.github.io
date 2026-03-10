@@ -32,8 +32,8 @@ experience:
     location: China
     date_start: '2019-09-01'
     date_end: ''
-    description: |2-
-      
+    description: ''
+
   - title: Student Member
     company: IEEE 
     company_url: ''
@@ -41,8 +41,7 @@ experience:
     location: USA
     date_start: '2022-01-01'
     date_end: ''
-    description: |2-
-        
+    description: ''
 
 design:
   columns: '2'

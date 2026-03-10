@@ -1,16 +1,10 @@
 ---
 
-title: SeekAnyWhere 猎影
-
+title: SAW (SeekAnyWhere)
 
 role: College of Systems Engineering
 
 school: National University of Defense Technology
-
-#organizations:
-#- name: Shanghai Jiao Tong University, China
-#  url: https://www.sjtu.edu.cn/
-  
 
 #email: "yanshen12@nudt.edu.cn"
 
@@ -65,8 +59,6 @@ social:
 #    icon_pack: fab
 #    link: "https://space.bilibili.com/86857008"
 
-  
-
 
 #- icon: instagram
 #  icon_pack: fab
@@ -80,16 +72,13 @@ bio:
 
 superuser: true
 
-
 highlight_name: true
 
-
-    
 
 ---
 
 
 Welcome to the website of SAW (SeekAnyWhere) Lab. Our lab is affiliated with the College of Systems Engineering at National University of Defense Technology. We are mainly engaged in the field of 3D Computer Vision, particularly including planet-scale digital twins, GPS-independent UAV localization, and physics-based multimodal simulation.  Most of our works are open-sourced, please explore our [Github Page](http://github.com/seekanywhere) to know more about our projects!
 
-Join Us:​​ We are looking for self-motivated students, postdocs and research assistants, please contact [this Email](mailto:yanshen12@nudt.edu.cn) if you are interested in working with us.
+**Join Us**:​​ We are looking for self-motivated students and postdocs, please contact [this Email](mailto:yanshen12@nudt.edu.cn) if you are interested in working with us.
 
