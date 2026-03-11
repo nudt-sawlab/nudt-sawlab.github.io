@@ -91,11 +91,18 @@
           <div class="col-12 col-md-2 pub-image-div-wrap">
             <div class="pub-image-wrap">
               {{ if eq $pub_item.media_icon.type "video" }}
-                <video autoplay="" loop="" muted="">
+                <video autoplay="" loop="" muted="" playsinline="">
                   <source src="{{ add $page_folder "/" $pub_item.media_icon.src | relLangURL }}" type="video/mp4">
                 </video>
+              {{ else if strings.HasSuffix $pub_item.media_icon.src ".gif" }}
+                {{ $gif_path := add $page_folder "/" $pub_item.media_icon.src }}
+                {{ $base := $gif_path | strings.TrimSuffix ".gif" }}
+                <video autoplay="" loop="" muted="" playsinline="" class="lazy-video" data-loaded="false">
+                  <source data-src="{{ (print $base ".webm") | relLangURL }}" type="video/webm">
+                  <source data-src="{{ (print $base ".mp4") | relLangURL }}" type="video/mp4">
+                </video>
               {{ else }}
-                <img src="{{ add $page_folder "/" $pub_item.media_icon.src | relLangURL }}"/>
+                <img src="{{ add $page_folder "/" $pub_item.media_icon.src | relLangURL }}" loading="lazy"/>
               {{ end }}
             </div>
           </div>
@@ -152,3 +159,36 @@
   </div>
 </div>
 
+<script>
+  // Lazy-load GIF-replaced videos in publications on page load via IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const lazyVideos = document.querySelectorAll('#container-publications-not-use-default-isotope video.lazy-video');
+    if (!lazyVideos.length) return;
+
+    function loadLazyPubVideo(video) {
+      if (video.dataset.loaded !== 'false') return;
+      video.querySelectorAll('source[data-src]').forEach(source => {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+      });
+      video.load();
+      video.play().catch(() => {});
+      video.dataset.loaded = 'true';
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            loadLazyPubVideo(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      lazyVideos.forEach(v => observer.observe(v));
+    } else {
+      lazyVideos.forEach(loadLazyPubVideo);
+    }
+  });
+</script>

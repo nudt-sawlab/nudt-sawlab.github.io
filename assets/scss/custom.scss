@@ -10,7 +10,7 @@
   font-family: "Optima Italic";
   font-style: normal;
   font-weight: normal;
-  src: local("Optima Italic"), url("../font/Optima_Italic.woff") format("woff");
+  src: local("Optima Italic"), url("../font/OPTIMA.woff") format("woff");
 }
 
 @font-face {
@@ -161,8 +161,9 @@ html, body {
   }
   .avatar-square {
     border-radius: 1.3rem;
-    width: 100px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
   }
 
   .big-icon {
@@ -267,13 +268,7 @@ html, body {
   }
 
 
-  video {
-    //height: 8rem;
-    //width: 11rem;
-    //height: 8rem;
-    //background-color: #999;
-    //padding: 0.5rem;
-  }
+
 
   .toggle-links-content{
     position: relative;

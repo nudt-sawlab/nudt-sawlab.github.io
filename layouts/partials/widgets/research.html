@@ -44,11 +44,17 @@
 
           <div class="pub-image-wrap">
             {{ if eq $paper.media_icon.type "video" }}
-            <video autoplay="" loop="" muted="">
+            <video autoplay="" loop="" muted="" playsinline="" loading="lazy">
               <source src="{{ $paper.media_icon.src | relLangURL }}" type="video/mp4">
             </video>
+            {{ else if strings.HasSuffix $paper.media_icon.src ".gif" }}
+            {{ $base := $paper.media_icon.src | strings.TrimSuffix ".gif" }}
+            <video autoplay="" loop="" muted="" playsinline="" class="lead-img lazy-video" data-loaded="false">
+              <source data-src="{{ (print $base ".webm") | relLangURL }}" type="video/webm">
+              <source data-src="{{ (print $base ".mp4") | relLangURL }}" type="video/mp4">
+            </video>
             {{ else }}
-            <img class="lead-img" src="{{ $paper.media_icon.src | relLangURL }}" />
+            <img class="lead-img" src="{{ $paper.media_icon.src | relLangURL }}" loading="lazy" />
             {{ end }}
           </div>
 
@@ -82,7 +88,7 @@
 
                 <div class="btn-links">
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
-                     href="javascript: togglePaperContent('research_intro_idx{{$p_index}}')">
+                     href="javascript: togglePaperContent('research_intro_{{$step}}_idx{{$p_index}}')">
                     <i class="fas fa-angle-double-down" >&nbsp;</i> Intro
                   </a>
                     {{ range $idx, $item := . }}
@@ -92,20 +98,20 @@
                       </a>
                     {{ end }}
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
-                     href="javascript: togglePaperContent('research_cite_idx{{$p_index}}')">
+                     href="javascript: togglePaperContent('research_cite_{{$step}}_idx{{$p_index}}')">
                     <i class="fas fa-quote-left"  >&nbsp;</i> Bibtex
                   </a>
                 </div>
               {{ end }}
 
               {{ with $paper.intro }}
-              <div class="toggle-content " id="research_intro_idx{{$p_index}}" style="display: none;">
+              <div class="toggle-content " id="research_intro_{{$step}}_idx{{$p_index}}" style="display: none;">
                 <div class=" ">{{ . }}</div>
               </div>
               {{ end }}
 
               {{ with $paper.cite_text }}
-                <div  class="toggle-content"  id="research_cite_idx{{$p_index}}" style="display: none;">
+                <div  class="toggle-content"  id="research_cite_{{$step}}_idx{{$p_index}}" style="display: none;">
                   <pre>{{ . }}</pre>
                 </div>
               {{ end }}
@@ -122,23 +128,36 @@
 <script>
   // let showProgress = false;
 
-  // steps
-  // const stepPages = ['step1', 'step2', 'step3'];
-  const stepPages = [];
-  {{ range  $key, $value := $page.Params.research_step_names }}
-  stepPages.push('{{$value}}');
-  {{ end }}
-
-  // active step
-  let activeStep = stepPages[0];
+  // active step key (e.g. 'step1'), initialised from the first tab's data-step attribute
+  let activeStep = '';
 
 
+
+  // Load src into a single lazy-video element and start playing
+  function loadLazyVideo(video) {
+    if (video.dataset.loaded !== 'false') return;
+    video.querySelectorAll('source[data-src]').forEach(source => {
+      source.src = source.dataset.src;
+      source.removeAttribute('data-src');
+    });
+    video.load();
+    video.play().catch(() => {});
+    video.dataset.loaded = 'true';
+  }
+
+  // Load all unloaded lazy-videos inside a given container element
+  function loadVideosIn(container) {
+    container.querySelectorAll('video.lazy-video[data-loaded="false"]').forEach(loadLazyVideo);
+  }
 
   function toggleShowProgress() {
     const progressElement = $(`.home-research-section .research-papers`);
-    if(progressElement) {
+    if (progressElement) {
       if (progressElement.hasClass('d-none')) {
         progressElement.removeClass('d-none');
+        // Section just became visible — load videos in the active step
+        const activeStepEl = document.querySelector(`.home-research-section .research-papers .research-step.${activeStep}`);
+        if (activeStepEl) loadVideosIn(activeStepEl);
       } else {
         progressElement.addClass('d-none');
       }
@@ -150,14 +169,25 @@
 
     function onStepChange() {
       $(`.home-research-section .research-papers .research-step`).addClass('d-none');
-      $(`.home-research-section .research-papers .${activeStep}`).removeClass('d-none');
+      const newStepEl = document.querySelector(`.home-research-section .research-papers .research-step.${activeStep}`);
+      if (newStepEl) {
+        newStepEl.classList.remove('d-none');
+        // Tab just became visible — load its videos
+        loadVideosIn(newStepEl);
+      }
     }
 
-
     function highlightTab() {
+      const tabs = document.querySelectorAll('.home-research-section .nav-item .nav-link');
+      // Read the initial active step key from the DOM
+      tabs.forEach(tab => {
+        if (tab.classList.contains('active')) {
+          activeStep = tab.dataset.step;
+        }
+      });
+
       $('.home-research-section .nav-item .nav-link').click((event) => {
         const thisElement = event.currentTarget;
-        // console.log(event)
         $('.home-research-section .nav-item .nav-link').removeClass('active');
         $(thisElement).addClass('active');
 
@@ -165,7 +195,6 @@
         onStepChange();
       });
     }
-
 
     highlightTab();
   }

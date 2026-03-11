@@ -43,7 +43,7 @@ research_step_papers:
   step1:
 
     - title: "UAV-GeoLoc: A Large-vocabulary Dataset and Geometry-Transformed Method for UAV Geo-Localization"
-      authors_text: "Rouwan Wu, jiacheng Deng, Mingyu Mou, Xingyi He, Maojun Zhang, Yu Liu, **Shen Yan**"
+      authors_text: "Rouwan Wu, Jiacheng Deng, Mingyu Mou, Xingyi He, Maojun Zhang, Yu Liu, **Shen Yan**"
       media_icon:
         type: image
         src: "img/research/teaser_UAVGeoLoc.gif"

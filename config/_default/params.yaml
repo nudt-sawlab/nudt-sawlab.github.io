@@ -18,10 +18,10 @@ appearance:
 
 marketing:
   seo:
-    site_type: Person
+    site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: ''
+    org_name: 'SAW Lab'
+    description: 'SAW (SeekAnyWhere) Lab at National University of Defense Technology. We focus on 3D Computer Vision: planet-scale digital twins, GPS-independent UAV localization, and physics-based multimodal simulation.'
     twitter: ''
   analytics:
     google_analytics: ''
@@ -75,9 +75,9 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/seekanywhere/sawlab-ai.github.io'
     content_dir: content
-    branch: master
+    branch: main
   avatar:
     gravatar: false
     shape: square

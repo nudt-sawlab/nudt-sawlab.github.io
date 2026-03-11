@@ -3,7 +3,7 @@ title: "LoD-Loc: Aerial Visual Localization using LoD 3D Map with Neural Wirefra
 authors_text: "Juelin Zhu*, Shen Yan*, Long Wang, Shengyue Zhang, Yu Liu, Maojun Zhang†"
 journal: "NeurIPS 2024"
 date: 2024-07-10
-intro: ""
+intro: "A method for aerial visual localization that uses LoD (Level-of-Detail) 3D city maps combined with neural wireframe alignment to achieve accurate 6-DoF pose estimation without requiring high-resolution textured models."
 weight: 3
 media_icon:
   type: "image"
