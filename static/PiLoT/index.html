@@ -381,9 +381,10 @@
               </div>
               <div class="column">
                 <p class="mb-5">
-                  <a class="btn btn-large btn-light" href="#" role="button" target="_blank">
+                  <a class="btn btn-large btn-light" href="https://drive.google.com/drive/folders/15hReGuoEGH5zdAWcFbszgIphJjD2BCDT?usp=drive_link" role="button" target="_blank" rel="noopener noreferrer">
                     <i class="fa-solid fa-database"></i>
-                    <b>Dataset(Coming Soon)</b>
+                    <b>Dataset</b>
+                    <span class="d-block" style="font-size: 0.72em; font-weight: 400; opacity: 0.85; margin-top: 2px;">uploading…</span>
                   </a>
                 </p>
               </div>
@@ -460,7 +461,7 @@
         <div class="col-12">
           <h3>Abstract</h3>
           <hr style="margin-top: 0px" />
-          <img src="static/images/teaser.png" alt="PiLoT teaser" width="100%" style="border-radius: 10px; margin-bottom: 1rem;" />
+          <img src="static/images/overview_v16.png" alt="PiLoT teaser" width="100%" style="border-radius: 10px; margin-bottom: 1rem;" />
           <p style="text-align: justify; text-justify: inter-word;">
             Conventional UAV geo-localization relies on decoupled GNSS-VIO pipelines and active sensors, which are prone to failure in GNSS-denied environments. In this work, we present <b style="color: var(--pilot-pink);">PiLoT</b>, a unified framework that directly registers live video against geo-referenced 3D maps, breaking the traditional dependency on GNSS. We introduce a dual-thread engine to decouple map rendering from localization, maintaining high accuracy at low latency. By leveraging a large-scale synthetic dataset and a joint neural-guided stochastic optimizer, PiLoT achieves <span class="text-blue">drift-free</span>, <span class="text-red">real-time</span>, and <span class="text-green">long-term</span> ego and target geo-localization across diverse and challenging environments.
           </p>
@@ -476,7 +477,7 @@
         <div class="col-12">
           <h3>Method Pipeline</h3>
           <hr style="margin-top: 0px" />
-          <img src="static/images/method_pipeline.png" alt="PiLoT Pipeline" class="pipeline-image" />
+          <img src="static/images/method_overview_v2.png" alt="PiLoT Pipeline" class="pipeline-image" />
           <p style="text-align: justify; text-justify: inter-word; margin-top: 1rem;">
             Given a geo-referenced 3D map, a monocular video stream with known camera intrinsics, and a single pose prior for the first frame, we address UAV-based ego localization and target geo-localization without GNSS or IMU. Our goals are twofold: (1) estimate the camera pose for every query frame, and (2) enable precise pixel-to-geo projection that maps any query pixel on each frame to real-world coordinates (longitude, latitude, altitude).
           </p>
