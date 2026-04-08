@@ -11,9 +11,9 @@ media_icon:
 
 links:
 
-  # - name: Home
-  #   url: "/PiLoT/"
-  #   css_class: home-link
+  - name: Home
+    url: "/SpectralMoE/"
+    css_class: home-link
 
   - name: Paper
     url: "https://arxiv.org/pdf/2603.13352"
