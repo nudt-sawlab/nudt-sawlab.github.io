@@ -40,31 +40,47 @@
       {{ range $paper := $paper_items }}
         {{ $matched_pages := where (where site.RegularPages "Type" "publication") "Params.title" $paper.title }}
         {{ $sort_date := "0001-01-01" }}
+        {{ $pub_page := nil }}
         {{ with index ($matched_pages | first 1) 0 }}
           {{ $sort_date = .Date }}
+          {{ $pub_page = . }}
         {{ end }}
-        {{ $sorted_papers = $sorted_papers | append (dict "paper" $paper "sort_date" $sort_date) }}
+        {{ $sorted_papers = $sorted_papers | append (dict "paper" $paper "sort_date" $sort_date "pub_page" $pub_page) }}
       {{ end }}
       {{ range  $p_index, $entry := sort $sorted_papers "sort_date" "desc" }}
       {{ $paper := $entry.paper }}
+      {{ $pub_page := $entry.pub_page }}
+      {{ $media_type := $paper.media_icon.type }}
+      {{ $media_src := $paper.media_icon.src }}
+      {{ if $pub_page }}
+        {{ with $pub_page.Params.media_icon }}
+          {{ $media_type = .type }}
+          {{ $media_src = .src }}
+        {{ end }}
+      {{ end }}
+      {{ $page_folder := "" }}
+      {{ if $pub_page }}
+        {{ $page_folder = substr $pub_page.Path 1 }}
+      {{ end }}
       <div class="research-step-item row">
         <div class="col-12 col-md-2 pub-image-div-wrap" >
 
           {{/*<img class="lead-img" src="{{ $paper.image | relLangURL }}" />*/}}
 
           <div class="pub-image-wrap">
-            {{ if eq $paper.media_icon.type "video" }}
+            {{ if eq $media_type "video" }}
             <video autoplay="" loop="" muted="" playsinline="" loading="lazy">
-              <source src="{{ $paper.media_icon.src | relLangURL }}" type="video/mp4">
+              <source src="{{ cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}" type="video/mp4">
             </video>
-            {{ else if strings.HasSuffix $paper.media_icon.src ".gif" }}
-            {{ $base := $paper.media_icon.src | strings.TrimSuffix ".gif" }}
+            {{ else if strings.HasSuffix $media_src ".gif" }}
+            {{ $gif_path := cond $pub_page (add $page_folder "/" $media_src) $media_src }}
+            {{ $base := $gif_path | strings.TrimSuffix ".gif" }}
             <video autoplay="" loop="" muted="" playsinline="" class="lead-img lazy-video" data-loaded="false">
               <source data-src="{{ (print $base ".webm") | relLangURL }}" type="video/webm">
               <source data-src="{{ (print $base ".mp4") | relLangURL }}" type="video/mp4">
             </video>
             {{ else }}
-            <img class="lead-img" src="{{ $paper.media_icon.src | relLangURL }}" loading="lazy" />
+            <img class="lead-img" src="{{ cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}" loading="lazy" />
             {{ end }}
           </div>
 
