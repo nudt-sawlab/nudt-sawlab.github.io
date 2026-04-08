@@ -36,7 +36,17 @@
         {{ $step_index = add  1 $step_index }}
 
     <div class="research-step {{$step}} container {{ if ne $step_index 1 }} d-none {{ end }} "  >
-      {{ range  $p_index, $paper := $paper_items }}
+      {{ $sorted_papers := slice }}
+      {{ range $paper := $paper_items }}
+        {{ $matched_pages := where (where site.RegularPages "Type" "publication") "Params.title" $paper.title }}
+        {{ $sort_date := "0001-01-01" }}
+        {{ with index ($matched_pages | first 1) 0 }}
+          {{ $sort_date = .Date }}
+        {{ end }}
+        {{ $sorted_papers = $sorted_papers | append (dict "paper" $paper "sort_date" $sort_date) }}
+      {{ end }}
+      {{ range  $p_index, $entry := sort $sorted_papers "sort_date" "desc" }}
+      {{ $paper := $entry.paper }}
       <div class="research-step-item row">
         <div class="col-12 col-md-2 pub-image-div-wrap" >
 
