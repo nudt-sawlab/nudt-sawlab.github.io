@@ -244,6 +244,56 @@ research_step_papers:
           - name: Project Page
             url: "https://zju3dv.github.io/sensloc/"
 
+    - title: "PiLoT: Neural Pixel-to-3D Registration for UAV-based Ego and Target Geo-localization"
+      authors_text: "Xiaoya Cheng, Long Wang, Yan Liu, Xinyi Liu, Hanlin Tan, Yu Liu, Maojun Zhang, **Shen Yan**"
+      media_icon:
+        type: image
+        src: "img/research/teaser_UAVGeoLoc.gif"
+      journal: "CVPR 2026"
+      intro: "A unified framework that directly registers live video against geo-referenced 3D maps for drift-free, real-time, and long-term UAV geo-localization in GNSS-denied environments."
+      cite_text: |
+        @inproceedings{cheng2026pilot,
+          author    = {Cheng, Xiaoya and Wang, Long and Liu, Yan and Liu, Xinyi and Tan, Hanlin and Liu, Yu and Zhang, Maojun and Yan, Shen},
+          title     = {PiLoT: Neural Pixel-to-3D Registration for UAV-based Ego and Target Geo-localization},
+          booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+          year      = {2026},
+        }
+
+      links:
+          - name: Paper
+            url: "https://arxiv.org/abs/2603.20778"
+
+          - name: Project Page
+            url: "/PiLoT/"
+
+          - name: Code
+            url: "https://github.com/nudt-sawlab/PiLoT"
+
+    - title: "LoD-Loc v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment"
+      authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Shen Yan†, Kun Yang, Maojun Zhang, Yu Liu"
+      media_icon:
+        type: image
+        src: "img/research/teaser_LoDLocv2.gif"
+      journal: "CVPR 2026"
+      intro: "A generalized aerial localization method for dense urban scenes that combines large-scale synthetic instance data with instance-level silhouette alignment to improve cross-scene generalization and reduce pose ambiguity."
+      cite_text: |
+        @article{peng2026lodlocv3generalizedaerial,
+          title={{LoD-Loc} v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment},
+          author={Peng, Shuaibang and Zhu, Juelin and Li, Xia and Yang, Kun and Zhang, Maojun and Liu, Yu and Yan, Shen},
+          journal={arXiv preprint arXiv:2603.19609},
+          year={2026}
+        }
+
+      links:
+          - name: Paper
+            url: "https://arxiv.org/abs/2603.19609"
+
+          - name: Project Page
+            url: "/LoD-Locv3/"
+
+          - name: Code
+            url: "https://github.com/pppppsb/LoD-Locv3"
+
     
   step2:
 
@@ -294,6 +344,31 @@ research_step_papers:
       links:
           - name: Paper
             url: "https://ieeexplore.ieee.org/abstract/document/10509725"
+
+
+    - title: "Local Precise Refinement: A Dual-Gated Mixture-of-Experts for Enhancing Foundation Model Generalization against Spectral Shifts"
+      authors_text: "Xi Chen, Maojun Zhang, Yu Liu, **Shen Yan**"
+      media_icon:
+        type: image
+        src: "img/research/teaser_S2AMSnet.png"
+      journal: "CVPR 2026"
+      intro: "A novel fine-tuning framework that utilizes a dual-gated Mixture-of-Experts architecture to perform spatially-adaptive, depth-guided feature refinement for robust domain-generalized semantic segmentation in spectral remote sensing."
+      cite_text: |
+        @misc{chen2026localpreciserefinementdualgated,
+          title={Local Precise Refinement: A Dual-Gated Mixture-of-Experts for Enhancing Foundation Model Generalization against Spectral Shifts},
+          author={Xi Chen and Maojun Zhang and Yu Liu and Shen Yan},
+          year={2026},
+          eprint={2603.13352},
+          archivePrefix={arXiv},
+          url={https://arxiv.org/abs/2603.13352},
+        }
+
+      links:
+          - name: Paper
+            url: "https://arxiv.org/pdf/2603.13352"
+
+          - name: Code
+            url: "https://github.com/daxichen/SpectralMoE-main"
     
   step3:
   

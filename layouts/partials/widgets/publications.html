@@ -128,10 +128,12 @@
                           {{ $item.name | markdownify | emojify }}
                       </a>
                     {{ end }}
+                  {{ with $cite_resource }}
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('pub_cite_idx{{$index}}')">
                     <i class="fas fa-quote-left"  >&nbsp;</i> Bibtex
                   </a>
+                  {{ end }}
                 </div>
               {{ end }}
 

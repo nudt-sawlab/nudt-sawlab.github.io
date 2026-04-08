@@ -97,10 +97,12 @@
                           {{ $item.name | markdownify | emojify }}
                       </a>
                     {{ end }}
+                  {{ with $paper.cite_text }}
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('research_cite_{{$step}}_idx{{$p_index}}')">
                     <i class="fas fa-quote-left"  >&nbsp;</i> Bibtex
                   </a>
+                  {{ end }}
                 </div>
               {{ end }}
 
