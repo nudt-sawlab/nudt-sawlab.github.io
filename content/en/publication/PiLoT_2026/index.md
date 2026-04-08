@@ -4,7 +4,7 @@ authors_text: "Xiaoya Cheng, Long Wang, Yan Liu, Xinyi Liu, Hanlin Tan, Yu Liu, 
 journal: "CVPR 2026"
 date: 2026-03-01
 intro: "A unified framework that directly registers live video against geo-referenced 3D maps for drift-free, real-time, and long-term UAV geo-localization in GNSS-denied environments."
-weight: 1
+weight: 3
 media_icon:
   type: "image"
   src: "teaser.png"
@@ -15,13 +15,15 @@ links:
     url: "/PiLoT/"
     css_class: home-link
 
-  # - name: Paper
-  #   url: "https://arxiv.org/pdf/xxxx.xxxxx.pdf"
-  #   css_class: paper-link
+  - name: Paper
+    url: "https://arxiv.org/abs/2603.20778"
+    css_class: paper-link
 
-  # - name: Code
-  #   url: "https://github.com/xxx/PiLoT"
-  #   css_class: code-link
+  - name: Code
+    url: "https://github.com/nudt-sawlab/PiLoT"
+    css_class: code-link
+
+ 
 
 
 

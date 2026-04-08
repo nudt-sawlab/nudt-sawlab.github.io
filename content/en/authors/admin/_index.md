@@ -24,7 +24,7 @@ social:
 
   - icon: github
     icon_pack: fab
-    link: "http://github.com/seekanywhere"
+    link: "https://github.com/nudt-sawlab"
 
 
 #  - icon:

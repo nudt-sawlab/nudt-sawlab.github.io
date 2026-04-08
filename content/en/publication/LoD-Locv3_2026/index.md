@@ -4,7 +4,7 @@ authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Shen Yan†, Kun Yang, Mao
 journal: "CVPR 2026"
 date: 2026-03-19
 intro: "A generalized aerial localization method for dense urban scenes that combines large-scale synthetic instance data with instance-level silhouette alignment to improve cross-scene generalization and reduce pose ambiguity."
-weight: 1
+weight: 3
 media_icon:
   type: "image"
   src: "teaser.png"
@@ -15,13 +15,18 @@ links:
     url: "/LoD-Locv3/"
     css_class: home-link
 
+  - name: Paper
+    url: "https://arxiv.org/abs/2603.19609"
+    css_class: paper-link
+   
+
   - name: Code
     url: "https://github.com/pppppsb/LoD-Locv3"
     css_class: code-link
 
-  - name: Video
-    url: "https://www.youtube.com/watch?v=pU2_JjncLPg"
-    css_class: code-link
+  # - name: Video
+  #   url: "https://www.youtube.com/watch?v=pU2_JjncLPg"
+  #   css_class: code-link
 
 
 
