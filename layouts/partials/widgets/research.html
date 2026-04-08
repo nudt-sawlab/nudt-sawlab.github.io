@@ -40,7 +40,7 @@
       {{ range $paper := $paper_items }}
         {{ $matched_pages := where (where site.RegularPages "Type" "publication") "Params.title" $paper.title }}
         {{ $sort_date := "0001-01-01" }}
-        {{ $pub_page := nil }}
+        {{ $pub_page := false }}
         {{ with index ($matched_pages | first 1) 0 }}
           {{ $sort_date = .Date }}
           {{ $pub_page = . }}
