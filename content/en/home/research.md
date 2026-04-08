@@ -169,7 +169,7 @@ research_step_papers:
         type: image
         src: "img/research/teaser_ATLoc.png"
       journal: "TGRS 2024"
-      intro: " This paper addresses the challenging problem of cross-view 6-DoF localization for thermal images by proposing a \\"Render-and-Compare\\" framework."
+      intro: ' This paper addresses the challenging problem of cross-view 6-DoF localization for thermal images by proposing a "Render-and-Compare" framework.'
       cite_text: |
         @ARTICLE{10387530,
           author={Liu, Yuxiang and Wu, Rouwan and Yan, Shen and Cheng, Xiaoya and Zhu, Juelin and Liu, Yu and Zhang, Maojun},
