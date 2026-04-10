@@ -136,12 +136,34 @@
     }
 
     /* Venue Badge */
+    .venue-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.65rem 0.85rem;
+      margin-top: 0.5rem;
+    }
+
     .venue-badge {
       display: inline-block;
       color: var(--pilot-gray);
       font-weight: bold;
       font-size: 1.5rem;
-      margin-top: 0.5rem;
+      margin: 0;
+    }
+
+    .highlight-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--pilot-pink);
+      padding: 0.35em 0.75em;
+      border-radius: 4px;
+      line-height: 1.2;
     }
 
     /* Stats Bar */
@@ -328,7 +350,7 @@
                 <span class="title-rest">UAV-based </span><span style="color: var(--pilot-pink);">Ego</span> <span class="title-rest">and</span> <span style="color: var(--pilot-blue);">Target</span> <span class="title-rest">Geo-localization</span>
               </b>
             </h1>
-            <h4 class="venue-badge">CVPR 2026</h4>
+            <h4 class="venue-badge">CVPR 2026 Highlight🌟</h4>
             <hr>
             <div class="author-list">
                 Xiaoya Cheng<sup>1</sup>
