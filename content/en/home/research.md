@@ -490,7 +490,7 @@ research_step_papers:
           css_class: paper-link
 
         - name: Code
-          url: "https://github.com/daxichen/SpectralMoE-main"
+          url: "https://github.com/nudt-sawlab/SpectralMoE-main"
           css_class: code-link
 
     - title: "Cross-SPECL: Cross-Scene Hyperspectral Image Classification via Spectral Stability Exploiting and Causal Learning"

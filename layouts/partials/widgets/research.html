@@ -52,11 +52,14 @@
       {{ $pub_page := $entry.pub_page }}
       {{ $media_type := $paper.media_icon.type }}
       {{ $media_src := $paper.media_icon.src }}
+      {{ $cite_text := $paper.cite_text }}
+      {{ $cite_resource := "" }}
       {{ if $pub_page }}
         {{ with $pub_page.Params.media_icon }}
           {{ $media_type = .type }}
           {{ $media_src = .src }}
         {{ end }}
+        {{ $cite_resource = $pub_page.Resources.GetMatch "cite.bib" }}
       {{ end }}
       {{ $page_folder := "" }}
       {{ if $pub_page }}
@@ -123,7 +126,7 @@
                           {{ $item.name | markdownify | emojify }}
                       </a>
                     {{ end }}
-                  {{ with $paper.cite_text }}
+                  {{ if or $cite_resource $cite_text }}
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('research_cite_{{$step}}_idx{{$p_index}}')">
                     <i class="fas fa-quote-left"  >&nbsp;</i> Bibtex
@@ -138,9 +141,13 @@
               </div>
               {{ end }}
 
-              {{ with $paper.cite_text }}
+              {{ if $cite_resource }}
                 <div  class="toggle-content"  id="research_cite_{{$step}}_idx{{$p_index}}" style="display: none;">
-                  <pre>{{ . }}</pre>
+                  <pre>{{ $cite_resource.Content }}</pre>
+                </div>
+              {{ else if $cite_text }}
+                <div  class="toggle-content"  id="research_cite_{{$step}}_idx{{$p_index}}" style="display: none;">
+                  <pre>{{ $cite_text }}</pre>
                 </div>
               {{ end }}
           </div>
