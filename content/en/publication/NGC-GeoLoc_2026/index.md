@@ -1,6 +1,6 @@
 ---
 title: "NGC-GeoLoc: Neural GeoCoordinate Regression for GPS-Denied UAV Geo-Localization"
-authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan"
+authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan†"
 journal: "IEEE Robotics and Automation Letters 2026"
 date: 2026-01-16
 intro: "NGC-GeoLoc is a novel dense coordinate regression framework for UAV geo-localization that replaces traditional retrieval methods, achieving scale/rotation robustness and map-size-independent, sub-second inference while outperforming baselines."

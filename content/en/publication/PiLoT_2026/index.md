@@ -2,7 +2,7 @@
 title: "PiLoT: Neural Pixel-to-3D Registration for UAV-based Ego and Target Geo-localization"
 authors_text: "Xiaoya Cheng, Long Wang, Yan Liu, Xinyi Liu, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
 journal: "CVPR 2026"
-date: 2026-03-01
+date: 2026-03-19
 intro: "A unified framework that directly registers live video against geo-referenced 3D maps for drift-free, real-time, and long-term UAV geo-localization in GNSS-denied environments."
 weight: 3
 media_icon:
