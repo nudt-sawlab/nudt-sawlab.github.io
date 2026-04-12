@@ -392,7 +392,7 @@ research_step_papers:
          
 
         - name: Code
-          url: "https://github.com/pppppsb/LoD-Locv3"
+          url: "https://github.com/nudt-sawlab/LoD-Loc-v3"
           css_class: code-link
 
         # - name: Video
