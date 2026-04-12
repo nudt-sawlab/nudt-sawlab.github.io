@@ -28,6 +28,14 @@
   {{ $archive_page = site.GetPage (printf "authors/%s" (urlize $st.Params.content.filters.author)) }}
   {{ $query = $query | intersect $archive_page.Pages }}
 {{ end }}
+{{ if $st.Params.content.filters.year_from }}
+  {{ $start := time (printf "%d-01-01" $st.Params.content.filters.year_from) }}
+  {{ $query = where $query "Date" ">=" $start }}
+{{ end }}
+{{ if $st.Params.content.filters.year_to }}
+  {{ $end := time (printf "%d-01-01" (add $st.Params.content.filters.year_to 1)) }}
+  {{ $query = where $query "Date" "<" $end }}
+{{ end }}
 
 {{ $count := len $query }}
 

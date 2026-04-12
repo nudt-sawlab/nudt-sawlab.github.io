@@ -18,13 +18,15 @@ content:
   # Page type to display. E.g. post, talk, publication...
   page_type: news
   # Choose how many pages you would like to display (0 = all pages)
-  count: 10
+  count: 0
   # Filter on criteria
   filters:
     author: ""
     category: ""
     publication_type: ""
     tag: ""
+    year_from: 2025
+    year_to: 2026
   # Page order: descending (desc) or ascending (asc) date.
   order: desc
 
