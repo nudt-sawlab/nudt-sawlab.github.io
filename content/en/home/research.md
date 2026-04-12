@@ -74,6 +74,26 @@ research_step_papers:
           url: "https://github.com/RingoWRW/GeoLoc-UAV"
           css_class: code-link
 
+    - title: "AerialExtreMatch: A Benchmark for Extreme-View Image Matching and Localization"
+      authors_text: "Rouwan Wu, Zhe Huang, Xingyi He, Yan Liu, Shen Yan, Sida Peng, Maojun Zhang†, Xiaowei Zhou†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_UAVGeoLoc.gif"
+      journal: "IEEE Robotics and Automation Letters 2026"
+      intro: "AerialExtreMatch is a large-scale benchmark for extreme-view UAV-to-satellite image matching and localization, featuring about 1.5 million synthetic pairs, a 32-level difficulty benchmark, and a real-world localization set."
+      links:
+        - name: Home
+          url: "https://xecades.github.io/AerialExtreMatch/"
+          css_class: home-link
+
+        - name: Paper
+          url: "https://ieeexplore.ieee.org/document/11434521"
+          css_class: paper-link
+
+        - name: Code
+          url: "https://github.com/Xecades/AerialExtreMatch"
+          css_class: code-link
+
     - title: "LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment"
       authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun  Zhang, Shen  Yan†"
       media_icon:
@@ -473,6 +493,18 @@ research_step_papers:
           url: "https://github.com/daxichen/SpectralMoE-main"
           css_class: code-link
 
+    - title: "Cross-SPECL: Cross-Scene Hyperspectral Image Classification via Spectral Stability Exploiting and Causal Learning"
+      authors_text: "Xi Chen, Maojun Zhang, Yuxiang Liu, Chen Chen, Shen Yan†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_S2AMSnet.png"
+      journal: "IEEE Transactions on Geoscience and Remote Sensing 2026"
+      intro: "A cross-scene hyperspectral image classification method based on spectral stability exploiting and causal learning."
+      links:
+        - name: Paper
+          url: "https://ieeexplore.ieee.org/document/11397394"
+          css_class: paper-link
+
   step3:
 
     - title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
@@ -503,6 +535,18 @@ research_step_papers:
         - name: Code
           url: "https://github.com/NPU-CVPG/NTR-Gaussian"
           css_class: code-link
+
+    - title: "3-D Thermal City Reconstruction via Thermal Mapping With RGB-Mesh Guidance"
+      authors_text: "Yuxiang Liu, Shen Yan, Maojun Zhang, Rouwan Wu, Huaxin Xiao, Yu Liu"
+      media_icon:
+        type: image
+        src: "img/research/teaser_ThermalGS.gif"
+      journal: "IEEE Transactions on Geoscience and Remote Sensing, vol. 64, 2026"
+      intro: "A 3-D thermal city reconstruction framework that uses a high-quality RGB mesh to guide thermal image registration, pixel-level thermal mapping, and temperature texture reconstruction for scalable, high-precision urban thermal modeling."
+      links:
+        - name: Paper
+          url: "https://ieeexplore.ieee.org/document/11345331"
+          css_class: paper-link
 
     - title: "ThermalGS: Dynamic 3D Thermal Reconstruction with Gaussian Splatting"
       authors_text: "Yuxiang Liu, Xi Chen, Shen Yan, Zeyu Cui, Huaxin Xiao, Yu Liu, Maojun Zhang†"
