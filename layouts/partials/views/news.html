@@ -2,16 +2,12 @@
 
 {{ $link := $item.RelPermalink }}
 {{ $target := "" }}
-{{ $date_label := "" }}
-{{ with $item.Params.date }}
-  {{ $date_label = time.Format "2006/01" . }}
-{{ end }}
 
 {{ if not $item.Params.hide_from_news_list }}
 <div class="media stream-item view-compact">
   <div class="media-body">
 
-      {{ if $date_label }}<span>[{{ $date_label }}]</span>{{ end }}
+      <span>[{{ $item.Params.date | time.Format "2006/01" }}]</span>
       <span>{{ $item.Title | markdownify | emojify }}</span>
 
 {{/*
