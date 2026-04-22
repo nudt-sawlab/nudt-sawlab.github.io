@@ -3,6 +3,7 @@
 {{ $link := $item.RelPermalink }}
 {{ $target := "" }}
 
+{{ if not $item.Params.hide_from_news_list }}
 <div class="media stream-item view-compact">
   <div class="media-body">
 
@@ -30,3 +31,4 @@
   */}}
 
 </div>
+{{ end }}
