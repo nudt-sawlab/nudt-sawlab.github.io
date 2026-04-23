@@ -79,7 +79,7 @@ research_step_papers:
       media_icon:
         type: image
         src: "img/research/teaser_UAVGeoLoc.gif"
-      journal: "IEEE Robotics and Automation Letters 2026"
+      journal: "RA-L 2026"
       intro: "AerialExtreMatch is a large-scale benchmark for extreme-view UAV-to-satellite image matching and localization, featuring about 1.5 million synthetic pairs, a 32-level difficulty benchmark, and a real-world localization set."
       links:
         - name: Home
@@ -338,7 +338,7 @@ research_step_papers:
       media_icon:
         type: image
         src: "img/research/teaser_UAVGeoLoc.gif"
-      journal: "IEEE Robotics and Automation Letters 2026"
+      journal: "RA-L 2026"
       intro: "NGC-GeoLoc is a novel dense coordinate regression framework for UAV geo-localization that replaces traditional retrieval methods, achieving scale/rotation robustness and map-size-independent, sub-second inference while outperforming baselines."
       cite_text: |
         @ARTICLE{11355838,
@@ -498,7 +498,7 @@ research_step_papers:
       media_icon:
         type: image
         src: "img/research/teaser_S2AMSnet.png"
-      journal: "IEEE Transactions on Geoscience and Remote Sensing 2026"
+      journal: "TGRS 2026"
       intro: "A cross-scene hyperspectral image classification method based on spectral stability exploiting and causal learning."
       links:
         - name: Paper
@@ -541,7 +541,7 @@ research_step_papers:
       media_icon:
         type: image
         src: "img/research/teaser_ThermalGS.gif"
-      journal: "IEEE Transactions on Geoscience and Remote Sensing, vol. 64, 2026"
+      journal: "TGRS 2026"
       intro: "A 3-D thermal city reconstruction framework that uses a high-quality RGB mesh to guide thermal image registration, pixel-level thermal mapping, and temperature texture reconstruction for scalable, high-precision urban thermal modeling."
       links:
         - name: Paper

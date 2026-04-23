@@ -1,7 +1,7 @@
 ---
 title: "AerialExtreMatch: A Benchmark for Extreme-View Image Matching and Localization"
 authors_text: "Rouwan Wu, Zhe Huang, Xingyi He, Yan Liu, Shen Yan, Sida Peng, Maojun Zhang†, Xiaowei Zhou†"
-journal: "IEEE Robotics and Automation Letters 2026"
+journal: "RA-L 2026"
 date: 2026-03-13
 intro: "AerialExtreMatch is a large-scale benchmark for extreme-view UAV-to-satellite image matching and localization, featuring about 1.5 million synthetic pairs, a 32-level difficulty benchmark, and a real-world localization set."
 weight: 3

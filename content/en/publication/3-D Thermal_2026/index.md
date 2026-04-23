@@ -1,7 +1,7 @@
 ---
 title: "3-D Thermal City Reconstruction via Thermal Mapping With RGB-Mesh Guidance"
 authors_text: "Yuxiang Liu, Shen Yan, Maojun Zhang, Rouwan Wu, Huaxin Xiao, Yu Liu"
-journal: "IEEE Transactions on Geoscience and Remote Sensing, vol. 64, 2026"
+journal: "TGRS 2026"
 date: 2026-01-12
 intro: "A 3-D thermal city reconstruction framework that uses a high-quality RGB mesh to guide thermal image registration, pixel-level thermal mapping, and temperature texture reconstruction for scalable, high-precision urban thermal modeling."
 weight: 3
