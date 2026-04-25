@@ -88,7 +88,7 @@
           {{ $cite_resource := $item.Resources.GetMatch "cite.bib" }}
 
         <div class="row pub-item grid-sizer isotope-item year-{{ $pub_item.Date.Format "2006" }}" style=" ">
-          <div class="col-12 col-md-2 pub-image-div-wrap">
+          <div class="col-12 col-md-auto pub-image-div-wrap">
             <div class="pub-image-wrap">
               {{ if eq $pub_item.media_icon.type "video" }}
                 <video autoplay="" loop="" muted="" playsinline="">
@@ -106,7 +106,7 @@
               {{ end }}
             </div>
           </div>
-          <div class="col-12 col-md-10">
+          <div class="col-12 col-md pub-content-wrap">
               <div>
               <div><span class="pub-title">{{ $pub_item.title | markdownify | emojify }}</span></div>
               <div><span class="pub-author">{{ $pub_item.authors_text | markdownify | emojify }}</span></div>
