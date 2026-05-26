@@ -1,6 +1,6 @@
 ---
-title: "FCP-SatMVS accepted by ICME 2026."
-date: "2026-05-01"
+title: "Local Precise Refinement accepted by CVPR 2026."
+date: "2026-03-27"
 # featured 设为 true 则在首页展示
 featured: true
 
