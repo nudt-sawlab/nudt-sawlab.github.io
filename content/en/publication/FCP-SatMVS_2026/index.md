@@ -2,12 +2,12 @@
 title: "FCP-SatMVS: Feature-Context-Progressive Network for Robust Satellite Digital Surface Model"
 authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao*"
 journal: "ICME 2026"
-date: 2026-01-12
+date: 2026-05-01
 intro: "A novel cascade multi-view stereo framework, FCP-SatMVS, that performs texture-aware, elevation-consistent, and uncertainty-guided depth refinement for high-precision Digital Surface Model reconstruction in satellite remote sensing."
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "tearse.png"
 
 links:
 

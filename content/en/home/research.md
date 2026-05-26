@@ -493,6 +493,18 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/SpectralMoE-main"
           css_class: code-link
 
+    - title: "FCP-SatMVS: Feature-Context-Progressive Network for Robust Satellite Digital Surface Model"
+      authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao*"
+      media_icon:
+        type: image
+        src: "img/research/teaser_S2AMSnet.png"
+      journal: "ICME 2026"
+      intro: "A novel cascade multi-view stereo framework, FCP-SatMVS, that performs texture-aware, elevation-consistent, and uncertainty-guided depth refinement for high-precision Digital Surface Model reconstruction in satellite remote sensing."
+      links:
+        - name: Code
+          url: "https://github.com/nudt-sawlab/FCP-SatMVS"
+          css_class: code-link
+
     - title: "Cross-SPECL: Cross-Scene Hyperspectral Image Classification via Spectral Stability Exploiting and Causal Learning"
       authors_text: "Xi Chen, Maojun Zhang, Yuxiang Liu, Chen Chen, Shen Yan†"
       media_icon:
