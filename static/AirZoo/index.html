@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta content="AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision" name="title" />
+  <meta content="AirZoo is a world-scale synthetic UAV dataset and benchmark for aerial image retrieval, cross-view matching, and multi-view 3D reconstruction." name="description" />
+  <meta content="AirZoo, UAV, aerial geometric vision, dataset, benchmark, RGB-D, 3D reconstruction, geo-localization" name="keywords" />
+  <meta content="index, follow" name="robots" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="English" name="language" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Xiaoya Cheng, Rouwan Wu, Xinyi Liu, Zeyu Cui, Yan Liu, Na Zhao, Yu Liu, Maojun Zhang, Shen Yan" name="author" />
+  <title>AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision</title>
+
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap-4.4.1.js"></script>
+
+  <link href="static/css/bootstrap-4.4.1.css" rel="stylesheet" />
+  <link href="static/css/airzoo.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/solid.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;800;900&amp;display=swap" rel="stylesheet" />
+  <link href="static/images/airzoo-logo.png" rel="icon" type="image/png" />
+</head>
+
+<body>
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>
+              <b>
+                <span class="airzoo-title-logo">
+                  <img src="static/images/airzoo-logo.png" alt="AirZoo logo" class="airzoo-logo" />
+                  <span class="airzoo-name"><span class="air-part">Air</span><span class="zoo-part">Zoo</span></span>
+                </span><span class="title-rest">: A Unified Large-Scale Dataset for</span>
+                <br />
+                <span class="title-rest">Grounding Aerial Geometric 3D Vision</span>
+              </b>
+            </h1>
+            <div class="venue-row">
+              <h4 class="venue-badge">ECCV 2026</h4>
+            </div>
+            <hr>
+            <div class="author-list">
+              Xiaoya Cheng<sup>1,*</sup>
+              Rouwan Wu<sup>1,*</sup>
+              Xinyi Liu<sup>1,*</sup>
+              Zeyu Cui<sup>1,*</sup>
+              Yan Liu<sup>3,*</sup>
+              Na Zhao<sup>2</sup>
+              Yu Liu<sup>1</sup>
+              Maojun Zhang<sup>1</sup>
+              Shen Yan<sup>1,†</sup>
+            </div>
+
+            <div class="affiliation-block">
+              <div>
+                <sup>1</sup><a href="https://nudt-sawlab.github.io/" target="_blank" rel="noopener noreferrer">National University of Defense Technology, Changsha, China</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>2</sup>Singapore University of Technology and Design, Singapore
+              </div>
+              <div>
+                <sup>3</sup>National Key Laboratory of Advanced Guidance and Control Technology
+              </div>
+              <div>
+                <sup>*</sup>Equal contribution&nbsp;&nbsp;&nbsp;&nbsp;<sup>†</sup>Corresponding author
+              </div>
+            </div>
+
+            <div class="row justify-content-center resource-row">
+              <div class="column">
+                <p class="mb-3">
+                  <a class="btn btn-large btn-light resource-btn" href="https://arxiv.org/abs/2604.26567" role="button" target="_blank" rel="noopener noreferrer">
+                    <i class="ai ai-arxiv"></i>
+                    <b>arXiv</b>
+                  </a>
+                </p>
+              </div>
+              <div class="column">
+                <p class="mb-3">
+                  <a class="btn btn-large btn-light resource-btn" href="https://huggingface.co/datasets/RingoWRW97/AirZoo-Real/tree/main" role="button" target="_blank" rel="noopener noreferrer">
+                    <span class="hf-logo">🤗</span>
+                    <b>Evaluation Benchmarks</b>
+                  </a>
+                </p>
+              </div>
+              <div class="column">
+                <p class="mb-3">
+                  <span class="btn btn-large btn-light resource-btn disabled-resource" role="button" aria-disabled="true">
+                    <span class="hf-logo">🤗</span>
+                    <span><b>Training Dataset</b><small>Coming soon</small></span>
+                  </span>
+                </p>
+              </div>
+              <div class="column">
+                <p class="mb-3">
+                  <span class="btn btn-large btn-light resource-btn disabled-resource" role="button" aria-disabled="true">
+                    <i class="fa-brands fa-github"></i>
+                    <span><b>Rendering Engine</b><small>Coming soon</small></span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="lead-line">
+            A world-scale UAV simulation engine with pixel-perfect RGB-D geometry for aerial spatial intelligence.
+          </div>
+          <div class="main-video-wrapper zoom-element">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="static/images/demo-poster.jpg" class="demo-video" width="100%">
+              <source src="static/video/Supp_demo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="main-figure-wrapper figure-panel zoom-element">
+            <img src="static/images/overview_v9.jpg" alt="Overview of AirZoo dataset and benchmarks" class="paper-figure" />
+          </div>
+          <div class="minimal-stats-bar">
+            <div class="stat-unit">
+              <span class="stat-val">378</span> <span class="stat-lab">Regions</span>
+            </div>
+            <div class="stat-sep">|</div>
+            <div class="stat-unit">
+              <span class="stat-val">22</span> <span class="stat-lab">Countries</span>
+            </div>
+            <div class="stat-sep">|</div>
+            <div class="stat-unit">
+              <span class="stat-val">1.2M+</span> <span class="stat-lab">Frames</span>
+            </div>
+            <div class="stat-sep">|</div>
+            <div class="stat-unit">
+              <span class="stat-val">2,386 km</span> <span class="stat-lab">Flight Distance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Abstract</h3>
+          <hr style="margin-top: 0px" />
+          <p class="section-copy">
+            Despite rapid progress in data-driven 3D vision, aerial geometric 3D vision remains limited by the scarcity of large-scale, high-fidelity training data. AirZoo bridges this gap with a unified dataset and benchmark for UAV-based sensing. It combines a <span class="text-green">scalable generation pipeline</span> built on world-scale photogrammetric 3D meshes, <span class="text-teal">comprehensive scene diversity</span> across 378 regions in 22 countries, and <span class="text-sky">rich geometric annotations</span> including pixel-aligned metric depth, camera intrinsics, and precise 6-DoF geo-referenced poses. Through aerial image retrieval, cross-view matching, and multi-view 3D reconstruction, AirZoo acts as a pre-training engine that improves state-of-the-art models such as MegaLoc, RoMa, VGGT, and Depth Anything 3 on real-world aerial benchmarks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Dataset Construction</h3>
+          <hr style="margin-top: 0px" />
+          <div class="figure-panel zoom-element">
+            <img src="static/images/method_data_show_v2.jpg" alt="AirZoo construction pipeline and properties" class="paper-figure" loading="lazy" />
+          </div>
+          <p class="section-copy mt-3">
+            AirZoo uses Cesium for Unreal to stream Google 3D Tiles into UE5, then drives a custom AirSim-Cesium-Unreal simulator over global terrains. The pipeline logs continuous UAV video sequences rather than isolated screenshots, producing synchronized RGB images, dense metric depth, calibrated intrinsics, and Earth-fixed 6-DoF poses. Weather and illumination are systematically varied along the same trajectories, encouraging models to learn geometry that survives appearance changes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Scale and Geometry</h3>
+          <hr style="margin-top: 0px" />
+          <div class="figure-panel zoom-element">
+            <img src="static/images/method_data_staticis_v10.jpg" alt="Comprehensive statistics of the AirZoo dataset" class="paper-figure" loading="lazy" />
+          </div>
+          <p class="section-copy mt-3">
+            The dataset contains over 1.2 million high-resolution frames at 1600 &times; 1200 pixels, collected from nearly 2,386 km of simulated flight trajectories. Each region is rendered under multiple weather and time-of-day conditions, while the camera envelope spans 0-800 m altitude and 10&deg;-90&deg; pitch angles, covering oblique-to-nadir UAV viewpoints.
+          </p>
+          <div class="figure-panel zoom-element mt-3">
+            <img src="static/images/method_data_geometric_validation_v3.jpg" alt="Geometric verification of AirZoo depth and poses" class="paper-figure" loading="lazy" />
+            <p class="figure-caption">Bidirectional projection checks report a 0.066% median relative depth error, with P90 at 0.174% and P95 at 0.380%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>AirZoo-Real Benchmark</h3>
+          <hr style="margin-top: 0px" />
+          <p class="section-copy">
+            AirZoo also evaluates real-flight transfer through AirZoo-Real, a collected benchmark with RTK-aligned UAV imagery. The reconstruction split includes 9,430 images from four areas captured across 06:00-08:00, 12:00-14:00, and 18:00-20:00, with extra 22:00-24:00 low-light flights for two scenes. The benchmark resources are available through the Evaluation Benchmarks link above.
+          </p>
+          <div class="figure-panel zoom-element">
+            <img src="static/images/airzoo_real_recon.jpg" alt="AirZoo-Real examples for reconstruction evaluation" class="paper-figure" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>Evaluation Tracks</h3>
+          <hr style="margin-top: 0px" />
+          <div class="track-block">
+            <h4><span class="track-index">1</span>Aerial Image Retrieval</h4>
+            <p class="section-copy">
+              Given a UAV query, the retrieval task finds the most relevant geo-tagged satellite tile under large viewpoint, scale, illumination, and seasonal changes. AirZoo fine-tuning improves top-rank retrieval quality, especially on the harder AirZoo-Real split with arbitrary UAV viewpoints.
+            </p>
+            <div class="figure-panel zoom-element">
+              <img src="static/images/retrieval_results.jpg" alt="Qualitative cross-view geo-localization comparisons" class="paper-figure" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="track-block">
+            <h4><span class="track-index">2</span>Cross-view Matching</h4>
+            <p class="section-copy">
+              Matching orthophoto references to oblique UAV imagery is central to UAV pose estimation. AirZoo exposes RoMa to difficult orthophoto-to-oblique pairs with controlled overlap, improving correspondence quality under altitude, viewpoint, and weather variation.
+            </p>
+            <div class="figure-panel zoom-element">
+              <img src="static/images/match_result.jpg" alt="Qualitative cross-view matching results on AirZoo-Real" class="paper-figure" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="track-block">
+            <h4><span class="track-index">3</span>Multi-view 3D Reconstruction</h4>
+            <p class="section-copy">
+              UAV sequences introduce wide baselines, strong oblique views, and lighting changes that ground-view training data rarely covers. Fine-tuning VGGT and DA3 on AirZoo consistently improves reconstruction performance across synthetic and real aerial evaluations.
+            </p>
+            <div class="figure-panel zoom-element">
+              <img src="static/images/reconstruction_results.jpg" alt="Qualitative multi-view 3D reconstruction results" class="paper-figure" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br />
+        <h3>Citation</h3>
+        <hr style="margin-top: 0px" />
+        <pre class="citation-block"><code>@article{cheng2026airzoo,
+  author  = {Cheng, Xiaoya and Wu, Rouwan and Liu, Xinyi and Cui, Zeyu and Liu, Yan and Zhao, Na and Liu, Yu and Zhang, Maojun and Yan, Shen},
+  title   = {AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision},
+  journal = {arXiv preprint arXiv:2604.26567},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2604.26567}
+}</code></pre>
+        <hr />
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Acknowledgements</h3>
+          <hr style="margin-top: 0px" />
+          <p class="ack-text">
+            AirZoo is built with <a href="https://cesium.com/platform/cesium-for-unreal/" target="_blank" rel="noopener noreferrer">Cesium for Unreal</a>, Unreal Engine 5, AirSim, and Google 3D Tiles. This website template is borrowed from <a href="https://github.com/zju3dv/zju3dv.github.io/tree/master/longvolcap" target="_blank" rel="noopener noreferrer">longvolcap</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
