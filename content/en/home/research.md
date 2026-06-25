@@ -331,7 +331,42 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/PiLoT"
           css_class: code-link
 
-       
+    - title: "AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision"
+      authors_text: "Xiaoya Cheng*, Rouwan Wu*, Xinyi Liu*, Zeyu Cui*, Yan Liu*, Na Zhao, Yu Liu, Maojun Zhang, Shen Yan†"
+      media_icon:
+        type: image
+        src: "img/research/teaser_AirZoo.jpg"
+      journal: "ECCV 2026"
+      intro: "A world-scale synthetic UAV dataset and benchmark for aerial image retrieval, cross-view matching, and multi-view 3D reconstruction, with pixel-aligned RGB-D geometry and geo-referenced 6-DoF poses for stronger aerial pre-training and real-world transfer."
+      cite_text: |
+        @article{cheng2026airzoo,
+          author  = {Cheng, Xiaoya and Wu, Rouwan and Liu, Xinyi and Cui, Zeyu and Liu, Yan and Zhao, Na and Liu, Yu and Zhang, Maojun and Yan, Shen},
+          title   = {AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision},
+          journal = {arXiv preprint arXiv:2604.26567},
+          year    = {2026},
+          url     = {https://arxiv.org/abs/2604.26567}
+        }
+
+      links:
+        - name: Home
+          url: "/AirZoo/"
+          css_class: home-link
+
+        - name: Paper
+          url: "https://arxiv.org/abs/2604.26567"
+          css_class: paper-link
+
+        - name: Dataset
+          url: "https://huggingface.co/datasets/choyaa/AirZoo/tree/main"
+          css_class: code-link
+
+        - name: Benchmarks
+          url: "https://huggingface.co/datasets/RingoWRW97/AirZoo-Real/tree/main"
+          css_class: code-link
+
+        - name: Code
+          url: "https://github.com/nudt-sawlab/AirZoo"
+          css_class: code-link
 
     - title: "NGC-GeoLoc: Neural GeoCoordinate Regression for GPS-Denied UAV Geo-Localization"
       authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan"
