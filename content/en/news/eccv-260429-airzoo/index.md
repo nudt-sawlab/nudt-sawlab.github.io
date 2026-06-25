@@ -1,6 +1,6 @@
 ---
 title: "AirZoo accepted by ECCV 2026."
-date: "2026-04-29"
+date: "2026-06-19"
 categories: ["Localization"]
 # featured 设为 true 则在首页展示
 featured: true
