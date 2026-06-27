@@ -45,37 +45,47 @@
           {{ $sort_date = .Date }}
           {{ $pub_page = . }}
         {{ end }}
-        {{ $sorted_papers = $sorted_papers | append (dict "paper" $paper "sort_date" $sort_date "pub_page" $pub_page) }}
+      {{ $sorted_papers = $sorted_papers | append (dict "paper" $paper "sort_date" $sort_date "pub_page" $pub_page) }}
       {{ end }}
       {{ range  $p_index, $entry := sort $sorted_papers "sort_date" "desc" }}
       {{ $paper := $entry.paper }}
       {{ $pub_page := $entry.pub_page }}
-      {{ $media_type := $paper.media_icon.type }}
-      {{ $media_src := $paper.media_icon.src }}
+      {{ $media_icon := $paper.media_icon }}
       {{ $cite_text := $paper.cite_text }}
       {{ $cite_resource := "" }}
       {{ if $pub_page }}
-        {{ with $pub_page.Params.media_icon }}
-          {{ $media_type = .type }}
-          {{ $media_src = .src }}
+        {{ with $pub_page.Params.research_media_icon }}
+          {{ $media_icon = . }}
+        {{ else }}
+          {{ with $pub_page.Params.media_icon }}
+            {{ $media_icon = . }}
+          {{ end }}
         {{ end }}
         {{ $cite_resource = $pub_page.Resources.GetMatch "cite.bib" }}
       {{ end }}
+      {{ $media_type := $media_icon.type | default "image" }}
+      {{ $media_src := $media_icon.src }}
       {{ $page_folder := "" }}
       {{ if $pub_page }}
         {{ $page_folder = substr $pub_page.Path 1 }}
       {{ end }}
+      {{ $media_url := cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}
+      {{ $media_is_video := or (eq $media_type "video") (strings.HasSuffix (lower $media_src) ".webm") (strings.HasSuffix (lower $media_src) ".mp4") }}
       <div class="research-step-item row">
         <div class="col-12 col-md-auto pub-image-div-wrap" >
 
           {{/*<img class="lead-img" src="{{ $paper.image | relLangURL }}" />*/}}
 
           <div class="pub-image-wrap">
-            {{ if eq $media_type "video" }}
+            {{ if $media_is_video }}
+            {{ $video_type := "video/mp4" }}
+            {{ if strings.HasSuffix (lower $media_src) ".webm" }}
+            {{ $video_type = "video/webm" }}
+            {{ end }}
             <video autoplay="" loop="" muted="" playsinline="" loading="lazy">
-              <source src="{{ cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}" type="video/mp4">
+              <source src="{{ $media_url }}" type="{{ $video_type }}">
             </video>
-            {{ else if strings.HasSuffix $media_src ".gif" }}
+            {{ else if strings.HasSuffix (lower $media_src) ".gif" }}
             {{ $gif_path := cond $pub_page (add $page_folder "/" $media_src) $media_src }}
             {{ $base := $gif_path | strings.TrimSuffix ".gif" }}
             <video autoplay="" loop="" muted="" playsinline="" class="lead-img lazy-video" data-loaded="false">
@@ -83,7 +93,7 @@
               <source data-src="{{ (print $base ".mp4") | relLangURL }}" type="video/mp4">
             </video>
             {{ else }}
-            <img class="lead-img" src="{{ cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}" loading="lazy" />
+            <img class="lead-img" src="{{ $media_url }}" loading="lazy" />
             {{ end }}
           </div>
 

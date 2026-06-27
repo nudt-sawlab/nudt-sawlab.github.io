@@ -9,6 +9,10 @@ media_icon:
   type: "image"
   src: "teaser.gif"
   style: "max-width: 400px; height: auto;"
+
+research_media_icon:
+  type: "image"
+  src: "research-card.png"
   
 links:
 
@@ -32,4 +36,3 @@ featured: true
 
 
 ---
-

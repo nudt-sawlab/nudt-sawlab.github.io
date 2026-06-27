@@ -8,6 +8,10 @@ weight: 3
 media_icon:
   type: "image"
   src: "teaser.png"
+
+research_media_icon:
+  type: "image"
+  src: "research-card.png"
   
 links:
 
@@ -31,5 +35,4 @@ featured: true
 
 
 ---
-
 

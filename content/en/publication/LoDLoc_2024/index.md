@@ -9,6 +9,10 @@ media_icon:
   type: "image"
   src: "LoD_Loc.gif"
   style: "max-width: 400px; height: auto;"
+
+research_media_icon:
+  type: "video"
+  src: "research-card.webm"
   
 links:
 
@@ -32,4 +36,3 @@ featured: true
 
 
 ---
-

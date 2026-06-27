@@ -8,6 +8,10 @@ weight: 3
 media_icon:
   type: "image"
   src: "Lod_Locv2_3.gif"
+
+research_media_icon:
+  type: "video"
+  src: "research-card.webm"
   
 links:
 
@@ -31,4 +35,3 @@ featured: true
 
 
 ---
-

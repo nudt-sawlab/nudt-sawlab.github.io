@@ -8,6 +8,10 @@ weight: 3
 media_icon:
   type: "image"
   src: "demo_small.gif"
+
+research_media_icon:
+  type: "video"
+  src: "research-card.mp4"
   
 links:
 
@@ -31,4 +35,3 @@ featured: true
 
 
 ---
-
