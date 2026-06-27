@@ -296,21 +296,24 @@ html, body {
 }
 
 .pub-image-wrap {
-  width: 180px;
   height: 110px;
   margin: 0.4rem 0 0 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  width: auto;
+  max-width: 100%;
+  overflow: visible;
 
   video, img {
-    width: 100%;
+    width: auto;
     height: 100%;
+    max-width: 100%;
     object-fit: contain;
     object-position: center;
     border-radius: 0;
     box-shadow: none;
+    display: block;
   }
 }
 

@@ -65,35 +65,40 @@
       {{ end }}
       {{ $media_type := $media_icon.type | default "image" }}
       {{ $media_src := $media_icon.src }}
+      {{ $media_src_lower := lower $media_src }}
+      {{ $media_base := $media_src | strings.TrimSuffix ".gif" | strings.TrimSuffix ".webm" | strings.TrimSuffix ".mp4" }}
+      {{ $poster_src := "" }}
+      {{ if or (eq $media_type "video") (strings.HasSuffix $media_src_lower ".gif") (strings.HasSuffix $media_src_lower ".webm") (strings.HasSuffix $media_src_lower ".mp4") }}
+        {{ $poster_src = print $media_base ".png" }}
+      {{ end }}
       {{ $page_folder := "" }}
       {{ if $pub_page }}
         {{ $page_folder = substr $pub_page.Path 1 }}
       {{ end }}
       {{ $media_url := cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}
-      {{ $media_is_video := or (eq $media_type "video") (strings.HasSuffix (lower $media_src) ".webm") (strings.HasSuffix (lower $media_src) ".mp4") }}
+      {{ $poster_url := cond $pub_page (add $page_folder "/" $poster_src | relLangURL) ($poster_src | relLangURL) }}
+      {{ $media_is_video := or (eq $media_type "video") (strings.HasSuffix $media_src_lower ".webm") (strings.HasSuffix $media_src_lower ".mp4") }}
       <div class="research-step-item row">
         <div class="col-12 col-md-auto pub-image-div-wrap" >
 
           {{/*<img class="lead-img" src="{{ $paper.image | relLangURL }}" />*/}}
 
           <div class="pub-image-wrap">
-            {{ if $media_is_video }}
+            {{ if or $media_is_video (strings.HasSuffix $media_src_lower ".gif") }}
             {{ $video_type := "video/mp4" }}
-            {{ if strings.HasSuffix (lower $media_src) ".webm" }}
+            {{ if strings.HasSuffix $media_src_lower ".webm" }}
             {{ $video_type = "video/webm" }}
             {{ end }}
-            <video autoplay="" loop="" muted="" playsinline="" loading="lazy">
-              <source src="{{ $media_url }}" type="{{ $video_type }}">
-            </video>
-            {{ else if strings.HasSuffix (lower $media_src) ".gif" }}
-            {{ $gif_path := cond $pub_page (add $page_folder "/" $media_src) $media_src }}
-            {{ $base := $gif_path | strings.TrimSuffix ".gif" }}
-            <video autoplay="" loop="" muted="" playsinline="" class="lead-img lazy-video" data-loaded="false">
-              <source data-src="{{ (print $base ".webm") | relLangURL }}" type="video/webm">
-              <source data-src="{{ (print $base ".mp4") | relLangURL }}" type="video/mp4">
+            <video autoplay="" loop="" muted="" playsinline="" loading="lazy" poster="{{ $poster_url }}" preload="none" class="lead-img lazy-video" data-loaded="false">
+              {{ if strings.HasSuffix $media_src_lower ".gif" }}
+              <source data-src="{{ (print $media_base ".webm") | relLangURL }}" type="video/webm">
+              <source data-src="{{ (print $media_base ".mp4") | relLangURL }}" type="video/mp4">
+              {{ else }}
+              <source data-src="{{ $media_url }}" type="{{ $video_type }}">
+              {{ end }}
             </video>
             {{ else }}
-            <img class="lead-img" src="{{ $media_url }}" loading="lazy" />
+            <img class="lead-img" src="{{ $media_url }}" loading="lazy" decoding="async" />
             {{ end }}
           </div>
 
