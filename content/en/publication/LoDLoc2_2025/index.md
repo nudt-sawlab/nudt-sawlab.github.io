@@ -1,6 +1,6 @@
 ---
 title: "LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment"
-authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun  Zhang, Shen  Yan†"
+authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
 journal: "ICCV 2025"
 date: 2025-07-01
 intro: "A novel method for aerial visual localization over low Level-of-Detail (LoD) city models. "

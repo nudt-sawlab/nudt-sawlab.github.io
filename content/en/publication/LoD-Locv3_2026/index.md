@@ -1,6 +1,6 @@
 ---
 title: "LoD-Loc v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment"
-authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Shen Yan†, Kun Yang, Maojun Zhang, Yu Liu"
+authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Kun Yang, Maojun Zhang, Yu Liu, Shen Yan†"
 journal: "CVPR 2026"
 date: 2026-03-19
 intro: "A generalized aerial localization method for dense urban scenes that combines large-scale synthetic instance data with instance-level silhouette alignment to improve cross-scene generalization and reduce pose ambiguity."

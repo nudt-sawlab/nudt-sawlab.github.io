@@ -95,7 +95,7 @@ research_step_papers:
           css_class: code-link
 
     - title: "LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment"
-      authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun  Zhang, Shen  Yan†"
+      authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
         src: "img/research/teaser_LoDLocv2.gif"
@@ -369,7 +369,7 @@ research_step_papers:
           css_class: code-link
 
     - title: "NGC-GeoLoc: Neural GeoCoordinate Regression for GPS-Denied UAV Geo-Localization"
-      authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan"
+      authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
         src: "img/research/teaser_UAVGeoLoc.gif"
@@ -402,7 +402,7 @@ research_step_papers:
           css_class: code-link
 
     - title: "LoD-Loc v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment"
-      authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Shen Yan†, Kun Yang, Maojun Zhang, Yu Liu"
+      authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Kun Yang, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
         src: "img/research/teaser_LoDLocv2.gif"

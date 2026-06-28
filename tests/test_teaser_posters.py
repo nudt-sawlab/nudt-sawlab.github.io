@@ -55,3 +55,14 @@ def test_teaser_images_fit_fixed_height_without_crop():
 def test_teaser_poster_assets_exist():
     for _, poster_path in POSTER_EXPECTATIONS.items():
         assert (ROOT / poster_path).exists(), poster_path
+
+
+def test_fcp_satmvs_uses_compressed_teaser_asset():
+    front_matter = (ROOT / "content/en/publication/FCP-SatMVS_2026/index.md").read_text(
+        encoding="utf-8"
+    )
+    asset = ROOT / "content/en/publication/FCP-SatMVS_2026/teaser.webp"
+
+    assert 'src: "teaser.webp"' in front_matter
+    assert asset.exists()
+    assert asset.stat().st_size < 600_000
