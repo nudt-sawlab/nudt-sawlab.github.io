@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 RESEARCH_TEMPLATE = ROOT / "layouts/partials/widgets/research.html"
+PUBLICATIONS_TEMPLATE = ROOT / "layouts/partials/widgets/publications.html"
 
 TARGET_PUBLICATIONS = {
     "content/en/publication/PiLoT_2026/index.md": "content/en/publication/PiLoT_2026/research-card.png",
@@ -21,6 +22,11 @@ TARGET_PUBLICATIONS = {
 
 def test_research_template_supports_research_specific_media_override():
     content = RESEARCH_TEMPLATE.read_text(encoding="utf-8")
+    assert "research_media_icon" in content
+
+
+def test_publications_template_supports_research_specific_media_override():
+    content = PUBLICATIONS_TEMPLATE.read_text(encoding="utf-8")
     assert "research_media_icon" in content
 
 

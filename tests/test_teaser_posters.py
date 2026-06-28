@@ -34,12 +34,22 @@ def test_teaser_templates_use_posters_and_no_preload():
         assert 'preload="none"' in content, path
 
 
+def test_static_teaser_images_do_not_lazy_load():
+    for path in TEMPLATE_PATHS:
+        content = path.read_text(encoding="utf-8")
+        for line in content.splitlines():
+            if "<img" in line:
+                assert 'loading="lazy"' not in line, path
+
+
 def test_teaser_images_fit_fixed_height_without_crop():
     content = (ROOT / "assets/scss/custom.scss").read_text(encoding="utf-8")
     assert ".pub-image-wrap" in content
     assert "height: 110px;" in content
-    assert "width: auto;" in content
+    assert "width: 240px;" in content
+    assert "flex: 0 0 240px;" in content
     assert "overflow: visible;" in content
+    assert "object-fit: contain;" in content
 
 
 def test_teaser_poster_assets_exist():

@@ -87,6 +87,9 @@
           {{/*cite.bib*/}}
           {{ $cite_resource := $item.Resources.GetMatch "cite.bib" }}
           {{ $media_icon := $pub_item.media_icon }}
+          {{ with $pub_item.research_media_icon }}
+            {{ $media_icon = . }}
+          {{ end }}
           {{ $media_src := $media_icon.src | default "" }}
           {{ $media_src_lower := lower $media_src }}
           {{ $media_base := $media_src | strings.TrimSuffix ".gif" | strings.TrimSuffix ".webm" | strings.TrimSuffix ".mp4" }}
@@ -114,7 +117,7 @@
                   <source data-src="{{ (print $media_base ".mp4") | relLangURL }}" type="video/mp4">
                 </video>
               {{ else }}
-                <img src="{{ $media_url }}" loading="lazy" decoding="async"/>
+                <img src="{{ $media_url }}" decoding="async"/>
               {{ end }}
             </div>
           </div>

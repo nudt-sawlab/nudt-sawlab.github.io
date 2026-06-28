@@ -7,7 +7,7 @@ intro: "A novel cascade multi-view stereo framework, FCP-SatMVS, that performs t
 weight: 3
 media_icon:
   type: "image"
-  src: "tearse.png"
+  src: "teaser.png"
 
 links:
 
