@@ -1,6 +1,6 @@
 ---
 title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
-authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu, Maojun Zhang, Shen Yan, Qing Wang†"
+authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu†, Maojun Zhang, Shen Yan, Qing Wang†"
 journal: "CVPR 2025"
 date: 2025-03-01
 intro: "A 4D Gaussian Splatting framework that integrates thermodynamic constraints to achieve high-fidelity 3D reconstruction and temporal temperature evolution of dynamic nighttime scenes from thermal infrared sequences. "
@@ -8,12 +8,7 @@ weight: 3
 media_icon:
   type: "image"
   src: "teaser.png"
-  style: "max-width: 400px; height: auto;"
 
-research_media_icon:
-  type: "image"
-  src: "research-card.png"
-  
 links:
 
   # - name: Home

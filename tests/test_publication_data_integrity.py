@@ -24,7 +24,6 @@ def resolve_publication_media_paths(pub_dir, media_icon):
     src_lower = src.lower()
     if (
         media_icon.get("type", "image") == "video"
-        or src_lower.endswith(".gif")
         or src_lower.endswith(".webm")
         or src_lower.endswith(".mp4")
     ):

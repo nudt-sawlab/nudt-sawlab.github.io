@@ -8,7 +8,6 @@ weight: 3
 media_icon:
   type: "image"
   src: "teaser.png"
-  
 links:
 
   # - name: Home

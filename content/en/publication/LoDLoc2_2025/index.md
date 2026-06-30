@@ -7,12 +7,8 @@ intro: "A novel method for aerial visual localization over low Level-of-Detail (
 weight: 3
 media_icon:
   type: "image"
-  src: "Lod_Locv2_3.gif"
+  src: "teaser.gif"
 
-research_media_icon:
-  type: "video"
-  src: "research-card.webm"
-  
 links:
 
   - name: Home

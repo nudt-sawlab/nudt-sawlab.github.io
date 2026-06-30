@@ -8,12 +8,7 @@ weight: 3
 media_icon:
   type: "image"
   src: "teaser.png"
-  style: "max-width: 400px; height: auto;"
 
-research_media_icon:
-  type: "image"
-  src: "research-card.png"
-  
 links:
 
   # - name: Home

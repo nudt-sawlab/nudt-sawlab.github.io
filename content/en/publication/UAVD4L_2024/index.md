@@ -7,12 +7,8 @@ intro: "The first large-scale dataset designed specifically for 6-DoF localizati
 weight: 3
 media_icon:
   type: "image"
-  src: "demo_small.gif"
+  src: "teaser.gif"
 
-research_media_icon:
-  type: "video"
-  src: "research-card.mp4"
-  
 links:
 
   # - name: Home

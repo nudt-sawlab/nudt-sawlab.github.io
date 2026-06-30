@@ -7,7 +7,7 @@ intro: "A 4D Gaussian Splatting approach for dynamic 3D thermal reconstruction, 
 weight: 3
 media_icon:
   type: "image"
-  src: "ThermalGS.gif"
+  src: "teaser.gif"
  
   
 links:

@@ -1,0 +1,2 @@
+https://github.com/NPU-CVPG/AV2T
+https://github.com/NPU-CVPG/ThermoGS

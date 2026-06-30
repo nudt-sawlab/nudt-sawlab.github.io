@@ -46,7 +46,7 @@ research_step_papers:
       authors_text: "Rouwan Wu, Jiacheng Deng, Mingyu Mou, Xingyi He, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_UAVGeoLoc.gif"
+        src: "img/research/UAV-GeoLoc.gif"
       journal: "RA-L 2025"
       intro: "World-UAV -- a diverse and realistic dataset for UAV-to-satellite geo-localization, UAVPlace -- a transformation-invariant retrieval method that significantly improves performance under extreme viewpoint variations."
       cite_text: |
@@ -78,7 +78,7 @@ research_step_papers:
       authors_text: "Rouwan Wu, Zhe Huang, Xingyi He, Yan Liu, Shen Yan, Sida Peng, Maojun Zhang†, Xiaowei Zhou†"
       media_icon:
         type: image
-        src: "img/research/teaser_UAVGeoLoc.gif"
+        src: "img/research/AerialExtreMatch.png"
       journal: "RA-L 2026"
       intro: "AerialExtreMatch is a large-scale benchmark for extreme-view UAV-to-satellite image matching and localization, featuring about 1.5 million synthetic pairs, a 32-level difficulty benchmark, and a real-world localization set."
       links:
@@ -98,7 +98,7 @@ research_step_papers:
       authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_LoDLocv2.gif"
+        src: "img/research/LoD-Loc-v2.gif"
       journal: "ICCV 2025"
       intro: "A novel method for aerial visual localization over low Level-of-Detail (LoD) city models. "
       cite_text: |
@@ -128,7 +128,7 @@ research_step_papers:
       authors_text: "Juelin Zhu*, Shen Yan*, Long Wang, Shengyue Zhang, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
-        src: "img/research/teaser_LoDLoc.gif"
+        src: "img/research/LoD-Loc.gif"
       journal: "NeurIPS 2024"
       intro: "A method for aerial visual localization that uses LoD (Level-of-Detail) 3D city maps combined with neural wireframe alignment to achieve accurate 6-DoF pose estimation without requiring high-resolution textured models."
       cite_text: |
@@ -157,7 +157,7 @@ research_step_papers:
       authors_text: "Rouwan Wu*, Xiaoya Cheng*, Juelin Zhu, Yuxiang Liu, Maojun Zhang†, Shen Yan"
       media_icon:
         type: image
-        src: "img/research/teaser_UAVD4L.gif"
+        src: "img/research/UAVD4L.gif"
       journal: "3DV 2024"
       intro: "The first large-scale dataset designed specifically for 6-DoF localization of UAVs in GPS-denied environments"
       cite_text: |
@@ -187,7 +187,7 @@ research_step_papers:
       authors_text: "Yuxiang Liu*, Rouwan Wu*, Shen Yan, Xiaoya Cheng, Juelin Zhu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
-        src: "img/research/teaser_ATLoc.png"
+        src: "img/research/ATLoc.png"
       journal: "TGRS 2024"
       intro: ' This paper addresses the challenging problem of cross-view 6-DoF localization for thermal images by proposing a "Render-and-Compare" framework.'
       cite_text: |
@@ -219,7 +219,7 @@ research_step_papers:
       authors_text: "Long Wang*, Shen Yan*, Jianan Zhen, Yu Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
       media_icon:
         type: image
-        src: "img/research/teaser_DeepAC.gif"
+        src: "img/research/DeepAC.gif"
       journal: "ICCV 2023"
       intro: "A real-time 6-DoF object tracking framework that integrates deep learning with active contour models to achieve robust pose estimation from monocular video."
       cite_text: |
@@ -248,7 +248,7 @@ research_step_papers:
       authors_text: "Shen Yan, Xiaoya Cheng, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
-        src: "img/research/teaser_Render2Loc.png"
+        src: "img/research/Render2Loc.png"
       journal: "ICME 2023"
       intro: "An iterative framework that refines a noisy initial pose by matching rendered synthetic views with actual query images to bridge the geometric gap between aerial and ground perspectives."
       cite_text: |
@@ -278,7 +278,7 @@ research_step_papers:
       authors_text: "Shen Yan, Yu Liu, Long Wang, Zehong Shen, Zhen Peng, Haomin Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
       media_icon:
         type: image
-        src: "img/research/teaser_SensLoc.png"
+        src: "img/research/SensLoc.png"
       journal: "CVPR 2023"
       intro: "Addresses extreme seasonal and structural appearance changes by tightly fusing visual information with standard mobile sensor data (GPS, compass, gravity)."
       cite_text: |
@@ -307,7 +307,7 @@ research_step_papers:
       authors_text: "Xiaoya Cheng, Long Wang, Yan Liu, Xinyi Liu, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_UAVGeoLoc.gif"
+        src: "img/research/PiLoT.png"
       journal: "CVPR 2026"
       intro: "A unified framework that directly registers live video against geo-referenced 3D maps for drift-free, real-time, and long-term UAV geo-localization in GNSS-denied environments."
       cite_text: |
@@ -335,7 +335,7 @@ research_step_papers:
       authors_text: "Xiaoya Cheng*, Rouwan Wu*, Xinyi Liu*, Zeyu Cui*, Yan Liu*, Na Zhao, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_AirZoo.jpg"
+        src: "img/research/AirZoo.jpg"
       journal: "ECCV 2026"
       intro: "A world-scale synthetic UAV dataset and benchmark for aerial image retrieval, cross-view matching, and multi-view 3D reconstruction, with pixel-aligned RGB-D geometry and geo-referenced 6-DoF poses for stronger aerial pre-training and real-world transfer."
       cite_text: |
@@ -372,7 +372,7 @@ research_step_papers:
       authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_UAVGeoLoc.gif"
+        src: "img/research/NGC-GeoLoc.png"
       journal: "RA-L 2026"
       intro: "NGC-GeoLoc is a novel dense coordinate regression framework for UAV geo-localization that replaces traditional retrieval methods, achieving scale/rotation robustness and map-size-independent, sub-second inference while outperforming baselines."
       cite_text: |
@@ -405,7 +405,7 @@ research_step_papers:
       authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Kun Yang, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_LoDLocv2.gif"
+        src: "img/research/LoD-Loc-v3.png"
       journal: "CVPR 2026"
       intro: "A generalized aerial localization method for dense urban scenes that combines large-scale synthetic instance data with instance-level silhouette alignment to improve cross-scene generalization and reduce pose ambiguity."
       cite_text: |
@@ -440,7 +440,7 @@ research_step_papers:
       authors_text: "Xi Chen, Lin Gao, Maojun Zhang†, Chen Chen, Shen Yan"
       media_icon:
         type: image
-        src: "img/research/teaser_S2AMSnet.png"
+        src: "img/research/S2AMSnet.png"
       journal: "TGRS 2024"
       intro: "A Method for Robust Cross-Scene Hyperspectral Image Classification via Expansion of Source Domain Distribution Diversity."
       cite_text: |
@@ -471,7 +471,7 @@ research_step_papers:
       authors_text: "Xi Chen, Maojun Zhang†, Yu Liu"
       media_icon:
         type: image
-        src: "img/research/teaser_TGRS_Target.png"
+        src: "img/research/Target-Detection.png"
       journal: "TGRS 2024"
       intro: "A Method for Hyperspectral Image Target Detection."
       cite_text: |
@@ -502,7 +502,7 @@ research_step_papers:
       authors_text: "Xi Chen, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_S2AMSnet.png"
+        src: "img/research/SpectralMoE.png"
       journal: "CVPR 2026"
       intro: "A novel fine-tuning framework that utilizes a dual-gated Mixture-of-Experts architecture to perform spatially-adaptive, depth-guided feature refinement for robust domain-generalized semantic segmentation in spectral remote sensing."
       cite_text: |
@@ -532,7 +532,7 @@ research_step_papers:
       authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao*"
       media_icon:
         type: image
-        src: "img/research/teaser_S2AMSnet.png"
+        src: "img/research/FCP-SatMVS.webp"
       journal: "ICME 2026"
       intro: "A novel cascade multi-view stereo framework, FCP-SatMVS, that performs texture-aware, elevation-consistent, and uncertainty-guided depth refinement for high-precision Digital Surface Model reconstruction in satellite remote sensing."
       links:
@@ -544,7 +544,7 @@ research_step_papers:
       authors_text: "Xi Chen, Maojun Zhang, Yuxiang Liu, Chen Chen, Shen Yan†"
       media_icon:
         type: image
-        src: "img/research/teaser_S2AMSnet.png"
+        src: "img/research/Cross-SPECL.png"
       journal: "TGRS 2026"
       intro: "A cross-scene hyperspectral image classification method based on spectral stability exploiting and causal learning."
       links:
@@ -554,11 +554,43 @@ research_step_papers:
 
   step3:
 
-    - title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
-      authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu, Maojun Zhang, Shen Yan, Qing Wang†"
+    - title: "ThermoGS: Decoupling Physical Surface Attributes for Spatio-Temporal Thermal Field Emulation via 4D Gaussian Splatting"
+      authors_text: "Kun Yang, Yuxiang Liu, Zeyu Cui, Shen Yan, Maojun Zhang, Yu Liu, Xue Wang†, Qing Wang"
       media_icon:
         type: image
-        src: "img/research/teaser_NTRGaussian.png"
+        src: "img/research/ThermoGS.png"
+      journal: "Preprint 2026"
+      intro: "A physics-informed 4D Gaussian Splatting framework for thermal field emulation that decouples material attributes from transient temperature states to simulate spatiotemporal thermal distributions under changing environmental conditions."
+      links:
+        - name: Paper
+          url: "/paper/ThermoGS_2026.pdf"
+          css_class: paper-link
+
+        - name: Code
+          url: "https://github.com/NPU-CVPG/ThermoGS"
+          css_class: code-link
+
+    - title: "AV2T-Gen: Aerial Visible to Thermal Generation with Environment and Vehicle State Guidance"
+      authors_text: "Kun Yang, Yuxiang Liu, Yihan Wang, Shen Yan, Maojun Zhang, Yu Liu†, Xue Wang, Qing Wang"
+      media_icon:
+        type: image
+        src: "img/research/AV2T-Gen.png"
+      journal: "Preprint 2026"
+      intro: "An environment- and vehicle-state-guided visible-to-thermal generation framework for aerial imagery that uses diffusion models and synchronized RGB-T data to produce thermal images with stronger physical realism and vehicle detail consistency."
+      links:
+        - name: Paper
+          url: "/paper/AV2T-Gen_2026.pdf"
+          css_class: paper-link
+
+        - name: Code
+          url: "https://github.com/NPU-CVPG/AV2T"
+          css_class: code-link
+
+    - title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
+      authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu†, Maojun Zhang, Shen Yan, Qing Wang†"
+      media_icon:
+        type: image
+        src: "img/research/NTR-Gaussian.png"
       journal: "CVPR 2025"
       intro: "A 4D Gaussian Splatting framework that integrates thermodynamic constraints to achieve high-fidelity 3D reconstruction and temporal temperature evolution of dynamic nighttime scenes from thermal infrared sequences. "
       cite_text: |
@@ -587,7 +619,7 @@ research_step_papers:
       authors_text: "Yuxiang Liu, Shen Yan, Maojun Zhang, Rouwan Wu, Huaxin Xiao, Yu Liu"
       media_icon:
         type: image
-        src: "img/research/teaser_ThermalGS.gif"
+        src: "img/research/3D-Thermal.png"
       journal: "TGRS 2026"
       intro: "A 3-D thermal city reconstruction framework that uses a high-quality RGB mesh to guide thermal image registration, pixel-level thermal mapping, and temperature texture reconstruction for scalable, high-precision urban thermal modeling."
       links:
@@ -599,7 +631,7 @@ research_step_papers:
       authors_text: "Yuxiang Liu, Xi Chen, Shen Yan, Zeyu Cui, Huaxin Xiao, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
-        src: "img/research/teaser_ThermalGS.gif"
+        src: "img/research/ThermalGS.gif"
       journal: "Remote Sensing 2025"
       intro: "A 4D Gaussian Splatting approach for dynamic 3D thermal reconstruction, enabling high-fidelity recovery of both spatiotemporal geometry and temperature evolution from multi-view infrared sequences."
       cite_text: |
