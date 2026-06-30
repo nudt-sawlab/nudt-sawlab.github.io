@@ -8,6 +8,19 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLICATION_ROOT = ROOT / "content/en/publication"
 RESEARCH_PAGE = ROOT / "content/en/home/research.md"
 
+ECCV_2026_PUBLICATIONS = {
+    "AV2T-Gen: Aerial Visible to Thermal Generation with Environment and Vehicle State Guidance": {
+        "publication": PUBLICATION_ROOT / "AV2T-Gen_2026/index.md",
+        "news": ROOT / "content/en/news/eccv-260627-av2t-gen/index.md",
+        "news_title": "AV2T-Gen accepted by ECCV 2026.",
+    },
+    "ThermoGS: Decoupling Physical Surface Attributes for Spatio-Temporal Thermal Field Emulation via 4D Gaussian Splatting": {
+        "publication": PUBLICATION_ROOT / "ThermoGS_2026/index.md",
+        "news": ROOT / "content/en/news/eccv-260627-thermogs/index.md",
+        "news_title": "ThermoGS accepted by ECCV 2026.",
+    },
+}
+
 
 def front_matter(path):
     text = path.read_text(encoding="utf-8")
@@ -58,6 +71,30 @@ def test_spectralmoe_publication_uses_project_teaser():
     project_teaser = ROOT / "static/SpectralMoE/static/images/teaser.png"
 
     assert publication_teaser.read_bytes() == project_teaser.read_bytes()
+
+
+def test_new_eccv_2026_publications_have_empty_paper_links_and_matching_news():
+    research_entries = {
+        entry["title"]: entry
+        for entries in front_matter(RESEARCH_PAGE)["research_step_papers"].values()
+        for entry in entries
+    }
+
+    for title, paths in ECCV_2026_PUBLICATIONS.items():
+        publication = front_matter(paths["publication"])
+        research_entry = research_entries[title]
+        news = front_matter(paths["news"])
+
+        assert publication["journal"] == "ECCV 2026"
+        assert research_entry["journal"] == "ECCV 2026"
+        assert news["title"] == paths["news_title"]
+        assert "Preprint" not in paths["news"].read_text(encoding="utf-8")
+
+        publication_paper = next(link for link in publication["links"] if link["name"] == "Paper")
+        research_paper = next(link for link in research_entry["links"] if link["name"] == "Paper")
+
+        assert publication_paper["url"] == ""
+        assert research_paper["url"] == ""
 
 
 def test_authors_text_has_no_repeated_spaces():

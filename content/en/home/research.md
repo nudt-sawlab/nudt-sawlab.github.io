@@ -559,11 +559,11 @@ research_step_papers:
       media_icon:
         type: image
         src: "img/research/ThermoGS.png"
-      journal: "Preprint 2026"
+      journal: "ECCV 2026"
       intro: "A physics-informed 4D Gaussian Splatting framework for thermal field emulation that decouples material attributes from transient temperature states to simulate spatiotemporal thermal distributions under changing environmental conditions."
       links:
         - name: Paper
-          url: "/paper/ThermoGS_2026.pdf"
+          url: ""
           css_class: paper-link
 
         - name: Code
@@ -575,11 +575,11 @@ research_step_papers:
       media_icon:
         type: image
         src: "img/research/AV2T-Gen.png"
-      journal: "Preprint 2026"
+      journal: "ECCV 2026"
       intro: "An environment- and vehicle-state-guided visible-to-thermal generation framework for aerial imagery that uses diffusion models and synchronized RGB-T data to produce thermal images with stronger physical realism and vehicle detail consistency."
       links:
         - name: Paper
-          url: "/paper/AV2T-Gen_2026.pdf"
+          url: ""
           css_class: paper-link
 
         - name: Code

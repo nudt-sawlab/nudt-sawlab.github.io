@@ -1,5 +1,5 @@
 ---
-title: "ThermoGS preprint released."
+title: "ThermoGS accepted by ECCV 2026."
 date: "2026-06-27"
 categories: ["Infrared"]
 # featured 设为 true 则在首页展示

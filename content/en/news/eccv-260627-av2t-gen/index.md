@@ -1,5 +1,5 @@
 ---
-title: "AV2T-Gen preprint released."
+title: "AV2T-Gen accepted by ECCV 2026."
 date: "2026-06-27"
 categories: ["Infrared"]
 # featured 设为 true 则在首页展示
