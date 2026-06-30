@@ -265,6 +265,7 @@ html, body {
 
   .pub-item {
     padding: 0.5rem 0;
+    column-gap: 2rem;
   }
 
 
@@ -297,7 +298,6 @@ html, body {
 
 .pub-content-wrap {
   min-width: 0;
-  padding-left: 1rem;
 }
 
 .pub-image-wrap {
@@ -345,12 +345,7 @@ html, body {
 
   .research-step-item {
     padding: 0.5rem 0;
-
-
-
-
-
-
+    column-gap: 2rem;
   }
 
 
@@ -438,10 +433,6 @@ html, body {
     max-width: 180px;
     height: 110px;
     margin-top: 0;
-  }
-
-  .pub-content-wrap {
-    padding-left: 0;
   }
 
 }

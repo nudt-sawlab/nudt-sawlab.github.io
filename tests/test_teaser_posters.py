@@ -54,12 +54,13 @@ def test_teaser_images_fit_fixed_height_without_crop():
 
 def test_teaser_titles_have_desktop_spacing_from_images():
     content = (ROOT / "assets/scss/custom.scss").read_text(encoding="utf-8")
+    home_pub_item = content.split(".home-pubs-section {", 1)[1].split(".toggle-links-content", 1)[0]
+    research_step_item = content.split(".research-step-item {", 1)[1].split("\n  }", 1)[0]
     pub_content_wrap = content.split(".pub-content-wrap {", 1)[1].split("\n}", 1)[0]
-    mobile_content = content.split("@media (max-width: 640px)", 1)[1]
 
-    assert "padding-left: 1rem;" in pub_content_wrap
-    assert ".pub-content-wrap" in mobile_content
-    assert "padding-left: 0;" in mobile_content
+    assert "column-gap: 2rem;" in home_pub_item
+    assert "column-gap: 2rem;" in research_step_item
+    assert "padding-left:" not in pub_content_wrap
 
 
 def test_teaser_poster_assets_exist():
