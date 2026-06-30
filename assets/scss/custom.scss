@@ -289,10 +289,10 @@ html, body {
 .pub-image-div-wrap {
   display: flex;
   align-items: flex-start;
-  flex: 0 0 240px;
-  width: 240px;
-  min-width: 240px;
-  max-width: 240px;
+  flex: 0 0 200px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
 }
 
 .pub-content-wrap {
@@ -305,9 +305,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 240px;
-  min-width: 240px;
-  max-width: 240px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
   overflow: visible;
   background: transparent !important;
 

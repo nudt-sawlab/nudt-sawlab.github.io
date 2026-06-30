@@ -46,8 +46,8 @@ def test_teaser_images_fit_fixed_height_without_crop():
     content = (ROOT / "assets/scss/custom.scss").read_text(encoding="utf-8")
     assert ".pub-image-wrap" in content
     assert "height: 110px;" in content
-    assert "width: 240px;" in content
-    assert "flex: 0 0 240px;" in content
+    assert "width: 200px;" in content
+    assert "flex: 0 0 200px;" in content
     assert "overflow: visible;" in content
     assert "object-fit: contain;" in content
 
