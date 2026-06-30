@@ -245,7 +245,7 @@ research_step_papers:
           css_class: code-link
 
     - title: "Render-and-compare: Cross-view 6-dof localization from noisy prior"
-      authors_text: "Shen Yan, Xiaoya Cheng, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
+      authors_text: "Shen Yan*, Xiaoya Cheng*, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
         src: "img/research/Render2Loc.png"
@@ -529,7 +529,7 @@ research_step_papers:
           css_class: code-link
 
     - title: "FCP-SatMVS: Feature-Context-Progressive Network for Robust Satellite Digital Surface Model"
-      authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao*"
+      authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao†"
       media_icon:
         type: image
         src: "img/research/FCP-SatMVS.webp"

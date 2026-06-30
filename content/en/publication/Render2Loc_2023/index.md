@@ -1,6 +1,6 @@
 ---
 title: "Render-and-compare: Cross-view 6-dof localization from noisy prior"
-authors_text: "Shen Yan, Xiaoya Cheng, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
+authors_text: "Shen Yan*, Xiaoya Cheng*, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
 journal: "ICME 2023"
 date: 2023-07-10
 intro: "An iterative framework that refines a noisy initial pose by matching rendered synthetic views with actual query images to bridge the geometric gap between aerial and ground perspectives."
