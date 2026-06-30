@@ -52,6 +52,16 @@ def test_teaser_images_fit_fixed_height_without_crop():
     assert "object-fit: contain;" in content
 
 
+def test_teaser_titles_have_desktop_spacing_from_images():
+    content = (ROOT / "assets/scss/custom.scss").read_text(encoding="utf-8")
+    pub_content_wrap = content.split(".pub-content-wrap {", 1)[1].split("\n}", 1)[0]
+    mobile_content = content.split("@media (max-width: 640px)", 1)[1]
+
+    assert "padding-left: 1rem;" in pub_content_wrap
+    assert ".pub-content-wrap" in mobile_content
+    assert "padding-left: 0;" in mobile_content
+
+
 def test_teaser_poster_assets_exist():
     for _, poster_path in POSTER_EXPECTATIONS.items():
         assert (ROOT / poster_path).exists(), poster_path
