@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+{{ $page := . }}
+
+<div class="universal-wrapper pt-3">
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Params.subtitle }}
+  <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
+  {{ end }}
+
+  <div class="article-style">
+    {{ .Content }}
+  </div>
+
+  {{/* Render the supervisors widget if supervisors param exists */}}
+  {{ if .Params.supervisors }}
+    {{ partial "widgets/supervisors.html" (dict "root" $ "page" .) }}
+  {{ end }}
+
+</div>
+
+{{- end -}}
