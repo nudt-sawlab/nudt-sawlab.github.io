@@ -44,6 +44,12 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Install Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+      - name: Download Hugo modules
+        run: hugo mod get
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
