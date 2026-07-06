@@ -1,0 +1,264 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+<div class="col-12 supervisors-section">
+
+  <!-- 返回主页链接 -->
+  <div class="back-to-home mb-4">
+    <a href="/" class="btn btn-outline-primary">
+      <i class="fas fa-arrow-left"></i> 返回主页
+    </a>
+  </div>
+
+  <div class="supervisors-intro">
+    {{ $page.Content }}
+  </div>
+
+  <div class="supervisors-list">
+    {{ range $index, $supervisor := $page.Params.supervisors }}
+    <div class="supervisor-card row mb-5">
+
+      <!-- 导师照片 -->
+      <div class="col-12 col-md-3 text-center mb-3">
+        {{ if $supervisor.photo }}
+        <img src="{{ $supervisor.photo | relURL }}"
+             alt="{{ $supervisor.name }}"
+             class="supervisor-photo img-fluid rounded-circle"
+             style="max-width: 200px; width: 100%;">
+        {{ else }}
+        <div class="supervisor-photo-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center"
+             style="width: 200px; height: 200px; margin: 0 auto;">
+          <i class="fas fa-user fa-5x text-secondary"></i>
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- 导师信息 -->
+      <div class="col-12 col-md-9">
+        <h3 class="supervisor-name mb-2">{{ $supervisor.name }}</h3>
+
+        <div class="supervisor-details mb-3">
+          {{ with $supervisor.unit }}
+          <p class="mb-1"><strong>所在单位：</strong>{{ . }}</p>
+          {{ end }}
+
+          <p class="mb-1">
+            {{ with $supervisor.title }}
+              <strong>职称：</strong>{{ . }}
+            {{ end }}
+            {{ if and $supervisor.title $supervisor.position }}
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+            {{ end }}
+            {{ with $supervisor.position }}
+              <strong>职务：</strong>{{ . }}
+            {{ end }}
+          </p>
+
+          {{ with $supervisor.research_areas }}
+          <p class="mb-1"><strong>研究方向：</strong>{{ . }}</p>
+          {{ end }}
+
+          {{ with $supervisor.email }}
+          <p class="mb-1"><strong>邮箱：</strong><a href="mailto:{{ . }}">{{ . }}</a></p>
+          {{ end }}
+
+          {{ with $supervisor.phone }}
+          <p class="mb-1"><strong>电话：</strong>{{ . }}</p>
+          {{ end }}
+
+          {{ with $supervisor.office }}
+          <p class="mb-1"><strong>办公室：</strong>{{ . }}</p>
+          {{ end }}
+        </div>
+
+        {{ with $supervisor.bio }}
+        <div class="supervisor-bio">
+          <h5>个人简介</h5>
+          <p>{{ . | markdownify }}</p>
+        </div>
+        {{ end }}
+
+        {{ with $supervisor.education }}
+        <div class="supervisor-education mt-3">
+          <h5>教育背景</h5>
+          <ul>
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        {{ with $supervisor.achievements }}
+        <div class="supervisor-achievements mt-3">
+          <h5>主要成就</h5>
+          <ul>
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ if ne $index (sub (len $page.Params.supervisors) 1) }}
+    <hr class="my-4">
+    {{ end }}
+    {{ end }}
+  </div>
+
+</div>
+
+<style>
+.supervisors-section {
+  padding: 2rem 0;
+}
+
+.back-to-home {
+  text-align: left;
+}
+
+.back-to-home .btn {
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.back-to-home .btn:hover {
+  transform: translateX(-3px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.supervisor-card {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e8e8e8;
+}
+
+.supervisor-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.supervisor-photo {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border: 3px solid #f8f9fa;
+}
+
+.supervisor-name {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.supervisor-details {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.supervisor-details strong {
+  color: #34495e;
+  font-weight: 600;
+}
+
+.supervisor-details p {
+  line-height: 1.8;
+  color: #555;
+}
+
+.supervisor-details a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.supervisor-details a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.supervisor-bio {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.supervisor-bio h5 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+}
+
+.supervisor-education h5,
+.supervisor-achievements h5 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3rem;
+}
+
+.supervisor-education ul,
+.supervisor-achievements ul {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.supervisor-education li,
+.supervisor-achievements li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.supervisors-intro {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.supervisors-intro h2 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.supervisors-intro p {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .supervisor-card {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .supervisor-name {
+    font-size: 1.5rem;
+  }
+
+  .supervisors-intro {
+    padding: 1.5rem;
+  }
+}
+</style>

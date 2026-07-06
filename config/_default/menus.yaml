@@ -24,9 +24,13 @@ main:
     url: '#publications'
     weight: 50
 
+  - name: Supervisors
+    url: '/supervisors/'
+    weight: 60
+
   # - name: Summary
   #   url: '#summary'
-  #   weight: 60
+  #   weight: 70
 
   # - name: Awards
   #   url: '#awards'
