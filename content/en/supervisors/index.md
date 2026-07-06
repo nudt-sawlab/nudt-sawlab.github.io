@@ -1,6 +1,6 @@
 ---
 title: "研究生导师简介"
-type: widget_page
+type: supervisors
 summary: "Graduate Supervisors Information"
 date: 2026-07-06
 
