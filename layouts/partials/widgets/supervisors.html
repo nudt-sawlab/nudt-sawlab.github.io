@@ -3,18 +3,12 @@
 
 <div class="col-12 supervisors-section">
 
-  <!-- 返回主页链接 -->
-  <div class="back-to-home mb-4">
-    <a href="/" class="btn btn-outline-primary">
-      <i class="fas fa-arrow-left"></i> 返回主页
-    </a>
-  </div>
-
+  {{/* 团队介绍 - 使用更优雅的渐变样式 */}}
   <div class="supervisors-intro">
     {{ $page.Content }}
   </div>
 
-  <div class="supervisors-list">
+  {{/* 导师列表 */}}
     {{ range $index, $supervisor := $page.Params.supervisors }}
     <div class="supervisor-card row mb-5">
 
@@ -229,22 +223,27 @@
 .supervisors-intro {
   margin-bottom: 3rem;
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
+  border-radius: 16px;
   color: white;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
 .supervisors-intro h2 {
   color: white;
   font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .supervisors-intro p {
   color: rgba(255,255,255,0.95);
   font-size: 1.05rem;
   line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {

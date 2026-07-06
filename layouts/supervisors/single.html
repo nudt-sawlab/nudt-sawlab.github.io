@@ -2,19 +2,56 @@
 
 <article class="article">
   <div class="article-container pt-3">
-    <div class="article-header article-header-caption">
-      <h1 class="article-title">{{ .Title }}</h1>
+
+    {{/* 页面标题 - 优雅的设计 */}}
+    <div class="page-header text-center mb-5">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Params.summary }}
+      <p class="page-subtitle">{{ . }}</p>
+      {{ end }}
     </div>
 
-    <div class="article-style">
-      {{ .Content }}
-    </div>
-
-    {{/* Render the supervisors widget if supervisors param exists */}}
+    {{/* 只渲染导师列表 */}}
     {{ if .Params.supervisors }}
       {{ partial "widgets/supervisors.html" (dict "root" $ "page" .) }}
     {{ end }}
   </div>
 </article>
+
+<style>
+.page-header {
+  padding: 3rem 0 2rem;
+  position: relative;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  color: #718096;
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+}
+</style>
 
 {{- end -}}
