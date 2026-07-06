@@ -18,3 +18,18 @@ yaoqiu/
 teaser/
 test/
 tests/
+
+# Large unused assets removed from remote
+content/en/publication/LoDLoc_2024/research-card.webm
+content/en/publication/LoDLoc2_2025/research-card.webm
+content/en/publication/UAVD4L_2024/research-card.mp4
+content/en/publication/FCP-SatMVS_2026/tearse.png
+static/PiLoT/static/pilot-video/ubuntu3090_real_time.mp4
+static/PiLoT/static/pilot-video/HK_airport_alignment_512.mp4
+static/PiLoT/static/pilot-video/google.mp4
+static/PiLoT/static/images/teaser.png
+static/LoD-Locv3/assets/instance_obj.png
+static/paper/AV2T-Gen_2026.pdf
+static/paper/ThermoGS_2026.pdf
+paper/1657(1).pdf
+paper/1521(1).pdf
