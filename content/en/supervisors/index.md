@@ -8,7 +8,7 @@ supervisors:
   - name: "刘煜"
     title: "教授"
     position: "博士生导师"
-    unit: "虚拟现实与视觉计算实验室"
+    unit: "虚拟现实与视觉计算教研室"
     research_areas: "视觉人工智能"
     email: "jasonyuliu@qq.com"
     photo: "img/supervisors/liuyu.png"
@@ -17,7 +17,7 @@ supervisors:
   - name: "张茂军"
     title: "教授"
     position: "博士生导师"
-    unit: "虚拟现实与视觉计算实验室"
+    unit: "虚拟现实与视觉计算教研室"
     research_areas: "多媒体信息系统与虚拟现实技术"
     email: "mjzhang@nudt.edu.cn"
     photo: "img/supervisors/zhangmaojun.png"
@@ -26,7 +26,7 @@ supervisors:
   - name: "肖华欣"
     title: "副研究员"
     position: "硕士生导师"
-    unit: "虚拟现实与视觉计算实验室"
+    unit: "虚拟现实与视觉计算教研室"
     research_areas: "计算机视觉及人工智能基础研究"
     email: "xiaohuaxin@nudt.edu.cn"
     photo: "img/supervisors/xiaohuaxin.png"
@@ -35,7 +35,7 @@ supervisors:
   - name: "张政"
     title: "副研究员"
     position: "硕士生导师"
-    unit: "虚拟现实与视觉计算实验室"
+    unit: "虚拟现实与视觉计算教研室"
     research_areas: "三维视觉、数字地形仿真、三维动态捕捉"
     email: "zhangzheng@nudt.edu.cn"
     photo: "img/supervisors/zhangzheng.png"
@@ -44,7 +44,7 @@ supervisors:
   - name: "周文"
     title: "副教授"
     position: "硕士生导师"
-    unit: "虚拟现实与视觉计算实验室"
+    unit: "虚拟现实与视觉计算教研室"
     research_areas: "无人机集群控制、知识工程"
     email: "zhouwen@nudt.edu.cn"
     photo: "img/supervisors/zhouwen.png"
@@ -53,14 +53,14 @@ supervisors:
   - name: "谭瀚霖"
     title: "副教授"
     position: "硕士生导师"
-    unit: "虚拟现实与视觉计算实验室"
+    unit: "虚拟现实与视觉计算教研室"
     research_areas: "图像处理、人工智能"
     email: "hanlin_tan@nudt.edu.cn"
     photo: "img/supervisors/tanhanlin.png"
     bio: "男，1991年4月出生，国防科技大学系统工程学院副教授，电子信息专业硕士研究生导师。先后在国防科技大学获得本硕博学位，长期从事图像处理、人工智能方向研究，本科生课程数据结构主讲教员，发表SCI、EI检索论文20余篇，获得国家发明专利8项，软件著作权3项，出版专著2部；主持国家自然科学基金项目1项、军队科研项目4项。"
 ---
 
-## 虚拟现实与视觉计算实验室 研究生导师
+## 虚拟现实与视觉计算教研室 研究生导师
 
 我们的导师团队由6位优秀的教授和副教授组成，其中博士生导师2名，硕士生导师4名。团队在视觉人工智能、虚拟现实技术、计算机视觉等领域拥有深厚的学术积累和丰富的科研经验，承担了多项国家级和军队级重大科研项目，发表了大量高水平学术论文，获得了多项科技奖励和发明专利。
 
