@@ -247,17 +247,155 @@
 }
 
 @media (max-width: 768px) {
+  .supervisors-section {
+    padding: 1rem 0;
+  }
+
   .supervisor-card {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .supervisor-card:hover {
+    transform: none; /* 移动端禁用悬浮效果 */
+  }
+
+  .supervisor-photo {
+    max-width: 150px !important;
+    margin-bottom: 1rem;
+  }
+
+  .supervisor-photo-placeholder {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .supervisor-photo-placeholder i {
+    font-size: 3.5rem !important;
   }
 
   .supervisor-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .supervisor-details {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .supervisor-details p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .supervisor-bio {
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .supervisor-bio h5 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .supervisor-education,
+  .supervisor-achievements {
+    margin-top: 1rem !important;
+  }
+
+  .supervisor-education h5,
+  .supervisor-achievements h5 {
+    font-size: 1rem;
+  }
+
+  .supervisor-education ul,
+  .supervisor-achievements ul {
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .supervisor-education li,
+  .supervisor-achievements li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
   }
 
   .supervisors-intro {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .supervisors-intro h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .supervisors-intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  hr.my-4 {
+    margin: 1.5rem 0 !important;
+  }
+}
+
+/* 针对更小的屏幕 (手机竖屏) */
+@media (max-width: 576px) {
+  .supervisors-section {
+    padding: 0.5rem 0;
+  }
+
+  .supervisor-card {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .supervisor-photo {
+    max-width: 120px !important;
+  }
+
+  .supervisor-photo-placeholder {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .supervisor-name {
+    font-size: 1.3rem;
+  }
+
+  .supervisor-details {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .supervisor-details p {
+    font-size: 0.85rem;
+  }
+
+  .supervisor-bio,
+  .supervisor-education,
+  .supervisor-achievements {
+    font-size: 0.85rem;
+  }
+
+  .supervisors-intro {
+    padding: 1.2rem 0.8rem;
+    border-radius: 12px;
+  }
+
+  .supervisors-intro h2 {
+    font-size: 1.3rem;
+  }
+
+  .supervisors-intro p {
+    font-size: 0.9rem;
   }
 }
 </style>
