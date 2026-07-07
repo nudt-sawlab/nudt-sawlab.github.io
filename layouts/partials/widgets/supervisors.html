@@ -261,9 +261,17 @@
     transform: none; /* 移动端禁用悬浮效果 */
   }
 
+  /* 确保照片列居中 */
+  .supervisor-card .col-md-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .supervisor-photo {
     max-width: 150px !important;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto !important;
+    display: block;
   }
 
   .supervisor-photo-placeholder {
