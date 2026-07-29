@@ -129,7 +129,7 @@
           </div>
           <div class="minimal-stats-bar">
             <div class="stat-unit">
-              <span class="stat-val">378</span> <span class="stat-lab">Regions</span>
+              <span class="stat-val">377</span> <span class="stat-lab">Regions</span>
             </div>
             <div class="stat-sep">|</div>
             <div class="stat-unit">
@@ -156,7 +156,7 @@
           <h3>Abstract</h3>
           <hr style="margin-top: 0px" />
           <p class="section-copy">
-            Despite rapid progress in data-driven 3D vision, aerial geometric 3D vision remains limited by the scarcity of large-scale, high-fidelity training data. AirZoo bridges this gap with a unified dataset and benchmark for UAV-based sensing. It combines a <span class="text-green">scalable generation pipeline</span> built on world-scale photogrammetric 3D meshes, <span class="text-teal">comprehensive scene diversity</span> across 378 regions in 22 countries, and <span class="text-sky">rich geometric annotations</span> including pixel-aligned metric depth, camera intrinsics, and precise 6-DoF geo-referenced poses. Through aerial image retrieval, cross-view matching, and multi-view 3D reconstruction, AirZoo acts as a pre-training engine that improves state-of-the-art models such as MegaLoc, RoMa, VGGT, and Depth Anything 3 on real-world aerial benchmarks.
+            Despite rapid progress in data-driven 3D vision, aerial geometric 3D vision remains limited by the scarcity of large-scale, high-fidelity training data. AirZoo bridges this gap with a unified dataset and benchmark for UAV-based sensing. It combines a <span class="text-green">scalable generation pipeline</span> built on world-scale photogrammetric 3D meshes, <span class="text-teal">comprehensive scene diversity</span> across 377 regions in 22 countries, and <span class="text-sky">rich geometric annotations</span> including pixel-aligned metric depth, camera intrinsics, and precise 6-DoF geo-referenced poses. Through aerial image retrieval, cross-view matching, and multi-view 3D reconstruction, AirZoo acts as a pre-training engine that improves state-of-the-art models such as MegaLoc, RoMa, VGGT, and Depth Anything 3 on real-world aerial benchmarks.
           </p>
         </div>
       </div>
@@ -195,6 +195,35 @@
           <div class="figure-panel zoom-element mt-3">
             <img src="static/images/method_data_geometric_validation_v3.jpg" alt="Geometric verification of AirZoo depth and poses" class="paper-figure" loading="lazy" />
             <p class="figure-caption">Bidirectional projection checks report a 0.066% median relative depth error, with P90 at 0.174% and P95 at 0.380%.</p>
+          </div>
+          <p class="section-copy mt-3">
+            We further use AirZoo ground-truth camera poses and metric depth to build 3D Gaussian Splatting models. Four representative results are shown below. For each displayed trajectory, the rendering PSNR exceeds 30 dB.
+          </p>
+          <div class="reconstruction-video-strip" aria-label="3D Gaussian Splatting reconstructions">
+            <figure class="reconstruction-video-card">
+              <video class="reconstruction-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Sydney Opera House 3DGS reconstruction">
+                <source src="static/video/pose_order_stride3_800x600/Australia_sydney_pose_order_stride3_800x600_15s.mp4" type="video/mp4" />
+              </video>
+              <figcaption>Sydney Opera House</figcaption>
+            </figure>
+            <figure class="reconstruction-video-card">
+              <video class="reconstruction-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Eiffel Tower 3DGS reconstruction">
+                <source src="static/video/pose_order_stride3_800x600/Paris_eiffel_pose_order_stride3_800x600_15s.mp4" type="video/mp4" />
+              </video>
+              <figcaption>Eiffel Tower</figcaption>
+            </figure>
+            <figure class="reconstruction-video-card">
+              <video class="reconstruction-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Colosseum 3DGS reconstruction">
+                <source src="static/video/pose_order_stride3_800x600/roma_Colosseo_pose_order_stride3_800x600_15s.mp4" type="video/mp4" />
+              </video>
+              <figcaption>Colosseum</figcaption>
+            </figure>
+            <figure class="reconstruction-video-card">
+              <video class="reconstruction-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Goddess of Victory 3DGS reconstruction">
+                <source src="static/video/pose_order_stride3_800x600/USA_freedomgodness_pose_order_stride3_800x600_15s.mp4" type="video/mp4" />
+              </video>
+              <figcaption>Goddess of Victory</figcaption>
+            </figure>
           </div>
         </div>
       </div>
