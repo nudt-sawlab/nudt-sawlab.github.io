@@ -10,7 +10,7 @@ supervisors:
     position: "博士生导师"
     unit: "虚拟现实与视觉计算教研室"
     research_areas: "视觉人工智能"
-    email: "jasonyuliu@qq.com"
+    email: "jasonyuliu@nudt.edu.cn"
     photo: "img/supervisors/liuyu.png"
     bio: "男，1983年12月生，国防科技大学系统工程学院系统仿真工程系副主任，教授，博士生导师。长期从事系统仿真、人工智能、机器视觉领域的教学科研工作。承担多个国家和军队重大课题，获军队科技进步奖、教学成果奖5项。出版专著教材10部，国际高水平期刊和会议发表论文80余篇，授权国家发明专利66项。入选全军高层次人才工程，入选国防科大领军人才工程。"
     
