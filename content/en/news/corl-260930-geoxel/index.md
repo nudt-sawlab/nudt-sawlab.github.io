@@ -1,5 +1,5 @@
 ---
-title: "GeoXel at CoRL 2026."
+title: "GeoXel accepted by CoRL 2026."
 date: "2026-09-30"
 featured: true
 ---
