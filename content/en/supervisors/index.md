@@ -1,6 +1,7 @@
 ---
 title: "研究生导师简介"
 type: supervisors
+draft: true
 summary: "Graduate Supervisors Information"
 date: 2026-07-06
 
