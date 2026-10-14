@@ -436,6 +436,22 @@ research_step_papers:
 
   step2:
 
+    - title: "GeoXel: Geographic Per-pixel 3D Mapping from Aerial Video in the Wild"
+      authors_text: "Zeyu Cui, Maojun Zhang, Shuaibang Peng, Shen Yan†, Yu Liu"
+      media_icon:
+        type: image
+        src: "img/research/GeoXel.png"
+      journal: "CoRL 2026"
+      intro: "GeoXel reconstructs geographically aligned camera trajectories and per-pixel 3D geometry from long aerial videos by combining StreamVGGT with orthophoto and elevation maps, test-time token adaptation, and pose-graph optimization."
+      links:
+        - name: Home
+          url: "https://nudt-sawlab.github.io/GeoXel/"
+          css_class: home-link
+
+        - name: Code
+          url: "https://github.com/nudt-sawlab/GeoXel"
+          css_class: code-link
+
     - title: "Spectral–spatial Adversarial Multidomain Synthesis Network for Cross-scene Hyperspectral Image Classification"
       authors_text: "Xi Chen, Lin Gao, Maojun Zhang†, Chen Chen, Shen Yan"
       media_icon:
