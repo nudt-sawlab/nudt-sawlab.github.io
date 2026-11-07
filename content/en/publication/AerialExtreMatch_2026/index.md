@@ -7,7 +7,7 @@ intro: "AerialExtreMatch is a large-scale benchmark for extreme-view UAV-to-sate
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

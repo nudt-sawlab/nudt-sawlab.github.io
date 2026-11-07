@@ -7,7 +7,7 @@ intro: "A real-time 6-DoF object tracking framework that integrates deep learnin
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.gif"
+  src: "teaser.mp4"
 
 links:
 

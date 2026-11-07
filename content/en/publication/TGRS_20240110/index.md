@@ -7,7 +7,7 @@ intro: " This paper addresses the challenging problem of cross-view 6-DoF locali
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 links:
 
   # - name: Home

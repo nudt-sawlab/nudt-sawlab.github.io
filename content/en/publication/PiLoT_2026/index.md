@@ -7,7 +7,7 @@ intro: "A unified framework that directly registers live video against geo-refer
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 
 links:

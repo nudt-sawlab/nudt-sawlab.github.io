@@ -7,7 +7,7 @@ intro: "A novel fine-tuning framework that utilizes a dual-gated Mixture-of-Expe
 weight: 1
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 
 links:

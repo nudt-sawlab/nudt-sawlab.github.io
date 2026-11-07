@@ -7,7 +7,7 @@ intro: "GeoXel reconstructs geographically aligned camera trajectories and per-p
 weight: 1
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
   - name: Home

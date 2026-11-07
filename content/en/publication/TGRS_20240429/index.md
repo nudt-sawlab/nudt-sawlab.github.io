@@ -7,7 +7,7 @@ intro: "A Method for Hyperspectral Image Target Detection."
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 links:
 
   # - name: Home

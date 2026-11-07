@@ -7,7 +7,7 @@ intro: "Addresses extreme seasonal and structural appearance changes by tightly 
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

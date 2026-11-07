@@ -7,7 +7,7 @@ intro: "NGC-GeoLoc is a novel dense coordinate regression framework for UAV geo-
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

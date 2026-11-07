@@ -8,7 +8,7 @@ weight: 1
 categories: ["Infrared"]
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
   - name: Paper

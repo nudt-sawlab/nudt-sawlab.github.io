@@ -7,7 +7,7 @@ intro: "A 4D Gaussian Splatting framework that integrates thermodynamic constrai
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

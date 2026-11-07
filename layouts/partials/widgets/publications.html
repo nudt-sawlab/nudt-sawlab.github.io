@@ -112,7 +112,7 @@
                   <source data-src="{{ $media_url }}" type="{{ $video_type }}">
                 </video>
               {{ else }}
-                <img src="{{ $media_url }}" decoding="async"/>
+                <img src="{{ $media_url }}" loading="lazy" decoding="async"/>
               {{ end }}
             </div>
           </div>

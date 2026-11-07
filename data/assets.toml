@@ -1,0 +1,83 @@
+# 本地化覆盖：项目级 data 文件优先于 wowchemy 模块内的同名文件
+# 原本这些依赖全部从 cdn.jsdelivr.net 加载，大陆访问 1.8s+/个且不稳定。
+# 现已下载到 static/js/vendor 与 static/css/vendor，改为同源加载。
+# 注意：url 中的 %s 会被 version 填充，因此文件名保留版本号；
+#       本地文件无法使用原 CDN 的 SRI，故 sri 置空。
+
+# JavaScript
+
+[js.mathJax]
+  version = "3"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/mathjax@%s/es5/tex-chtml.js"
+  async = true
+[js.isotope]
+  version = "3.0.6"
+  sri = ""
+  url = "/js/vendor/isotope.pkgd.%s.min.js"
+[js.imagesLoaded]
+  version = "5.0.0"
+  sri = ""
+  url = "/js/vendor/imagesloaded.pkgd.%s.min.js"
+[js.gmaps]
+  version = "0.4.25"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/gh/hpneo/gmaps@%s/gmaps.min.js"
+[js.leaflet]
+  version = "1.7.1"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/leaflet@%s/dist/leaflet.min.js"
+[js.fancybox]
+  version = "3.5.7"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@%s/dist/jquery.fancybox.min.js"
+[js.fuse]
+  version = "3.2.1"
+  sri = ""
+  url = "/js/vendor/fuse.%s.min.js"
+[js.mark]
+  version = "8.11.1"
+  sri = ""
+  url = "/js/vendor/jquery.mark.%s.min.js"
+[js.instantsearch]
+  version = "4"
+  url = "https://cdn.jsdelivr.net/npm/instantsearch.js@%s/dist/instantsearch.production.min.js"
+[js.anchor]
+  version = "5.0.0"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/anchor-js@%s/anchor.min.js"
+[js.mermaid]
+  version = "9.1.3"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/mermaid@%s/dist/mermaid.min.js"
+[js.cookieconsent]
+  version = "3.1.1"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/gh/osano/cookieconsent@%s/build/cookieconsent.min.js"
+[js.plotly]
+  version = "1.55.2"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/gh/plotly/plotly.js@v%s/dist/plotly.min.js"
+
+# CSS
+
+[css.academicons]
+  version = "1.9.4"
+  sri = ""
+  url = "/css/vendor/academicons.%s.min.css"
+[css.leaflet]
+  version = "1.7.1"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/leaflet@%s/dist/leaflet.min.css"
+[css.fancybox]
+  version = "3.5.7"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@%s/dist/jquery.fancybox.min.css"
+[css.instantsearch]
+  version = "7.4.5"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/npm/instantsearch.css@%s/themes/satellite-min.css"
+[css.cookieconsent]
+  version = "3.1.1"
+  sri = ""
+  url = "https://cdn.jsdelivr.net/gh/osano/cookieconsent@%s/build/cookieconsent.min.css"

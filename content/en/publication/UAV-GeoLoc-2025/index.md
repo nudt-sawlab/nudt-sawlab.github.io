@@ -7,7 +7,7 @@ intro: "World-UAV -- a diverse and realistic dataset for UAV-to-satellite geo-lo
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.gif"
+  src: "teaser.mp4"
 links:
 
   # - name: Home

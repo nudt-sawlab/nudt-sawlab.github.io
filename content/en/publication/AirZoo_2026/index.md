@@ -8,7 +8,7 @@ weight: 1
 categories: ["Localization"]
 media_icon:
   type: "image"
-  src: "teaser.jpg"
+  src: "teaser.webp"
 
 links:
 

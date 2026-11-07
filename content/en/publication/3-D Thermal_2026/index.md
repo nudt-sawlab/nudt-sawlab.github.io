@@ -7,7 +7,7 @@ intro: "A 3-D thermal city reconstruction framework that uses a high-quality RGB
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

@@ -7,7 +7,7 @@ intro: "A novel method for aerial visual localization over low Level-of-Detail (
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.gif"
+  src: "teaser.mp4"
 
 links:
 

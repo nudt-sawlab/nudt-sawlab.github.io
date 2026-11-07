@@ -7,7 +7,7 @@ intro: "A method for aerial visual localization that uses LoD (Level-of-Detail) 
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.gif"
+  src: "teaser.mp4"
 
 links:
 

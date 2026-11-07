@@ -7,7 +7,7 @@ intro: "An iterative framework that refines a noisy initial pose by matching ren
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

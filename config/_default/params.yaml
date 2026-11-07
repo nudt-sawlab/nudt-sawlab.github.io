@@ -10,7 +10,7 @@ appearance:
   # theme_night: dark
   # remove dark theme
   theme_night:
-  font: minimal
+  font: native
   # S,  M  , L
   font_size: S
 

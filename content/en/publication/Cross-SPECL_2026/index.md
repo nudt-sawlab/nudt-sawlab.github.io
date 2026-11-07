@@ -7,7 +7,7 @@ intro: "A cross-scene hyperspectral image classification method based on spectra
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 

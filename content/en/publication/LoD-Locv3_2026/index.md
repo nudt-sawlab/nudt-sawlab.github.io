@@ -7,7 +7,7 @@ intro: "A generalized aerial localization method for dense urban scenes that com
 weight: 3
 media_icon:
   type: "image"
-  src: "teaser.png"
+  src: "teaser.webp"
 
 links:
 
