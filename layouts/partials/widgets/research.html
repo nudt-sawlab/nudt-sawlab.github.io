@@ -69,7 +69,7 @@
       {{ $media_base := $media_src | strings.TrimSuffix ".webm" | strings.TrimSuffix ".mp4" }}
       {{ $poster_src := "" }}
       {{ if or (eq $media_type "video") (strings.HasSuffix $media_src_lower ".webm") (strings.HasSuffix $media_src_lower ".mp4") }}
-        {{ $poster_src = print $media_base ".png" }}
+        {{ $poster_src = print $media_base ".webp" }}
       {{ end }}
       {{ $page_folder := "" }}
       {{ if $pub_page }}
