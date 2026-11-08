@@ -160,6 +160,9 @@
               {{ end }}
 
               {{ $pub_intro := $pub_item.intro }}
+              {{ if eq site.Language.Lang "zh" }}
+                {{ with index site.Data.zh_pub_titles.intros $pub_item.title }}{{ $pub_intro = . }}{{ end }}
+              {{ end }}
               <div class="toggle-content " id="pub_intro_idx{{$index}}" style="display: none;">
                 <div class=" ">{{ $pub_intro }}</div>
               </div>

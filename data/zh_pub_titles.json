@@ -1,0 +1,28 @@
+{
+  "intros": {
+    "UAV-GeoLoc: A Large-vocabulary Dataset and Geometry-Transformed Method for UAV Geo-Localization": "World-UAV：面向无人机—卫星地理定位的多样、真实数据集；UAVPlace：一种变换不变的检索方法，可显著提升极端视角变化下的性能。",
+    "AerialExtreMatch: A Benchmark for Extreme-View Image Matching and Localization": "AerialExtreMatch 是面向极端视角无人机—卫星图像匹配与定位的大规模基准，包含约 150 万对合成图像、32 级难度基准以及一个真实场景定位集。",
+    "LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment": "一种在低细节层次（LoD）城市模型上实现空中视觉定位的新方法。",
+    "LoD-Loc: Aerial Visual Localization using LoD 3D Map with Neural Wireframe Alignment": "一种空中视觉定位方法，利用 LoD（细节层次）三维城市地图结合神经线框对齐，无需高分辨率纹理模型即可实现精确的 6 自由度位姿估计。",
+    "UAVD4L:A Large-Scale Dataset for UAV 6-DoF Localization": "首个专门面向 GPS 拒止环境下无人机 6 自由度定位的大规模数据集。",
+    "Deep Active Contours for Real-time 6-DoF Object Tracking": "一个实时 6 自由度目标跟踪框架，将深度学习与主动轮廓模型结合，从单目视频中获得稳健的位姿估计。",
+    "Render-and-compare: Cross-view 6-dof localization from noisy prior": "一个迭代框架：通过将渲染的合成视图与实际查询图像匹配来精化带噪的初始位姿，从而弥合空中与地面视角之间的几何差异。",
+    "Long-term Visual Localization with Mobile Sensors": "通过将视觉信息与手机常用传感器数据（GPS、罗盘、重力）紧耦合，应对剧烈的季节与结构外观变化。",
+    "PiLoT: Neural Pixel-to-3D Registration for UAV-based Ego and Target Geo-localization": "一个统一框架，将实时视频直接与带地理坐标的三维地图配准，在 GNSS 拒止环境下实现无漂移、实时、长期的无人机地理定位。",
+    "AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision": "面向空中图像检索、跨视角匹配与多视角三维重建的全球尺度合成无人机数据集与基准，提供像素对齐的 RGB-D 几何与带地理坐标的 6 自由度位姿，支撑更强的空中预训练与真实场景迁移。",
+    "NGC-GeoLoc: Neural GeoCoordinate Regression for GPS-Denied UAV Geo-Localization": "NGC-GeoLoc 是一种新的无人机地理定位稠密坐标回归框架，取代传统检索方法，具备尺度与旋转鲁棒性、与地图尺寸无关的亚秒级推理，并优于现有基线。",
+    "LoD-Loc v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment": "一种面向密集城市场景的通用空中定位方法，结合大规模合成实例数据与实例级轮廓对齐，提升跨场景泛化能力并降低位姿歧义。",
+    "GeoXel: Geographic Per-pixel 3D Mapping from Aerial Video in the Wild": "GeoXel 通过将 StreamVGGT 与正射影像和高程图结合、测试时 token 自适应以及位姿图优化，从长航时空中视频中重建地理对齐的相机轨迹与逐像素三维几何。",
+    "Spectral–spatial Adversarial Multidomain Synthesis Network for Cross-scene Hyperspectral Image Classification": "一种通过扩展源域分布多样性实现稳健跨场景高光谱图像分类的方法。",
+    "Target Detection With Spectral Graph Contrast Clustering Assignment and Spectral Graph Transformer in Hyperspectral Imagery": "一种高光谱图像目标检测方法。",
+    "Local Precise Refinement: A Dual-Gated Mixture-of-Experts for Enhancing Foundation Model Generalization against Spectral Shifts": "一个新颖的微调框架，采用双门控混合专家（MoE）架构，在光谱遥感中实现空间自适应、深度引导的特征精化，从而获得稳健的域泛化语义分割。",
+    "FCP-SatMVS: Feature-Context-Progressive Network for Robust Satellite Digital Surface Model": "一个新的级联多视图立体框架 FCP-SatMVS，通过纹理感知、高程一致与不确定性引导的深度精化，在卫星遥感中实现高精度数字表面模型重建。",
+    "Cross-SPECL: Cross-Scene Hyperspectral Image Classification via Spectral Stability Exploiting and Causal Learning": "一种基于光谱稳定性挖掘与因果学习的跨场景高光谱图像分类方法。",
+    "ThermoGS: Decoupling Physical Surface Attributes for Spatio-Temporal Thermal Field Emulation via 4D Gaussian Splatting": "一个物理信息驱动的 4D 高斯泼溅框架，用于热场仿真，将材料属性与瞬态温度状态解耦，以模拟环境条件变化下的时空热分布。",
+    "AV2T-Gen: Aerial Visible to Thermal Generation with Environment and Vehicle State Guidance": "一个环境与车辆状态引导的可见光到热红外生成框架，面向空中影像，利用扩散模型与同步 RGB-T 数据生成物理真实感更强、车辆细节更一致的热红外图像。",
+    "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics": "一个融合热力学约束的 4D 高斯泼溅框架，可从热红外序列实现动态夜间场景的高保真三维重建与温度时序演化。",
+    "3-D Thermal City Reconstruction via Thermal Mapping With RGB-Mesh Guidance": "一个三维城市热红外重建框架，利用高质量 RGB 网格引导热红外图像配准、逐像素热映射与温度纹理重建，实现可扩展的高精度城市热建模。",
+    "ThermalGS: Dynamic 3D Thermal Reconstruction with Gaussian Splatting": "一种面向动态三维热重建的 4D 高斯泼溅方法，能够从多视角红外序列高保真地恢复时空几何与温度演化。",
+    "ATLoc: Aerial Thermal Images Localization via View Synthesis": "面向热红外图像的跨视角 6 自由度定位难题，提出渲染—比对框架，通过合成视图与真实热红外图像的匹配实现稳健的位姿估计。"
+  }
+}
