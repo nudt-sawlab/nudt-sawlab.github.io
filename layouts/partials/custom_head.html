@@ -1,0 +1,15 @@
+{{/* 在 <head> 末尾预载 Research Summary 主图，避免 lazy/eager 加载过晚。
+     主题升级（Wowchemy v5.9.0）不受影响：本文件为站点级覆盖。
+     注意：srcset/sizes 必须与 content/{zh,en}/home/research.md 中的 <img> 完全一致，
+     否则浏览器会重复下载。两处需同步修改。 */}}
+{{ if .IsHome }}
+  {{ if eq site.Language.Lang "zh" }}
+    <link rel="preload" as="image" href="/img/research/r3-zh-1400.webp"
+          imagesrcset="/img/research/r3-zh-1400.webp 1400w, /img/research/r3-zh-1900.webp 1900w"
+          imagesizes="(min-width: 1200px) 1140px, 100vw" fetchpriority="high">
+  {{ else }}
+    <link rel="preload" as="image" href="/img/research/r3-1400.webp"
+          imagesrcset="/img/research/r3-1400.webp 1400w, /img/research/r3-1900.webp 1900w"
+          imagesizes="(min-width: 1200px) 1140px, 100vw" fetchpriority="high">
+  {{ end }}
+{{ end }}
