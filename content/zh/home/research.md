@@ -42,13 +42,13 @@ research_step_names:
 research_step_papers:
   step1:
 
-    - title: "UAV-GeoLoc：大规模词汇集与几何变换的无人机地理定位方法"
+    - title: "UAV-GeoLoc: A Large-vocabulary Dataset and Geometry-Transformed Method for UAV Geo-Localization"
       authors_text: "Rouwan Wu, Jiacheng Deng, Mingyu Mou, Xingyi He, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/UAV-GeoLoc.mp4"
       journal: "RA-L 2025"
-      intro: "World-UAV：面向无人机—卫星地理定位的多样、真实数据集；UAVPlace：一种变换不变的检索方法，可显著提升极端视角变化下的性能。"
+      intro: "World-UAV -- a diverse and realistic dataset for UAV-to-satellite geo-localization, UAVPlace -- a transformation-invariant retrieval method that significantly improves performance under extreme viewpoint variations."
       cite_text: |
         @ARTICLE{11077664,
           author={Wu, Rouwan and Deng, Jiacheng and Mou, Mingyu and He, Xingyi and Zhang, Maojun and Liu, Yu and Yan, Shen},
@@ -74,13 +74,13 @@ research_step_papers:
           url: "https://github.com/RingoWRW/GeoLoc-UAV"
           css_class: code-link
 
-    - title: "AerialExtreMatch：极端视角图像匹配与定位基准"
+    - title: "AerialExtreMatch: A Benchmark for Extreme-View Image Matching and Localization"
       authors_text: "Rouwan Wu, Zhe Huang, Xingyi He, Yan Liu, Shen Yan, Sida Peng, Maojun Zhang†, Xiaowei Zhou†"
       media_icon:
         type: image
         src: "/img/research/AerialExtreMatch.webp"
       journal: "RA-L 2026"
-      intro: "AerialExtreMatch 是面向极端视角无人机—卫星图像匹配与定位的大规模基准，包含约 150 万对合成图像、32 级难度基准以及一个真实场景定位集。"
+      intro: "AerialExtreMatch is a large-scale benchmark for extreme-view UAV-to-satellite image matching and localization, featuring about 1.5 million synthetic pairs, a 32-level difficulty benchmark, and a real-world localization set."
       links:
         - name: 主页
           url: "https://xecades.github.io/AerialExtreMatch/"
@@ -94,13 +94,13 @@ research_step_papers:
           url: "https://github.com/Xecades/AerialExtreMatch"
           css_class: code-link
 
-    - title: "LoD-Loc v2：基于显式轮廓对齐的低细节层次城市模型空中视觉定位"
+    - title: "LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment"
       authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/LoD-Loc-v2.mp4"
       journal: "ICCV 2025"
-      intro: "一种在低细节层次（LoD）城市模型上实现空中视觉定位的新方法。"
+      intro: "A novel method for aerial visual localization over low Level-of-Detail (LoD) city models. "
       cite_text: |
         @InProceedings{Zhu_2025_ICCV,
             author    = {Zhu, Juelin and Peng, Shuaibang and Wang, Long and Tan, Hanlin and Liu, Yu and Zhang, Maojun and Yan, Shen},
@@ -124,13 +124,13 @@ research_step_papers:
           url: "https://github.com/VictorZoo/LoD-Loc-v2"
           css_class: code-link
 
-    - title: "LoD-Loc：基于 LoD 三维地图与神经线框对齐的空中视觉定位"
+    - title: "LoD-Loc: Aerial Visual Localization using LoD 3D Map with Neural Wireframe Alignment"
       authors_text: "Juelin Zhu*, Shen Yan*, Long Wang, Shengyue Zhang, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
         src: "/img/research/LoD-Loc.mp4"
       journal: "NeurIPS 2024"
-      intro: "一种空中视觉定位方法，利用 LoD（细节层次）三维城市地图结合神经线框对齐，无需高分辨率纹理模型即可实现精确的 6 自由度位姿估计。"
+      intro: "A method for aerial visual localization that uses LoD (Level-of-Detail) 3D city maps combined with neural wireframe alignment to achieve accurate 6-DoF pose estimation without requiring high-resolution textured models."
       cite_text: |
         @inproceedings{zhu2024lod,
           title={LoD-Loc: aerial visual localization using LoD 3D map with neural wireframe alignment},
@@ -153,13 +153,13 @@ research_step_papers:
           url: "https://github.com/VictorZoo/LoD-Loc"
           css_class: code-link
 
-    - title: "UAVD4L：面向无人机 6 自由度定位的大规模数据集"
+    - title: "UAVD4L:A Large-Scale Dataset for UAV 6-DoF Localization"
       authors_text: "Rouwan Wu*, Xiaoya Cheng*, Juelin Zhu, Yuxiang Liu, Maojun Zhang†, Shen Yan"
       media_icon:
         type: image
         src: "/img/research/UAVD4L.mp4"
       journal: "3DV 2024"
-      intro: "首个专门面向 GPS 拒止环境下无人机 6 自由度定位的大规模数据集。"
+      intro: "The first large-scale dataset designed specifically for 6-DoF localization of UAVs in GPS-denied environments"
       cite_text: |
         @inproceedings{wu2024uavd4l,
           title={UAVD4L: A Large-Scale Dataset for UAV 6-DoF Localization},
@@ -183,7 +183,7 @@ research_step_papers:
           url: "https://github.com/RingoWRW/UAVD4L"
           css_class: code-link
 
-    - title: "ATLoc：基于视图合成的空中热红外图像定位"
+    - title: "ATLoc: Aerial Thermal Images Localization via View Synthesis"
       authors_text: "Yuxiang Liu*, Rouwan Wu*, Shen Yan, Xiaoya Cheng, Juelin Zhu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
@@ -215,13 +215,13 @@ research_step_papers:
           url: "https://github.com/RingoWRW/ATLoc"
           css_class: code-link
 
-    - title: "深度主动轮廓：实时 6 自由度目标跟踪"
+    - title: "Deep Active Contours for Real-time 6-DoF Object Tracking"
       authors_text: "Long Wang*, Shen Yan*, Jianan Zhen, Yu Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
       media_icon:
         type: image
         src: "/img/research/DeepAC.mp4"
       journal: "ICCV 2023"
-      intro: "一个实时 6 自由度目标跟踪框架，将深度学习与主动轮廓模型结合，从单目视频中获得稳健的位姿估计。"
+      intro: "A real-time 6-DoF object tracking framework that integrates deep learning with active contour models to achieve robust pose estimation from monocular video."
       cite_text: |
         @inproceedings{wang2023deep,
           title={Deep active contours for real-time 6-DoF object tracking},
@@ -244,13 +244,13 @@ research_step_papers:
           url: "https://github.com/WangLongZJU/DeepAC"
           css_class: code-link
 
-    - title: "渲染—比对：基于噪声先验的跨视角 6 自由度定位"
+    - title: "Render-and-compare: Cross-view 6-dof localization from noisy prior"
       authors_text: "Shen Yan*, Xiaoya Cheng*, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
         src: "/img/research/Render2Loc.webp"
       journal: "ICME 2023"
-      intro: "一个迭代框架：通过将渲染的合成视图与实际查询图像匹配来精化带噪的初始位姿，从而弥合空中与地面视角之间的几何差异。"
+      intro: "An iterative framework that refines a noisy initial pose by matching rendered synthetic views with actual query images to bridge the geometric gap between aerial and ground perspectives."
       cite_text: |
         @inproceedings{yan2023render,
           title={Render-and-compare: Cross-view 6-dof localization from noisy prior},
@@ -274,13 +274,13 @@ research_step_papers:
           url: "https://github.com/Choyaa/Render2Loc"
           css_class: code-link
 
-    - title: "融合移动传感器数据的长期视觉定位"
+    - title: "Long-term Visual Localization with Mobile Sensors"
       authors_text: "Shen Yan, Yu Liu, Long Wang, Zehong Shen, Zhen Peng, Haomin Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
       media_icon:
         type: image
         src: "/img/research/SensLoc.webp"
       journal: "CVPR 2023"
-      intro: "通过将视觉信息与手机常用传感器数据（GPS、罗盘、重力）紧耦合，应对剧烈的季节与结构外观变化。"
+      intro: "Addresses extreme seasonal and structural appearance changes by tightly fusing visual information with standard mobile sensor data (GPS, compass, gravity)."
       cite_text: |
         @inproceedings{yan2023long,
           title={Long-term Visual Localization with Mobile Sensors},
@@ -303,13 +303,13 @@ research_step_papers:
         #   url: "https://github.com/Choyaa/Render2Loc"
         #   css_class: code-link
 
-    - title: "PiLoT：面向无人机自身与目标地理定位的神经像素—三维配准"
+    - title: "PiLoT: Neural Pixel-to-3D Registration for UAV-based Ego and Target Geo-localization"
       authors_text: "Xiaoya Cheng, Long Wang, Yan Liu, Xinyi Liu, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/PiLoT.webp"
       journal: "CVPR 2026"
-      intro: "一个统一框架，将实时视频直接与带地理坐标的三维地图配准，在 GNSS 拒止环境下实现无漂移、实时、长期的无人机地理定位。"
+      intro: "A unified framework that directly registers live video against geo-referenced 3D maps for drift-free, real-time, and long-term UAV geo-localization in GNSS-denied environments."
       cite_text: |
         @inproceedings{cheng2026pilot,
           author    = {Cheng, Xiaoya and Wang, Long and Liu, Yan and Liu, Xinyi and Tan, Hanlin and Liu, Yu and Zhang, Maojun and Yan, Shen},
@@ -331,13 +331,13 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/PiLoT"
           css_class: code-link
 
-    - title: "AirZoo：支撑空中几何三维视觉的统一大规模数据集"
+    - title: "AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision"
       authors_text: "Xiaoya Cheng*, Rouwan Wu*, Xinyi Liu*, Zeyu Cui*, Yan Liu*, Na Zhao, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/AirZoo.webp"
       journal: "ECCV 2026"
-      intro: "面向空中图像检索、跨视角匹配与多视角三维重建的全球尺度合成无人机数据集与基准，提供像素对齐的 RGB-D 几何与带地理坐标的 6 自由度位姿，支撑更强的空中预训练与真实场景迁移。"
+      intro: "A world-scale synthetic UAV dataset and benchmark for aerial image retrieval, cross-view matching, and multi-view 3D reconstruction, with pixel-aligned RGB-D geometry and geo-referenced 6-DoF poses for stronger aerial pre-training and real-world transfer."
       cite_text: |
         @article{cheng2026airzoo,
           author  = {Cheng, Xiaoya and Wu, Rouwan and Liu, Xinyi and Cui, Zeyu and Liu, Yan and Zhao, Na and Liu, Yu and Zhang, Maojun and Yan, Shen},
@@ -368,13 +368,13 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/AirZoo"
           css_class: code-link
 
-    - title: "NGC-GeoLoc：面向 GPS 拒止环境的无人机地理定位神经坐标回归"
+    - title: "NGC-GeoLoc: Neural GeoCoordinate Regression for GPS-Denied UAV Geo-Localization"
       authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/NGC-GeoLoc.webp"
       journal: "RA-L 2026"
-      intro: "NGC-GeoLoc 是一种新的无人机地理定位稠密坐标回归框架，取代传统检索方法，具备尺度与旋转鲁棒性、与地图尺寸无关的亚秒级推理，并优于现有基线。"
+      intro: "NGC-GeoLoc is a novel dense coordinate regression framework for UAV geo-localization that replaces traditional retrieval methods, achieving scale/rotation robustness and map-size-independent, sub-second inference while outperforming baselines."
       cite_text: |
         @ARTICLE{11355838,
           author={Deng, Jiacheng and Wu, Rouwan and Zhang, Maojun and Yan, Shen},
@@ -401,13 +401,13 @@ research_step_papers:
           url: "https://github.com/djcrobo/NGC-Geoloc"
           css_class: code-link
 
-    - title: "LoD-Loc v3：基于实例轮廓对齐的密集城区泛化空中定位"
+    - title: "LoD-Loc v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment"
       authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Kun Yang, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/LoD-Loc-v3.webp"
       journal: "CVPR 2026"
-      intro: "一种面向密集城市场景的通用空中定位方法，结合大规模合成实例数据与实例级轮廓对齐，提升跨场景泛化能力并降低位姿歧义。"
+      intro: "A generalized aerial localization method for dense urban scenes that combines large-scale synthetic instance data with instance-level silhouette alignment to improve cross-scene generalization and reduce pose ambiguity."
       cite_text: |
         @article{peng2026lodlocv3generalizedaerial,
           title={{LoD-Loc} v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment},
@@ -436,13 +436,13 @@ research_step_papers:
 
   step2:
 
-    - title: "GeoXel：从真实场景空中视频重建地理对齐的逐像素三维地图"
+    - title: "GeoXel: Geographic Per-pixel 3D Mapping from Aerial Video in the Wild"
       authors_text: "Zeyu Cui, Maojun Zhang, Shuaibang Peng, Shen Yan†, Yu Liu"
       media_icon:
         type: image
         src: "/img/research/GeoXel.webp"
       journal: "CoRL 2026"
-      intro: "GeoXel 通过将 StreamVGGT 与正射影像和高程图结合、测试时 token 自适应以及位姿图优化，从长航时空中视频中重建地理对齐的相机轨迹与逐像素三维几何。"
+      intro: "GeoXel reconstructs geographically aligned camera trajectories and per-pixel 3D geometry from long aerial videos by combining StreamVGGT with orthophoto and elevation maps, test-time token adaptation, and pose-graph optimization."
       links:
         - name: 主页
           url: "https://nudt-sawlab.github.io/GeoXel/"
@@ -452,13 +452,13 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/GeoXel"
           css_class: code-link
 
-    - title: "光谱—空间对抗多域合成网络：跨场景高光谱图像分类"
+    - title: "Spectral–spatial Adversarial Multidomain Synthesis Network for Cross-scene Hyperspectral Image Classification"
       authors_text: "Xi Chen, Lin Gao, Maojun Zhang†, Chen Chen, Shen Yan"
       media_icon:
         type: image
         src: "/img/research/S2AMSnet.webp"
       journal: "TGRS 2024"
-      intro: "一种通过扩展源域分布多样性实现稳健跨场景高光谱图像分类的方法。"
+      intro: "A Method for Robust Cross-Scene Hyperspectral Image Classification via Expansion of Source Domain Distribution Diversity."
       cite_text: |
         @article{chen2024spectral,
           title={Spectral--spatial adversarial multidomain synthesis network for cross-scene hyperspectral image classification},
@@ -483,13 +483,13 @@ research_step_papers:
           url: "https://github.com/daxichen/S2AMSnet"
           css_class: code-link
 
-    - title: "光谱图对比聚类分配与光谱图 Transformer 的高光谱目标检测"
+    - title: "Target Detection With Spectral Graph Contrast Clustering Assignment and Spectral Graph Transformer in Hyperspectral Imagery"
       authors_text: "Xi Chen, Maojun Zhang†, Yu Liu"
       media_icon:
         type: image
         src: "/img/research/Target-Detection.webp"
       journal: "TGRS 2024"
-      intro: "一种高光谱图像目标检测方法。"
+      intro: "A Method for Hyperspectral Image Target Detection."
       cite_text: |
         @article{chen2024target,
           title={Target detection with spectral graph contrast clustering assignment and spectral graph transformer in hyperspectral imagery},
@@ -514,13 +514,13 @@ research_step_papers:
         #   url: "https://github.com/daxichen"
         #   css_class: code-link
 
-    - title: "局部精细精化：双门控混合专家提升基础模型对光谱漂移的泛化能力"
+    - title: "Local Precise Refinement: A Dual-Gated Mixture-of-Experts for Enhancing Foundation Model Generalization against Spectral Shifts"
       authors_text: "Xi Chen, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/SpectralMoE.webp"
       journal: "CVPR 2026"
-      intro: "一个新颖的微调框架，采用双门控混合专家（MoE）架构，在光谱遥感中实现空间自适应、深度引导的特征精化，从而获得稳健的域泛化语义分割。"
+      intro: "A novel fine-tuning framework that utilizes a dual-gated Mixture-of-Experts architecture to perform spatially-adaptive, depth-guided feature refinement for robust domain-generalized semantic segmentation in spectral remote sensing."
       cite_text: |
         @misc{chen2026localpreciserefinementdualgated,
               title={Local Precise Refinement: A Dual-Gated Mixture-of-Experts for Enhancing Foundation Model Generalization against Spectral Shifts}, 
@@ -544,25 +544,25 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/SpectralMoE-main"
           css_class: code-link
 
-    - title: "FCP-SatMVS：面向稳健卫星数字表面模型的特征—上下文渐进网络"
+    - title: "FCP-SatMVS: Feature-Context-Progressive Network for Robust Satellite Digital Surface Model"
       authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao†"
       media_icon:
         type: image
         src: "/img/research/FCP-SatMVS.webp"
       journal: "ICME 2026"
-      intro: "一个新的级联多视图立体框架 FCP-SatMVS，通过纹理感知、高程一致与不确定性引导的深度精化，在卫星遥感中实现高精度数字表面模型重建。"
+      intro: "A novel cascade multi-view stereo framework, FCP-SatMVS, that performs texture-aware, elevation-consistent, and uncertainty-guided depth refinement for high-precision Digital Surface Model reconstruction in satellite remote sensing."
       links:
         - name: 代码
           url: "https://github.com/nudt-sawlab/FCP-SatMVS"
           css_class: code-link
 
-    - title: "Cross-SPECL：基于光谱稳定性挖掘与因果学习的跨场景高光谱图像分类"
+    - title: "Cross-SPECL: Cross-Scene Hyperspectral Image Classification via Spectral Stability Exploiting and Causal Learning"
       authors_text: "Xi Chen, Maojun Zhang, Yuxiang Liu, Chen Chen, Shen Yan†"
       media_icon:
         type: image
         src: "/img/research/Cross-SPECL.webp"
       journal: "TGRS 2026"
-      intro: "一种基于光谱稳定性挖掘与因果学习的跨场景高光谱图像分类方法。"
+      intro: "A cross-scene hyperspectral image classification method based on spectral stability exploiting and causal learning."
       links:
         - name: 论文
           url: "https://ieeexplore.ieee.org/document/11397394"
@@ -570,13 +570,13 @@ research_step_papers:
 
   step3:
 
-    - title: "ThermoGS：解耦物理表面属性的 4D 高斯泼溅时空热场仿真"
+    - title: "ThermoGS: Decoupling Physical Surface Attributes for Spatio-Temporal Thermal Field Emulation via 4D Gaussian Splatting"
       authors_text: "Kun Yang, Yuxiang Liu, Zeyu Cui, Shen Yan, Maojun Zhang, Yu Liu, Xue Wang†, Qing Wang"
       media_icon:
         type: image
         src: "/img/research/ThermoGS.webp"
       journal: "ECCV 2026"
-      intro: "一个物理信息驱动的 4D 高斯泼溅框架，用于热场仿真，将材料属性与瞬态温度状态解耦，以模拟环境条件变化下的时空热分布。"
+      intro: "A physics-informed 4D Gaussian Splatting framework for thermal field emulation that decouples material attributes from transient temperature states to simulate spatiotemporal thermal distributions under changing environmental conditions."
       links:
         - name: 论文
           url: ""
@@ -586,13 +586,13 @@ research_step_papers:
           url: "https://github.com/NPU-CVPG/ThermoGS"
           css_class: code-link
 
-    - title: "AV2T-Gen：环境与车辆状态引导的空中可见光到热红外生成"
+    - title: "AV2T-Gen: Aerial Visible to Thermal Generation with Environment and Vehicle State Guidance"
       authors_text: "Kun Yang, Yuxiang Liu, Yihan Wang, Shen Yan, Maojun Zhang, Yu Liu†, Xue Wang, Qing Wang"
       media_icon:
         type: image
         src: "/img/research/AV2T-Gen.webp"
       journal: "ECCV 2026"
-      intro: "一个环境与车辆状态引导的可见光到热红外生成框架，面向空中影像，利用扩散模型与同步 RGB-T 数据生成物理真实感更强、车辆细节更一致的热红外图像。"
+      intro: "An environment- and vehicle-state-guided visible-to-thermal generation framework for aerial imagery that uses diffusion models and synchronized RGB-T data to produce thermal images with stronger physical realism and vehicle detail consistency."
       links:
         - name: 论文
           url: ""
@@ -602,13 +602,13 @@ research_step_papers:
           url: "https://github.com/NPU-CVPG/AV2T"
           css_class: code-link
 
-    - title: "NTR-Gaussian：基于热力学的夜间动态热红外 4D 高斯泼溅重建"
+    - title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
       authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu†, Maojun Zhang, Shen Yan, Qing Wang†"
       media_icon:
         type: image
         src: "/img/research/NTR-Gaussian.webp"
       journal: "CVPR 2025"
-      intro: "一个融合热力学约束的 4D 高斯泼溅框架，可从热红外序列实现动态夜间场景的高保真三维重建与温度时序演化。"
+      intro: "A 4D Gaussian Splatting framework that integrates thermodynamic constraints to achieve high-fidelity 3D reconstruction and temporal temperature evolution of dynamic nighttime scenes from thermal infrared sequences. "
       cite_text: |
         @inproceedings{yang2025ntr,
           title={NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics},
@@ -631,25 +631,25 @@ research_step_papers:
           url: "https://github.com/NPU-CVPG/NTR-Gaussian"
           css_class: code-link
 
-    - title: "RGB 网格引导热映射的三维城市热红外重建"
+    - title: "3-D Thermal City Reconstruction via Thermal Mapping With RGB-Mesh Guidance"
       authors_text: "Yuxiang Liu, Shen Yan, Maojun Zhang, Rouwan Wu, Huaxin Xiao, Yu Liu"
       media_icon:
         type: image
         src: "/img/research/3D-Thermal.webp"
       journal: "TGRS 2026"
-      intro: "一个三维城市热红外重建框架，利用高质量 RGB 网格引导热红外图像配准、逐像素热映射与温度纹理重建，实现可扩展的高精度城市热建模。"
+      intro: "A 3-D thermal city reconstruction framework that uses a high-quality RGB mesh to guide thermal image registration, pixel-level thermal mapping, and temperature texture reconstruction for scalable, high-precision urban thermal modeling."
       links:
         - name: 论文
           url: "https://ieeexplore.ieee.org/document/11345331"
           css_class: paper-link
 
-    - title: "ThermalGS：基于高斯泼溅的动态三维热重建"
+    - title: "ThermalGS: Dynamic 3D Thermal Reconstruction with Gaussian Splatting"
       authors_text: "Yuxiang Liu, Xi Chen, Shen Yan, Zeyu Cui, Huaxin Xiao, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
         src: "/img/research/ThermalGS.mp4"
       journal: "Remote Sensing 2025"
-      intro: "一种面向动态三维热重建的 4D 高斯泼溅方法，能够从多视角红外序列高保真地恢复时空几何与温度演化。"
+      intro: "A 4D Gaussian Splatting approach for dynamic 3D thermal reconstruction, enabling high-fidelity recovery of both spatiotemporal geometry and temperature evolution from multi-view infrared sequences."
       cite_text: |
         @article{thermalgs2025,
         AUTHOR = {Liu, Yuxiang and Chen, Xi and Yan, Shen and Cui, Zeyu and Xiao, Huaxin and Liu, Yu and Zhang, Maojun},

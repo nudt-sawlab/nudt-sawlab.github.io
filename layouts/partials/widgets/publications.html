@@ -124,10 +124,8 @@
           </div>
           <div class="col-12 col-md pub-content-wrap">
               <div>
+              {{/* 论文一律展示英文原文（含中文页）：标题/作者/期刊/简介不翻译 */}}
               {{ $pub_title := $pub_item.title }}
-              {{ if eq site.Language.Lang "zh" }}
-                {{ with index site.Data.zh_pub_titles.titles $pub_item.title }}{{ $pub_title = . }}{{ end }}
-              {{ end }}
               <div><span class="pub-title">{{ $pub_title | markdownify | emojify }}</span></div>
               <div><span class="pub-author">{{ $pub_item.authors_text | markdownify | emojify }}</span></div>
               {{ with $pub_item.journal }}
@@ -162,9 +160,6 @@
               {{ end }}
 
               {{ $pub_intro := $pub_item.intro }}
-              {{ if eq site.Language.Lang "zh" }}
-                {{ with index site.Data.zh_pub_titles.intros $pub_item.title }}{{ $pub_intro = . }}{{ end }}
-              {{ end }}
               <div class="toggle-content " id="pub_intro_idx{{$index}}" style="display: none;">
                 <div class=" ">{{ $pub_intro }}</div>
               </div>
