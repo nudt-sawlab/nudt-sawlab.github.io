@@ -7,8 +7,10 @@
     {{ $page.Content }}
   </div>
   <div class=" ">
-    <a href="javascript: toggleShowProgress(); ">
-      [Show the research progress]
+    <a href="javascript: toggleShowProgress(); " id="research-progress-toggle"
+       data-show="{{ if eq site.Language.Lang "zh" }}展开研究进展{{ else }}[Show the research progress]{{ end }}"
+       data-hide="{{ if eq site.Language.Lang "zh" }}收起研究进展{{ else }}[Hide the research progress]{{ end }}">
+      {{ if eq site.Language.Lang "zh" }}展开研究进展{{ else }}[Show the research progress]{{ end }}
     </a>
   </div>
 
@@ -89,11 +91,20 @@
             {{ if strings.HasSuffix $media_src_lower ".webm" }}
             {{ $video_type = "video/webm" }}
             {{ end }}
-            <video autoplay="" loop="" muted="" playsinline="" loading="lazy" poster="{{ $poster_url }}" preload="none" class="lead-img lazy-video" data-loaded="false">
+            {{ $poster_sm := replaceRE `\.webp$` "-sm.webp" $poster_url }}
+            {{ $has_poster_sm := and (ne $poster_url "") (fileExists (print "static" $poster_sm)) }}
+            <video autoplay="" loop="" muted="" playsinline="" loading="lazy" poster="{{ cond $has_poster_sm $poster_sm $poster_url }}" preload="none" class="lead-img lazy-video" data-loaded="false">
               <source data-src="{{ $media_url }}" type="{{ $video_type }}">
             </video>
             {{ else }}
-            <img class="lead-img" src="{{ $media_url }}" loading="lazy" decoding="async" />
+            {{/* 卡片显示尺寸仅 200x110，优先用 480px 缩略图，避免为缩略图传输原图 */}}
+            {{ $sm_url := replaceRE `\.webp$` "-sm.webp" $media_url }}
+            {{ $has_sm := and (strings.HasSuffix $media_url ".webp") (fileExists (print "static" $sm_url)) }}
+            <img class="lead-img"
+                 src="{{ cond $has_sm $sm_url $media_url }}"
+                 {{ if $has_sm }}srcset="{{ $sm_url }} 480w, {{ $media_url }} {{ with (imageConfig (print "static" $media_url)) }}{{ .Width }}{{ else }}1600{{ end }}w" sizes="200px"{{ end }}
+                 width="200" height="110"
+                 loading="lazy" decoding="async" />
             {{ end }}
           </div>
 
@@ -128,7 +139,7 @@
                 <div class="btn-links">
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('research_intro_{{$step}}_idx{{$p_index}}')">
-                    <i class="fas fa-angle-double-down" >&nbsp;</i> Intro
+                    <i class="fas fa-angle-double-down" >&nbsp;</i> {{ if eq site.Language.Lang "zh" }}简介{{ else }}Intro{{ end }}
                   </a>
                     {{ range $idx, $item := . }}
                       <a class="btn btn-outline-primary btn-page-header btn-sm"
@@ -139,7 +150,7 @@
                   {{ if or $cite_resource $cite_text }}
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('research_cite_{{$step}}_idx{{$p_index}}')">
-                    <i class="fas fa-quote-left"  >&nbsp;</i> Bibtex
+                    <i class="fas fa-quote-left"  >&nbsp;</i> {{ if eq site.Language.Lang "zh" }}引用{{ else }}Bibtex{{ end }}
                   </a>
                   {{ end }}
                 </div>
@@ -197,14 +208,17 @@
 
   function toggleShowProgress() {
     const progressElement = $(`.home-research-section .research-papers`);
+    const toggleLink = document.getElementById('research-progress-toggle');
     if (progressElement) {
       if (progressElement.hasClass('d-none')) {
         progressElement.removeClass('d-none');
+        if (toggleLink) toggleLink.textContent = toggleLink.dataset.hide;
         // Section just became visible — load videos in the active step
         const activeStepEl = document.querySelector(`.home-research-section .research-papers .research-step.${activeStep}`);
         if (activeStepEl) loadVideosIn(activeStepEl);
       } else {
         progressElement.addClass('d-none');
+        if (toggleLink) toggleLink.textContent = toggleLink.dataset.show;
       }
     }
     return false;

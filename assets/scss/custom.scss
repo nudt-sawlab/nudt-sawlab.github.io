@@ -543,3 +543,476 @@ html, body {
     transform: rotate(180deg);
   }
 }
+
+/* ============================================================
+   2026-11 排版重做
+   1) 导航：任何宽度都横排，不再折叠成汉堡下拉
+   2) 中文页：单独一套中文排版（字体/字号/行高/字重/留白）
+   ============================================================ */
+
+/* ---------- 导航：始终横排 ---------- */
+#navbar-main {
+  flex-wrap: wrap;
+  row-gap: .15rem;
+  padding: .55rem 1rem;
+}
+#navbar-main .navbar-toggler { display: none !important; }
+#navbar-main .navbar-brand-mobile-wrapper { display: none !important; }
+#navbar-main .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+}
+#navbar-main .navbar-brand-wrap { align-items: center; }
+
+/* 关键：Bootstrap 的 .navbar-nav 默认纵向排列，折叠态下必须强制回横排 */
+#navbar-main .navbar-nav {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  #navbar-main .container-xl {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #navbar-main .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    justify-content: center !important;
+  }
+  #navbar-main .main-menu-item {
+    flex-basis: 100%;
+    justify-content: center !important;
+    margin-top: .1rem;
+  }
+  #navbar-main .navbar-nav {
+    justify-content: center;
+  }
+  #navbar-main .navbar-nav .nav-link { padding: .28rem .55rem; }
+
+  /* 中文页窄屏：收窄留白，保证行长合理且不出界 */
+  html[lang^="zh"] .page-body {
+    padding: 1.6rem 1.1rem 2rem;
+    margin: .6rem auto 1.4rem;
+  }
+  html[lang^="zh"] body { font-size: 16px; }
+  html[lang^="zh"] .home-section { padding: 2rem 0; }
+  html[lang^="zh"] .home-section h1 { font-size: 1.4rem; }
+  html[lang^="zh"] .pub-image-div-wrap { flex: 0 0 130px; width: 130px; min-width: 130px; max-width: 130px; }
+  html[lang^="zh"] .pub-image-wrap { width: 130px; min-width: 130px; max-width: 130px; height: 76px; }
+}
+
+/* ---------- 中文页整体 ---------- */
+html[lang^="zh"] body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+               "Noto Sans SC", "Microsoft YaHei", -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: .012em;
+  color: #1b1b1f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang^="zh"] .page-body {
+  box-shadow: none;
+  border-radius: 0;
+  padding: 2.4rem 3.6rem 3.2rem;
+  margin: 1.2rem auto 2.4rem;
+  background: #fff;
+}
+
+@media (min-width: 1200px) {
+  html[lang^="zh"] .container-xl { max-width: 1080px; }
+}
+
+/* 导航：浅色、干净 */
+html[lang^="zh"] .nav-container-bg {
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .07);
+}
+html[lang^="zh"] .navbar-light .navbar-brand {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: .015em;
+  color: #0f172a;
+}
+html[lang^="zh"] #navbar-main .main-menu-item ul li {
+  margin: 0 0 0 .35rem;
+}
+html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: .95rem;
+  letter-spacing: .06em;
+  color: #52525b;
+  padding: .35rem .7rem;
+  border-radius: 6px;
+  transition: color .2s, background-color .2s;
+}
+html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link:hover {
+  color: #0f172a;
+  background: #f4f4f5;
+}
+html[lang^="zh"] .nav-icons .nav-link { color: #52525b; font-size: .95rem; }
+
+/* 区块：留白与标题层级 */
+html[lang^="zh"] .home-section {
+  padding: 3rem 0;
+}
+html[lang^="zh"] .home-section h1 {
+  font-family: inherit;
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: .05em;
+  color: #111;
+  padding: 0 0 1.1rem 0;
+  margin: 0 0 .4rem;
+}
+html[lang^="zh"] .home-section h1::after {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 3px;
+  margin-top: .85rem;
+  background: #b99470;
+  border-radius: 2px;
+}
+
+/* 简介 */
+html[lang^="zh"] .portrait-title h2 {
+  font-family: inherit;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  margin: 0 0 .2rem;
+}
+html[lang^="zh"] .role-text,
+html[lang^="zh"] .school-text {
+  font-family: inherit;
+  font-size: .95rem;
+  letter-spacing: .06em;
+  padding-top: .5rem;
+}
+html[lang^="zh"] .role-text { color: #8a8a94; }
+html[lang^="zh"] .school-text { color: #3f3f46; }
+
+/* 正文 */
+html[lang^="zh"] .article-style {
+  font-size: 1.02rem;
+  line-height: 1.95;
+  color: #27272a;
+}
+html[lang^="zh"] .article-style p {
+  margin-bottom: 1.15em;
+}
+html[lang^="zh"] .article-style strong {
+  font-weight: 600;
+  color: #111;
+}
+html[lang^="zh"] .article-style a {
+  color: #0b5cad;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(11, 92, 173, .28);
+}
+html[lang^="zh"] .article-style a:hover { border-bottom-color: #0b5cad; }
+
+/* 新闻 */
+html[lang^="zh"] #recent_news .media.stream-item:not(:last-child) {
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid #f1f1f3;
+}
+html[lang^="zh"] .stream-meta { font-size: .88rem; color: #9a9aa3; letter-spacing: .04em; }
+html[lang^="zh"] .article-title { font-size: 1.02rem; font-weight: 500; line-height: 1.75; }
+html[lang^="zh"] .article-title a { color: #18181b; }
+
+/* 研究方向 */
+html[lang^="zh"] .home-research-section .nav-pills .nav-item {
+  border: 1px solid #e4e4e7;
+  background: #fafafa;
+  border-radius: 8px;
+  margin: .5rem .25rem;
+}
+html[lang^="zh"] .home-research-section .nav-pills .nav-link {
+  font-size: .95rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  color: #52525b;
+  padding: .55rem .4rem;
+}
+html[lang^="zh"] .home-research-section .nav-pills .active {
+  background: #b99470;
+  color: #fff;
+}
+html[lang^="zh"] .research-step-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #f4f4f6;
+}
+html[lang^="zh"] .home-research-section .pub-title,
+html[lang^="zh"] .home-pubs-section .pub-title {
+  font-family: inherit;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: .01em;
+  color: #18181b;
+}
+html[lang^="zh"] .home-research-section .pub-author,
+html[lang^="zh"] .home-pubs-section .pub-author {
+  font-family: inherit;
+  font-size: .86rem;
+  line-height: 1.8;
+  color: #7c7c86;
+  letter-spacing: .015em;
+}
+html[lang^="zh"] .home-research-section .pub-journal,
+html[lang^="zh"] .home-pubs-section .pub-journal {
+  font-family: inherit;
+  font-style: normal;
+  font-size: .86rem;
+  letter-spacing: .03em;
+  color: #a1653f;
+}
+
+/* 按钮 */
+html[lang^="zh"] .btn-page-header,
+html[lang^="zh"] .btn-links .btn {
+  font-family: inherit;
+  font-size: .82rem;
+  letter-spacing: .05em;
+  border-radius: 6px;
+  padding: .18rem .55rem;
+  color: #3f3f46;
+  border-color: #dcdce0;
+}
+html[lang^="zh"] .btn-page-header:hover,
+html[lang^="zh"] .btn-links .btn:hover {
+  background: #f4f4f5;
+  border-color: #c8c8ce;
+  color: #111;
+}
+html[lang^="zh"] .toggle-content {
+  font-size: .93rem;
+  line-height: 1.9;
+  color: #3f3f46;
+  background: #fafafa;
+  border: 1px solid #efeff1;
+  border-radius: 8px;
+}
+
+/* 展开研究进展链接 */
+html[lang^="zh"] .research-summary + div a { font-size: .93rem; letter-spacing: .04em; }
+
+/* ---------- 新闻条目：日期独占一行，标题独立成行 ---------- */
+html[lang^="zh"] #recent_news .stream-item .media-body > span:first-child {
+  display: block;
+  font-size: .78rem;
+  line-height: 1.6;
+  color: #a1a1aa;
+  letter-spacing: .07em;
+  margin-bottom: .15rem;
+}
+html[lang^="zh"] #recent_news .stream-item .media-body > span:last-child {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #18181b;
+  letter-spacing: .01em;
+}
+
+/* ---------- 头部：右侧标题区垂直居中 ---------- */
+html[lang^="zh"] .profile-avatar > div[class*="col-md-8"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* ---------- 窄屏微调：导航压到一行 ---------- */
+@media (max-width: 575.98px) {
+  html[lang^="zh"] #navbar-main .main-menu-item ul li { margin: 0; }
+  html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
+    font-size: .78rem;
+    letter-spacing: .02em;
+    padding: .3rem .38rem;
+  }
+  html[lang^="zh"] .navbar-light .navbar-brand { font-size: .82rem; letter-spacing: 0; }
+  html[lang^="zh"] .portrait-title h2 { font-size: 1.3rem; line-height: 1.5; }
+  html[lang^="zh"] .profile-avatar .avatar-square { width: 170px; height: 170px; }
+}
+
+/* ---------- 极窄屏：品牌收短，菜单压成一行 ---------- */
+@media (max-width: 575.98px) {
+  #navbar-main .brand-sub { display: none; }
+  #navbar-main .navbar-nav { flex-wrap: nowrap; justify-content: center; }
+  html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
+    font-size: .74rem;
+    letter-spacing: 0;
+    padding: .3rem .26rem;
+    white-space: nowrap;
+  }
+  #navbar-main .navbar-collapse { padding-left: 0; padding-right: 0; }
+  #navbar-main .container-xl { padding-left: .35rem; padding-right: .35rem; }
+}
+
+/* ---------- 极窄屏导航：用 px + !important 兜底，确保 5 项一行 ---------- */
+@media (max-width: 575.98px) {
+  #navbar-main { padding: .4rem .3rem; }
+  #navbar-main .navbar-nav {
+    display: flex !important;
+    width: 100%;
+    flex-wrap: nowrap !important;
+    justify-content: space-around !important;
+  }
+  #navbar-main .navbar-nav .nav-item {
+    flex: 1 1 auto !important;
+    margin: 0 !important;
+    text-align: center;
+  }
+  #navbar-main .navbar-nav .nav-link {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    padding: 6px 2px !important;
+    white-space: nowrap;
+  }
+  #navbar-main .container-xl { position: relative; }
+  #navbar-main .nav-icons {
+    position: absolute;
+    right: .35rem;
+    top: .35rem;
+    margin: 0 !important;
+  }
+  html[lang^="zh"] #navbar-main .nav-icons .nav-link { font-size: 12px !important; }
+}
+
+/* ---------- 修复：正文内图片无宽度约束会撑破布局（主图 2600px） ---------- */
+.research-summary img,
+.article-style img,
+.w-100 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+html[lang^="zh"] .research-summary { margin: 1.4rem 0 0; }
+html[lang^="zh"] .research-summary figure { margin: 1.6rem 0 0; }
+
+/* ---------- 极窄屏导航最终方案：table 布局强制 5 等分，杜绝溢出 ---------- */
+@media (max-width: 575.98px) {
+  #navbar-main .main-menu-item { width: 100%; max-width: 100%; }
+  #navbar-main .main-menu-item .navbar-nav {
+    display: table !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed;
+    margin: 0;
+  }
+  #navbar-main .main-menu-item .navbar-nav .nav-item {
+    display: table-cell !important;
+    float: none !important;
+    width: auto !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  #navbar-main .main-menu-item .navbar-nav .nav-link {
+    display: block;
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0 !important;
+    padding: 5px 0 !important;
+  }
+}
+
+/* 兜底：任何情况下都不产生横向滚动 */
+html, body { overflow-x: hidden; }
+
+/* 窄屏语言切换：右上角只留地球图标 */
+@media (max-width: 575.98px) {
+  #navbar-main .nav-icons {
+    position: absolute !important;
+    right: .5rem;
+    top: .55rem;
+    display: flex !important;
+    flex-direction: row !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
+  #navbar-main .nav-icons .nav-item { display: block !important; }
+  #navbar-main .nav-icons .nav-link {
+    display: block !important;
+    padding: .2rem .3rem !important;
+    color: #52525b !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+  }
+  #navbar-main .nav-icons .nav-link i { font-size: 15px; }
+}
+
+/* 窄屏语言切换：回到文档流，与品牌同一行两端对齐 */
+@media (max-width: 575.98px) {
+  #navbar-main .container-xl {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    align-items: center;
+  }
+  #navbar-main .navbar-brand-wrap { order: 1; flex: 0 0 auto; }
+  #navbar-main .nav-icons {
+    position: static !important;
+    order: 2;
+    flex: 0 0 auto;
+    margin: 0 0 0 auto !important;
+    width: auto !important;
+  }
+  #navbar-main .main-menu-item { order: 3; flex-basis: 100%; }
+  #navbar-main .nav-icons .nav-link {
+    padding: .25rem .35rem !important;
+    color: #52525b !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+  }
+}
+
+/* 窄屏菜单文字颜色（避免变成链接蓝） */
+@media (max-width: 575.98px) {
+  #navbar-main .main-menu-item .navbar-nav .nav-link { color: #3f3f46 !important; }
+  #navbar-main .main-menu-item .navbar-nav .nav-link:hover { color: #b99470 !important; }
+}
+
+/* ---------- 精修：条目间距、卡片分隔、主图满宽 ---------- */
+html[lang^="zh"] #recent_news .media.stream-item:not(:last-child) {
+  margin-bottom: .55rem;
+  padding-bottom: .85rem;
+}
+html[lang^="zh"] #recent_news .media.stream-item { margin-top: 0; }
+
+html[lang^="zh"] .home-pubs-section .pub-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f4f4f6;
+}
+html[lang^="zh"] .home-pubs-section .pub-item:last-child { border-bottom: 0; }
+
+/* 主图铺满内容宽度，图内文字更易读 */
+html[lang^="zh"] .research-summary .d-flex,
+html[lang^="zh"] .research-summary .w-100 { width: 100% !important; }
+html[lang^="zh"] .research-summary img { width: 100% !important; }
+
+/* 英文窄屏：Publications 等长词不撑破格子 */
+@media (max-width: 575.98px) {
+  html:not([lang^="zh"]) #navbar-main .main-menu-item .navbar-nav .nav-link {
+    font-size: 10px !important;
+    letter-spacing: -.01em !important;
+    padding: 5px 0 !important;
+  }
+}

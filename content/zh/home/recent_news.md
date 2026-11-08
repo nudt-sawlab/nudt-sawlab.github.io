@@ -31,7 +31,7 @@ content:
   order: desc
 
   archive:
-    text: Show more
+    text: 更多动态
     enable: true
 
 design:

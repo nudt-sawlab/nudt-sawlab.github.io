@@ -63,7 +63,7 @@
               class="pub-filters form-control form-control-sm"
               style="width: 9rem;"
               data-filter-group="year">
-        <option value="*">Year</option>
+        <option value="*">{{ if eq site.Language.Lang "zh" }}全部年份{{ else }}Year{{ end }}</option>
           {{ $years_sorted := $.Store.GetSortedMapValues "years" }}
           {{ if $years_sorted }}
               {{ range $year := sort $years_sorted "" "desc" }}
@@ -124,7 +124,11 @@
           </div>
           <div class="col-12 col-md pub-content-wrap">
               <div>
-              <div><span class="pub-title">{{ $pub_item.title | markdownify | emojify }}</span></div>
+              {{ $pub_title := $pub_item.title }}
+              {{ if eq site.Language.Lang "zh" }}
+                {{ with index site.Data.zh_pub_titles.titles $pub_item.title }}{{ $pub_title = . }}{{ end }}
+              {{ end }}
+              <div><span class="pub-title">{{ $pub_title | markdownify | emojify }}</span></div>
               <div><span class="pub-author">{{ $pub_item.authors_text | markdownify | emojify }}</span></div>
               {{ with $pub_item.journal }}
                   <div><strong class="pub-journal">{{ . | markdownify | emojify }}</strong></div>
@@ -136,25 +140,33 @@
                 <div class="btn-links">
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('pub_intro_idx{{$index}}')">
-                    <i class="fas fa-angle-double-down" >&nbsp;</i> Intro
+                    <i class="fas fa-angle-double-down" >&nbsp;</i> {{ if eq site.Language.Lang "zh" }}简介{{ else }}Intro{{ end }}
                   </a>
                     {{ range $idx, $item := . }}
                       <a class="btn btn-outline-primary btn-page-header btn-sm"
                          href="{{ $item.url }}">
-                          {{ $item.name | markdownify | emojify }}
+                          {{ $link_name := $item.name }}
+                          {{ if eq site.Language.Lang "zh" }}
+                            {{ with index site.Data.zh_link_names.names $item.name }}{{ $link_name = . }}{{ end }}
+                          {{ end }}
+                          {{ $link_name | markdownify | emojify }}
                       </a>
                     {{ end }}
                   {{ with $cite_resource }}
                   <a class="btn btn-outline-primary btn-page-header btn-sm"
                      href="javascript: togglePaperContent('pub_cite_idx{{$index}}')">
-                    <i class="fas fa-quote-left"  >&nbsp;</i> Bibtex
+                    <i class="fas fa-quote-left"  >&nbsp;</i> {{ if eq site.Language.Lang "zh" }}引用{{ else }}Bibtex{{ end }}
                   </a>
                   {{ end }}
                 </div>
               {{ end }}
 
+              {{ $pub_intro := $pub_item.intro }}
+              {{ if eq site.Language.Lang "zh" }}
+                {{ with index site.Data.zh_pub_titles.intros $pub_item.title }}{{ $pub_intro = . }}{{ end }}
+              {{ end }}
               <div class="toggle-content " id="pub_intro_idx{{$index}}" style="display: none;">
-                <div class=" ">{{ $pub_item.intro }}</div>
+                <div class=" ">{{ $pub_intro }}</div>
               </div>
 
               {{ with $cite_resource }}

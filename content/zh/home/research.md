@@ -42,7 +42,7 @@ research_step_names:
 research_step_papers:
   step1:
 
-    - title: "UAV-GeoLoc: A Large-vocabulary Dataset and Geometry-Transformed Method for UAV Geo-Localization"
+    - title: "UAV-GeoLoc：大规模词汇集与几何变换的无人机地理定位方法"
       authors_text: "Rouwan Wu, Jiacheng Deng, Mingyu Mou, Xingyi He, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
@@ -74,7 +74,7 @@ research_step_papers:
           url: "https://github.com/RingoWRW/GeoLoc-UAV"
           css_class: code-link
 
-    - title: "AerialExtreMatch: A Benchmark for Extreme-View Image Matching and Localization"
+    - title: "AerialExtreMatch：极端视角图像匹配与定位基准"
       authors_text: "Rouwan Wu, Zhe Huang, Xingyi He, Yan Liu, Shen Yan, Sida Peng, Maojun Zhang†, Xiaowei Zhou†"
       media_icon:
         type: image
@@ -94,7 +94,7 @@ research_step_papers:
           url: "https://github.com/Xecades/AerialExtreMatch"
           css_class: code-link
 
-    - title: "LoD-Loc v2: Aerial Visual Localization over Low Level-of-Detail City Models using Explicit Silhouette Alignment"
+    - title: "LoD-Loc v2：基于显式轮廓对齐的低细节层次城市模型空中视觉定位"
       authors_text: "Juelin Zhu, Shuaibang Peng, Long Wang, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
@@ -124,7 +124,7 @@ research_step_papers:
           url: "https://github.com/VictorZoo/LoD-Loc-v2"
           css_class: code-link
 
-    - title: "LoD-Loc: Aerial Visual Localization using LoD 3D Map with Neural Wireframe Alignment"
+    - title: "LoD-Loc：基于 LoD 三维地图与神经线框对齐的空中视觉定位"
       authors_text: "Juelin Zhu*, Shen Yan*, Long Wang, Shengyue Zhang, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
@@ -153,7 +153,7 @@ research_step_papers:
           url: "https://github.com/VictorZoo/LoD-Loc"
           css_class: code-link
 
-    - title: "UAVD4L:A Large-Scale Dataset for UAV 6-DoF Localization"
+    - title: "UAVD4L：面向无人机 6 自由度定位的大规模数据集"
       authors_text: "Rouwan Wu*, Xiaoya Cheng*, Juelin Zhu, Yuxiang Liu, Maojun Zhang†, Shen Yan"
       media_icon:
         type: image
@@ -183,7 +183,7 @@ research_step_papers:
           url: "https://github.com/RingoWRW/UAVD4L"
           css_class: code-link
 
-    - title: "ATLoc: Aerial Thermal Images Localization via View Synthesis"
+    - title: "ATLoc：基于视图合成的空中热红外图像定位"
       authors_text: "Yuxiang Liu*, Rouwan Wu*, Shen Yan, Xiaoya Cheng, Juelin Zhu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
@@ -215,7 +215,7 @@ research_step_papers:
           url: "https://github.com/RingoWRW/ATLoc"
           css_class: code-link
 
-    - title: "Deep Active Contours for Real-time 6-DoF Object Tracking"
+    - title: "深度主动轮廓：实时 6 自由度目标跟踪"
       authors_text: "Long Wang*, Shen Yan*, Jianan Zhen, Yu Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
       media_icon:
         type: image
@@ -244,7 +244,7 @@ research_step_papers:
           url: "https://github.com/WangLongZJU/DeepAC"
           css_class: code-link
 
-    - title: "Render-and-compare: Cross-view 6-dof localization from noisy prior"
+    - title: "渲染—比对：基于噪声先验的跨视角 6 自由度定位"
       authors_text: "Shen Yan*, Xiaoya Cheng*, Yuxiang Liu, Juelin Zhu, Rouwan Wu, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
@@ -274,7 +274,7 @@ research_step_papers:
           url: "https://github.com/Choyaa/Render2Loc"
           css_class: code-link
 
-    - title: "Long-term Visual Localization with Mobile Sensors"
+    - title: "融合移动传感器数据的长期视觉定位"
       authors_text: "Shen Yan, Yu Liu, Long Wang, Zehong Shen, Zhen Peng, Haomin Liu, Maojun Zhang, Guofeng Zhang, Xiaowei Zhou†"
       media_icon:
         type: image
@@ -303,7 +303,7 @@ research_step_papers:
         #   url: "https://github.com/Choyaa/Render2Loc"
         #   css_class: code-link
 
-    - title: "PiLoT: Neural Pixel-to-3D Registration for UAV-based Ego and Target Geo-localization"
+    - title: "PiLoT：面向无人机自身与目标地理定位的神经像素—三维配准"
       authors_text: "Xiaoya Cheng, Long Wang, Yan Liu, Xinyi Liu, Hanlin Tan, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
@@ -331,7 +331,7 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/PiLoT"
           css_class: code-link
 
-    - title: "AirZoo: A Unified Large-Scale Dataset for Grounding Aerial Geometric 3D Vision"
+    - title: "AirZoo：支撑空中几何三维视觉的统一大规模数据集"
       authors_text: "Xiaoya Cheng*, Rouwan Wu*, Xinyi Liu*, Zeyu Cui*, Yan Liu*, Na Zhao, Yu Liu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
@@ -368,7 +368,7 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/AirZoo"
           css_class: code-link
 
-    - title: "NGC-GeoLoc: Neural GeoCoordinate Regression for GPS-Denied UAV Geo-Localization"
+    - title: "NGC-GeoLoc：面向 GPS 拒止环境的无人机地理定位神经坐标回归"
       authors_text: "Jiacheng Deng, Rouwan Wu, Maojun Zhang, Shen Yan†"
       media_icon:
         type: image
@@ -401,7 +401,7 @@ research_step_papers:
           url: "https://github.com/djcrobo/NGC-Geoloc"
           css_class: code-link
 
-    - title: "LoD-Loc v3: Generalized Aerial Localization in Dense Cities using Instance Silhouette Alignment"
+    - title: "LoD-Loc v3：基于实例轮廓对齐的密集城区泛化空中定位"
       authors_text: "Shuaibang Peng, Juelin Zhu†, Xia Li, Kun Yang, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
@@ -436,7 +436,7 @@ research_step_papers:
 
   step2:
 
-    - title: "GeoXel: Geographic Per-pixel 3D Mapping from Aerial Video in the Wild"
+    - title: "GeoXel：从真实场景空中视频重建地理对齐的逐像素三维地图"
       authors_text: "Zeyu Cui, Maojun Zhang, Shuaibang Peng, Shen Yan†, Yu Liu"
       media_icon:
         type: image
@@ -452,7 +452,7 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/GeoXel"
           css_class: code-link
 
-    - title: "Spectral–spatial Adversarial Multidomain Synthesis Network for Cross-scene Hyperspectral Image Classification"
+    - title: "光谱—空间对抗多域合成网络：跨场景高光谱图像分类"
       authors_text: "Xi Chen, Lin Gao, Maojun Zhang†, Chen Chen, Shen Yan"
       media_icon:
         type: image
@@ -483,7 +483,7 @@ research_step_papers:
           url: "https://github.com/daxichen/S2AMSnet"
           css_class: code-link
 
-    - title: "Target Detection With Spectral Graph Contrast Clustering Assignment and Spectral Graph Transformer in Hyperspectral Imagery"
+    - title: "光谱图对比聚类分配与光谱图 Transformer 的高光谱目标检测"
       authors_text: "Xi Chen, Maojun Zhang†, Yu Liu"
       media_icon:
         type: image
@@ -514,7 +514,7 @@ research_step_papers:
         #   url: "https://github.com/daxichen"
         #   css_class: code-link
 
-    - title: "Local Precise Refinement: A Dual-Gated Mixture-of-Experts for Enhancing Foundation Model Generalization against Spectral Shifts"
+    - title: "局部精细精化：双门控混合专家提升基础模型对光谱漂移的泛化能力"
       authors_text: "Xi Chen, Maojun Zhang, Yu Liu, Shen Yan†"
       media_icon:
         type: image
@@ -544,7 +544,7 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/SpectralMoE-main"
           css_class: code-link
 
-    - title: "FCP-SatMVS: Feature-Context-Progressive Network for Robust Satellite Digital Surface Model"
+    - title: "FCP-SatMVS：面向稳健卫星数字表面模型的特征—上下文渐进网络"
       authors_text: "Jinyu Liang, Xiaoran Zhang, Shen Yan, Huaxin Xiao†"
       media_icon:
         type: image
@@ -556,7 +556,7 @@ research_step_papers:
           url: "https://github.com/nudt-sawlab/FCP-SatMVS"
           css_class: code-link
 
-    - title: "Cross-SPECL: Cross-Scene Hyperspectral Image Classification via Spectral Stability Exploiting and Causal Learning"
+    - title: "Cross-SPECL：基于光谱稳定性挖掘与因果学习的跨场景高光谱图像分类"
       authors_text: "Xi Chen, Maojun Zhang, Yuxiang Liu, Chen Chen, Shen Yan†"
       media_icon:
         type: image
@@ -570,7 +570,7 @@ research_step_papers:
 
   step3:
 
-    - title: "ThermoGS: Decoupling Physical Surface Attributes for Spatio-Temporal Thermal Field Emulation via 4D Gaussian Splatting"
+    - title: "ThermoGS：解耦物理表面属性的 4D 高斯泼溅时空热场仿真"
       authors_text: "Kun Yang, Yuxiang Liu, Zeyu Cui, Shen Yan, Maojun Zhang, Yu Liu, Xue Wang†, Qing Wang"
       media_icon:
         type: image
@@ -586,7 +586,7 @@ research_step_papers:
           url: "https://github.com/NPU-CVPG/ThermoGS"
           css_class: code-link
 
-    - title: "AV2T-Gen: Aerial Visible to Thermal Generation with Environment and Vehicle State Guidance"
+    - title: "AV2T-Gen：环境与车辆状态引导的空中可见光到热红外生成"
       authors_text: "Kun Yang, Yuxiang Liu, Yihan Wang, Shen Yan, Maojun Zhang, Yu Liu†, Xue Wang, Qing Wang"
       media_icon:
         type: image
@@ -602,7 +602,7 @@ research_step_papers:
           url: "https://github.com/NPU-CVPG/AV2T"
           css_class: code-link
 
-    - title: "NTR-Gaussian: Nighttime Dynamic Thermal Reconstruction with 4D Gaussian Splatting Based on Thermodynamics"
+    - title: "NTR-Gaussian：基于热力学的夜间动态热红外 4D 高斯泼溅重建"
       authors_text: "Kun Yang*, Yuxiang Liu*, Zeyu Cui, Yu Liu†, Maojun Zhang, Shen Yan, Qing Wang†"
       media_icon:
         type: image
@@ -631,7 +631,7 @@ research_step_papers:
           url: "https://github.com/NPU-CVPG/NTR-Gaussian"
           css_class: code-link
 
-    - title: "3-D Thermal City Reconstruction via Thermal Mapping With RGB-Mesh Guidance"
+    - title: "RGB 网格引导热映射的三维城市热红外重建"
       authors_text: "Yuxiang Liu, Shen Yan, Maojun Zhang, Rouwan Wu, Huaxin Xiao, Yu Liu"
       media_icon:
         type: image
@@ -643,7 +643,7 @@ research_step_papers:
           url: "https://ieeexplore.ieee.org/document/11345331"
           css_class: paper-link
 
-    - title: "ThermalGS: Dynamic 3D Thermal Reconstruction with Gaussian Splatting"
+    - title: "ThermalGS：基于高斯泼溅的动态三维热重建"
       authors_text: "Yuxiang Liu, Xi Chen, Shen Yan, Zeyu Cui, Huaxin Xiao, Yu Liu, Maojun Zhang†"
       media_icon:
         type: image
@@ -678,12 +678,12 @@ research_step_papers:
           css_class: code-link
 
 ---
-Our lab pioneers **3D geospatial intelligence** with a focus on:
+本实验室聚焦 **三维地理空间智能**，围绕以下三个方向展开研究：
 
-**‌●‌**   GPS-Independent UAV Localization – Enabling drones to geolocate and navigate using various map representations (e.g., textured model, white model, DOM+DSM and DOM+DEM) in GPS-denied environments.
+**‌●‌**   无 GPS 依赖的无人机定位 —— 在 GPS 拒止环境中，让无人机借助各类地图表示（纹理模型、白模、DOM+DSM、DOM+DEM 等）完成地理定位与导航。
 
-**‌●‌**   Planet-Scale Digital Twins – Generating accurate, photorealistic, semantic, and real-time 3D reconstructions of Earth’s surface for intelligently path planning, equipment and target geolocation, and geospatial analysis.
+**‌●‌**   全球数字孪生 —— 对地球表面进行精确、照片级真实、带语义的实时三维重建，支撑智能路径规划、装备与目标定位以及地理空间分析。
 
-**‌●‌**   Physics-Based Multimodal Simulation – Developing immersive virtual environments for UAV perception, planning, and localization training via sensor simulation (RGB, thermal, LiDAR, et.al).
+**‌●‌**   物理驱动的多模态仿真 —— 通过传感器仿真（RGB、热红外、LiDAR 等）构建沉浸式虚拟环境，服务于无人机感知、规划与定位训练。
 
 ![](/img/research/r3-zh.webp)

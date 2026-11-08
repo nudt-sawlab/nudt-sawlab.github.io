@@ -1,0 +1,17 @@
+{
+  "names": {
+    "Home": "主页",
+    "Paper": "论文",
+    "Code": "代码",
+    "Video": "视频",
+    "Benchmarks": "基准",
+    "Benchmark": "基准",
+    "Engine": "引擎",
+    "Dataset": "数据集",
+    "Project": "项目",
+    "arXiv": "arXiv",
+    "PDF": "PDF",
+    "Slides": "幻灯片",
+    "Poster": "海报"
+  }
+}
