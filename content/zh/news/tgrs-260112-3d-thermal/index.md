@@ -1,5 +1,5 @@
 ---
-title: "三维城市热红外重建被 IEEE TGRS 2026 录用"
+title: "3-D Thermal City Reconstruction 被 IEEE TGRS 2026 录用"
 date: "2026-01-12"
 # featured 设为 true 则在首页展示
 featured: true
