@@ -75,8 +75,8 @@
       {{ if $pub_page }}
         {{ $page_folder = substr $pub_page.Path 1 }}
       {{ end }}
-      {{ $media_url := cond $pub_page (add $page_folder "/" $media_src | relLangURL) ($media_src | relLangURL) }}
-      {{ $poster_url := cond $pub_page (add $page_folder "/" $poster_src | relLangURL) ($poster_src | relLangURL) }}
+      {{ $media_url := cond $pub_page (add $page_folder "/" $media_src | relURL) ($media_src | relURL) }}
+      {{ $poster_url := cond $pub_page (add $page_folder "/" $poster_src | relURL) ($poster_src | relURL) }}
       {{ $media_is_video := or (eq $media_type "video") (strings.HasSuffix $media_src_lower ".webm") (strings.HasSuffix $media_src_lower ".mp4") }}
       <div class="research-step-item row">
         <div class="col-12 col-md-auto pub-image-div-wrap" >

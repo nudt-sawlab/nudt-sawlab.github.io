@@ -17,7 +17,13 @@
 
 
 {{/* Query */}}
-{{ $query := where (where site.RegularPages "Type" $items_type) "Params.featured" true }}
+{{/* 中文版没有自己的 publication 内容（论文条目与原件均为英文），
+     可通过 content.cross_language: true 复用默认语言的论文数据。 */}}
+{{ $query_site := site }}
+{{ if $st.Params.content.cross_language }}
+  {{ $query_site = site.Sites.Default }}
+{{ end }}
+{{ $query := where (where $query_site.RegularPages "Type" $items_type) "Params.featured" true }}
 
 
 
@@ -97,8 +103,8 @@
           {{ if or (eq ($media_icon.type | default "image") "video") (strings.HasSuffix $media_src_lower ".webm") (strings.HasSuffix $media_src_lower ".mp4") }}
             {{ $poster_src = print $media_base ".webp" }}
           {{ end }}
-          {{ $media_url := add $page_folder "/" $media_src | relLangURL }}
-          {{ $poster_url := cond (ne $poster_src "") (add $page_folder "/" $poster_src | relLangURL) "" }}
+          {{ $media_url := add $page_folder "/" $media_src | relURL }}
+          {{ $poster_url := cond (ne $poster_src "") (add $page_folder "/" $poster_src | relURL) "" }}
 
         <div class="row pub-item grid-sizer isotope-item year-{{ $pub_item.Date.Format "2006" }}" style=" ">
           <div class="col-12 col-md-auto pub-image-div-wrap">

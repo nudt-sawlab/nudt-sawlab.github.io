@@ -1,43 +1,39 @@
 # Languages
-#   Create a section for each of your site's languages.
 #   Documentation: https://wowchemy.com/docs/guide/language/
+#   站点默认英文（根路径 /），中文在 /zh/ 子路径下，导航右上角可切换。
 
-# Default language
 en:
   languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  languageName: English
   contentDir: content/en
+  weight: 1
 
-# Uncomment the lines below to configure your website in a second language.
-#zh:
-#  languageCode: zh-Hans
-#  contentDir: content/zh
-#  title:  Fanzeng Xia个人主页
-#  params:
-#    description:  Fanzeng Xia 个人主页
-#  menu:
-#    main:
-#      - name: 首页
-#        url: '#about'
-#        weight: 10
-#
-#      - name: 新闻
-#        url: '#news'
-#        weight: 20
-#
-#      - name: 经验
-#        url: '#experience'
-#        weight: 30
-#
-#      - name: 项目
-#        url: '#project'
-#        weight: 40
-#
-#      - name: 论文
-#        url: '#publications'
-#        weight: 50
-#
-#
-#      - name: 服务
-#        url: '#service'
-#        weight: 60
+zh:
+  languageCode: zh-Hans
+  languageName: 中文
+  contentDir: content/zh
+  title: SAW Lab｜国防科技大学系统工程学院
+  weight: 2
+  params:
+    description: 国防科技大学系统工程学院 SAW Lab（SeekAnyWhere）实验室主页
+  menus:
+    main:
+      - name: 首页
+        url: '#about'
+        weight: 10
+
+      - name: 简介
+        url: '#about'
+        weight: 20
+
+      - name: 新闻
+        url: '#recent_news'
+        weight: 30
+
+      - name: 研究方向
+        url: '#research'
+        weight: 40
+
+      - name: 代表成果
+        url: '#publications'
+        weight: 50
