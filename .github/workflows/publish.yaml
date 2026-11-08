@@ -28,7 +28,19 @@ jobs:
     steps:
       - name: Install Hugo CLI
         run: |
-          wget --tries=5 --waitretry=5 --retry-connrefused --timeout=60 -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ env.WC_HUGO_VERSION }}/hugo_extended_${{ env.WC_HUGO_VERSION }}_linux-amd64.deb
+          set -e
+          URL=https://github.com/gohugoio/hugo/releases/download/v${{ env.WC_HUGO_VERSION }}/hugo_extended_${{ env.WC_HUGO_VERSION }}_linux-amd64.deb
+          if ! wget --tries=3 --waitretry=5 --timeout=60 -O ${{ runner.temp }}/hugo.deb "$URL"; then
+            echo "Release download failed; falling back to GitHub API asset endpoint"
+            AID=$(curl -s --retry 3 -H "Authorization: Bearer ${{ github.token }}" \
+              -H "Accept: application/vnd.github+json" \
+              https://api.github.com/repos/gohugoio/hugo/releases/tags/v${{ env.WC_HUGO_VERSION }} \
+              | python3 -c "import json,sys; print([a['id'] for a in json.load(sys.stdin)['assets'] if 'extended' in a['name'] and 'linux-amd64.deb' in a['name']][0])")
+            curl -sL --retry 3 --retry-all-errors -H "Authorization: Bearer ${{ github.token }}" \
+              -H "Accept: application/octet-stream" \
+              -o ${{ runner.temp }}/hugo.deb \
+              https://api.github.com/repos/gohugoio/hugo/releases/assets/$AID
+          fi
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
         uses: actions/checkout@v4
