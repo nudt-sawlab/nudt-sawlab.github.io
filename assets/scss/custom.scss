@@ -135,7 +135,11 @@ html, body {
 
 
 // pc
-#navbar-main .main-menu-item.collapse ul {
+/* 原本写作 `.main-menu-item.collapse ul`。折叠容器已取消（汉堡按钮移除，
+   菜单常显），HTML 上的 collapse 类也随之去掉，这条规则就整段失配——
+   导航菜单从 Optima Medium 粗体掉回 body 的 Optima 常规体。
+   去掉 .collapse 限定，恢复原字体/字号/字重；窄屏仍由下方媒体查询覆盖。 */
+#navbar-main .main-menu-item ul {
 
   li {
     margin: 0 0 0 1.5rem;
@@ -583,8 +587,13 @@ html[lang^="zh"] .home-research-section .pub-journal {
 html[lang^="zh"] .profile-avatar .role-text,
 html[lang^="zh"] .profile-avatar .school-text,
 html[lang^="zh"] .home-pubs-section .pub-author,
-html[lang^="zh"] .home-research-section .pub-author {
+html[lang^="zh"] .home-research-section .pub-author,
+/* 导航菜单的原规则是 font-family:"Optima Medium" 单族名，中文会掉到系统默认字体 */
+html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
   font-family: "optima medium", $zh-sans;
+}
+html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
+  font-weight: 600;
 }
 
 /* 品牌后缀「国防科技大学系统工程学院」字数多，压半级，
@@ -672,7 +681,15 @@ html[lang^="zh"] .home-research-section .pub-title {
     justify-content: center !important;
   }
   #navbar-main .navbar-nav { justify-content: center; }
+  #navbar-main .navbar-nav { flex-wrap: nowrap !important; }
   #navbar-main .navbar-nav .nav-link { padding: .35rem .6rem; }
+  /* 菜单独占一行后，原 pc 规则的 li 左间距（1.5rem）与 1.2rem 字号
+     会把 5 项挤到两行；平板区间收到 1rem / 1.05rem，五项恒为一行。 */
+  #navbar-main .main-menu-item ul li { margin: 0 0 0 1rem; }
+  #navbar-main .main-menu-item ul li .nav-link {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
 }
 
 /* 极窄屏：5 项一行放下，绝不折行、不溢出 */
@@ -702,8 +719,45 @@ html[lang^="zh"] .home-research-section .pub-title {
     color: #34495e !important;
     white-space: nowrap;
   }
-  #navbar-main .navbar-brand { font-size: 15px !important; line-height: 1.3; }
-  #navbar-main .nav-icons .nav-link { font-size: 15px !important; padding: .2rem .3rem !important; }
+  /* 英文品牌保持原设计的 1.5rem 不动；中文品牌带「｜国防科技大学系统工程学院」
+     长后缀，用 1.35rem + 更小的后缀字号，既放得下又和英文品牌视觉分量接近。 */
+  html[lang^="zh"] #navbar-main .navbar-brand { font-size: 1.35rem; line-height: 1.3; }
+  html[lang^="zh"] #navbar-main .brand-sub { font-size: .72em; }
+  #navbar-main .nav-icons .nav-link { padding: .2rem .3rem !important; }
+}
+
+/* 中文版在 992–1199 的窄桌面：品牌后缀长（「｜国防科技大学系统工程学院」），
+   与 5 项中文菜单挤不进一行。仅中文版在此区间改为「品牌行 + 菜单行」，
+   英文版仍是原单行布局，不受影响。 */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  html[lang^="zh"] #navbar-main .container-xl {
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    align-items: center;
+  }
+  html[lang^="zh"] #navbar-main .navbar-brand-wrap { order: 1; }
+  html[lang^="zh"] #navbar-main .nav-icons { order: 2; margin: 0 0 0 auto !important; }
+  html[lang^="zh"] #navbar-main .navbar-collapse {
+    order: 3;
+    flex-basis: 100%;
+    flex-grow: 0;
+    justify-content: center !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  html[lang^="zh"] #navbar-main .main-menu-item {
+    flex-basis: 100%;
+    justify-content: center !important;
+  }
+  html[lang^="zh"] #navbar-main .navbar-nav {
+    justify-content: center;
+    flex-wrap: nowrap !important;
+  }
+  html[lang^="zh"] #navbar-main .main-menu-item ul li { margin: 0 0 0 1rem; }
+  html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
 }
 
 /* 兜底：任何情况下都不产生横向滚动 */
