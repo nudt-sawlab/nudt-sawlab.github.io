@@ -559,6 +559,11 @@ $zh-sans: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
 
 html[lang^="zh"] body {
   font-family: optima, $zh-sans;
+  /* 中英混排（如「欢迎访问 SAW Lab 实验室主页」）自动让开半格间隙，
+     压缩连续中文标点的空白；这是中英双语站看起来"顺"的关键细节，
+     不支持的环境自动忽略，不影响其他浏览器。 */
+  text-autospace: normal;
+  text-spacing-trim: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -590,18 +595,19 @@ html[lang^="zh"] #navbar-main .brand-sub {
   letter-spacing: 0;
 }
 
-/* 中文方块字在同等字号下视觉重量轻于 Optima（x-height 更大）：
-   +1px 让中英文在同一版式里观感等重；行高/字距仅影响纵向节奏，
-   容器宽度、断点、卡片与图片尺寸一律未动。 */
+/* 中文方块字 x-height 小于 Optima，同字号下显得更小更密：
+   正文 +1px、行距略放，让中文与英文在同一列宽里保持相近的呼吸感。
+   列宽、边距、卡片、图片等版式参数一律不动。 */
 html[lang^="zh"] .article-style,
 html[lang^="zh"] .article-style p,
 html[lang^="zh"] .article-style li,
 html[lang^="zh"] .toggle-content {
   font-size: 17px;
-  line-height: 1.78;
-  letter-spacing: .012em;
+  line-height: 1.82;
 }
-/* 列表型内容（新闻、论文条目）保持与英文版相同的紧凑密度 */
+html[lang^="zh"] .article-style p {
+  margin-bottom: 1.1em;
+}
 html[lang^="zh"] #recent_news .media-body,
 html[lang^="zh"] .article-title,
 html[lang^="zh"] .pub-title,
@@ -609,7 +615,16 @@ html[lang^="zh"] .pub-author,
 html[lang^="zh"] .pub-journal {
   font-size: 17px;
   line-height: 1.62;
-  letter-spacing: .01em;
+}
+
+/* 标题：苹方 Bold 的笔画比 Optima Bold 重得多，同字重会显得笨重，
+   降到 600 才与英文标题的视觉重量相当。 */
+html[lang^="zh"] .home-section h1,
+html[lang^="zh"] .navbar-light .navbar-brand,
+html[lang^="zh"] .profile-avatar .portrait-title h2,
+html[lang^="zh"] .home-pubs-section .pub-title,
+html[lang^="zh"] .home-research-section .pub-title {
+  font-weight: 600;
 }
 
 /* ---------- 导航：不折叠，任何宽度都横排（英文页同步生效） ---------- */
