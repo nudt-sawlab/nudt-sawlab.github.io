@@ -592,6 +592,13 @@ html[lang^="zh"] .home-research-section .pub-author,
 html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
   font-family: "optima medium", $zh-sans;
 }
+
+/* hero 区副行（学院/学校）：原 1rem 中文方块字视觉太小，与 2.25rem 的
+   实验室名比例失衡，中文页加大到 1.3rem（英文页保持原样不动） */
+html[lang^="zh"] .profile-avatar .role-text,
+html[lang^="zh"] .profile-avatar .school-text {
+  font-size: 1.3rem;
+}
 html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
   font-weight: 600;
 }
