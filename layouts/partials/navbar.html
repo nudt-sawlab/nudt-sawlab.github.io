@@ -174,8 +174,7 @@
               <li class="nav-item dropdown i18n-dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                    aria-haspopup="true" aria-label="{{ i18n "languages" | default "Languages" }}">
-                  <i class="fas fa-globe mr-1" aria-hidden="true"></i>
-                  <span class="d-none d-lg-inline">{{ site.Language.LanguageName | default .Lang }}</span>
+                  <span>{{ site.Language.LanguageName | default .Lang }}</span>
                 </a>
                 <div class="dropdown-menu">
                   {{ range site.Sites }}
