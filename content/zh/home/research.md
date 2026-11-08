@@ -686,4 +686,4 @@ research_step_papers:
 
 **‌●‌**   物理驱动的多模态仿真 —— 通过传感器仿真（RGB、热红外、LiDAR 等）构建沉浸式虚拟环境，服务于无人机感知、规划与定位训练。
 
-![](/img/research/r3-zh.webp)
+<img src="/img/research/r3-zh-1400.webp" srcset="/img/research/r3-zh-1400.webp 1400w, /img/research/r3-zh.webp 2600w" sizes="(min-width: 1200px) 1140px, 100vw" loading="lazy" decoding="async" alt="研究方向总览">
