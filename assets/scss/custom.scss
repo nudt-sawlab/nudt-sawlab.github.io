@@ -658,113 +658,87 @@ html[lang^="zh"] .home-research-section .pub-title {
 }
 #navbar-main .navbar-brand-wrap { align-items: center; }
 
+/* ---------- 窄屏：顶栏压成单行（品牌 + 菜单 + 功能按钮），xiuyuliang 式 ----------
+   主题原本把窄屏菜单做成绝对定位的白色浮层（配合汉堡按钮），
+   这里菜单常显，必须让它回到文档流。
+   单行放不下时菜单区横向滑动（overflow-x:auto），绝不换行。 */
 @media (max-width: 991.98px) {
-  /* 主题原本把窄屏菜单做成绝对定位的白色浮层（配合汉堡按钮），
-     这里菜单常显，必须让它回到文档流，否则会浮在页面内容上。 */
-  #navbar-main { height: auto !important; }
+  #navbar-main { height: auto !important; padding: .4rem .5rem; }
+  #navbar-main .navbar { flex-wrap: nowrap !important; }
+  #navbar-main .container-xl {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center;
+  }
+  #navbar-main .navbar-brand-wrap {
+    order: 1;
+    flex-shrink: 0;
+    margin-right: .5rem;
+  }
+  #navbar-main .nav-icons {
+    order: 3;
+    flex-shrink: 0;
+    margin: 0 0 0 auto !important;
+  }
   #navbar-main .navbar-collapse {
     position: static !important;
     background: transparent !important;
     box-shadow: none !important;
     text-align: left !important;
-  }
-  #navbar-main .container-xl {
-    flex-wrap: wrap;
-    justify-content: space-between !important;
-    align-items: center;
-  }
-  #navbar-main .navbar-brand-wrap { order: 1; }
-  #navbar-main .nav-icons { order: 2; margin: 0 0 0 auto !important; }
-  #navbar-main .navbar-collapse {
-    order: 3;
-    flex-basis: 100%;
-    flex-grow: 0;
-    justify-content: center !important;
+    order: 2;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start !important;
     padding-left: 0;
     padding-right: 0;
   }
-  #navbar-main .main-menu-item {
-    flex-basis: 100%;
-    justify-content: center !important;
+  #navbar-main .navbar-collapse::-webkit-scrollbar { display: none; }
+  #navbar-main .navbar-nav {
+    justify-content: flex-start;
+    flex-wrap: nowrap !important;
   }
-  #navbar-main .navbar-nav { justify-content: center; }
-  #navbar-main .navbar-nav { flex-wrap: nowrap !important; }
-  #navbar-main .navbar-nav .nav-link { padding: .35rem .6rem; }
-  /* 菜单独占一行后，原 pc 规则的 li 左间距（1.5rem）与 1.2rem 字号
-     会把 5 项挤到两行；平板区间收到 1rem / 1.05rem，五项恒为一行。 */
-  #navbar-main .main-menu-item ul li { margin: 0 0 0 1rem; }
-  #navbar-main .main-menu-item ul li .nav-link {
+  /* 菜单文字沿用 pc 的白字：早期汉堡浮层时代的深色字（#000/#34495e）
+     只在 .show 浮层里生效，现在菜单常显会落到灰底深字，对比度差，显式恢复白字 */
+  /* 选择器用 ul.navbar-nav li.nav-item 提升特异性：主题残留两条 !important
+     `#navbar-main .main-menu-item .nav-item{padding:10px 15px!important}` 和
+     `#navbar-main .main-menu-item .nav-item .nav-link{padding:5px 15px!important}`
+     （汉堡浮层样式）——!important 层级压制特异性，这里必须同用 !important 压回 */
+  #navbar-main .navbar-collapse ul.navbar-nav li.nav-item { margin: 0 0 0 .6rem !important; padding: 0 !important; }
+  #navbar-main .navbar-collapse ul.navbar-nav li.nav-item:first-child { margin-left: 0 !important; }
+  #navbar-main .navbar-collapse ul.navbar-nav li.nav-item .nav-link {
+    color: #ffffff !important;
     font-size: 1.05rem;
+    padding: .35rem .5rem !important;
     white-space: nowrap;
   }
 }
 
-/* 极窄屏：5 项一行放下，绝不折行、不溢出 */
+/* 手机（<576px）：品牌压小、菜单 12px、只留语言切换按钮，保证单行放下 */
 @media (max-width: 575.98px) {
-  #navbar-main { padding: .45rem .3rem; }
-  #navbar-main .container-xl { padding-left: .3rem; padding-right: .3rem; }
-  #navbar-main .main-menu-item { width: 100%; max-width: 100%; }
-  #navbar-main .main-menu-item .navbar-nav {
-    display: flex !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex-wrap: nowrap !important;
-    justify-content: space-between !important;
-    margin: 0;
-  }
-  #navbar-main .main-menu-item .navbar-nav .nav-item {
-    flex: 0 1 auto !important;
-    margin: 0 !important;
-    text-align: center;
-  }
-  #navbar-main .main-menu-item .navbar-nav .nav-link {
-    display: block !important;
-    font-size: 11px !important;
-    line-height: 1.6 !important;
+  #navbar-main { padding: .35rem .3rem !important; }
+  #navbar-main .container-xl { padding-left: .3rem !important; padding-right: .3rem !important; }
+  #navbar-main .navbar-light .navbar-brand,
+  #navbar-main .navbar-brand { font-size: 1.15rem !important; }
+  #navbar-main .navbar-brand-wrap { margin-right: .35rem !important; }
+  /* 手机尺寸规则一律 !important：下方 576–991 断点与 bootstrap/pc 规则
+     的选择器特异性更高，不加会被覆盖成大 padding/margin，一行放不下 */
+  #navbar-main .navbar-nav { margin: 0 !important; }
+  #navbar-main .navbar-collapse ul.navbar-nav li.nav-item { margin: 0 !important; padding: 0 !important; }
+  #navbar-main .navbar-collapse ul.navbar-nav li.nav-item .nav-link {
+    font-size: 12px !important;
     letter-spacing: -.01em !important;
-    padding: 6px 2px !important;
-    color: #34495e !important;
-    white-space: nowrap;
+    padding: 6px 3px !important;
+    line-height: 1.6 !important;
+    white-space: nowrap !important;
   }
-  /* 英文品牌保持原设计的 1.5rem 不动；中文品牌带「｜国防科技大学系统工程学院」
-     长后缀，用 1.35rem + 更小的后缀字号，既放得下又和英文品牌视觉分量接近。 */
-  html[lang^="zh"] #navbar-main .navbar-brand { font-size: 1.35rem; line-height: 1.3; }
-  html[lang^="zh"] #navbar-main .brand-sub { font-size: .72em; }
-  #navbar-main .nav-icons .nav-link { padding: .2rem .3rem !important; }
-}
-
-/* 中文版在 992–1199 的窄桌面：品牌后缀长（「｜国防科技大学系统工程学院」），
-   与 5 项中文菜单挤不进一行。仅中文版在此区间改为「品牌行 + 菜单行」，
-   英文版仍是原单行布局，不受影响。 */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  html[lang^="zh"] #navbar-main .container-xl {
-    flex-wrap: wrap;
-    justify-content: space-between !important;
-    align-items: center;
-  }
-  html[lang^="zh"] #navbar-main .navbar-brand-wrap { order: 1; }
-  html[lang^="zh"] #navbar-main .nav-icons { order: 2; margin: 0 0 0 auto !important; }
-  html[lang^="zh"] #navbar-main .navbar-collapse {
-    order: 3;
-    flex-basis: 100%;
-    flex-grow: 0;
-    justify-content: center !important;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  html[lang^="zh"] #navbar-main .main-menu-item {
-    flex-basis: 100%;
-    justify-content: center !important;
-  }
-  html[lang^="zh"] #navbar-main .navbar-nav {
-    justify-content: center;
-    flex-wrap: nowrap !important;
-  }
-  html[lang^="zh"] #navbar-main .main-menu-item ul li { margin: 0 0 0 1rem; }
-  html[lang^="zh"] #navbar-main .main-menu-item ul li .nav-link {
-    font-size: 1.05rem;
-    white-space: nowrap;
-  }
+  #navbar-main .nav-icons .nav-link { padding: .2rem .3rem !important; font-size: .85rem !important; }
+  /* 一行放不下三个功能按钮：搜索与主题切换在手机隐藏，只留语言切换 */
+  #navbar-main .nav-icons .js-search { display: none !important; }
+  #navbar-main .nav-icons .theme-dropdown { display: none !important; }
 }
 
 /* 兜底：任何情况下都不产生横向滚动 */
